@@ -1,0 +1,17 @@
+import { SrinivasImage } from "./BaseImages";
+import Heading from "./Heading";
+
+const Srinivas = () => {
+    return (
+        <div className="flex justify-center items-center space-x-4">
+            <SrinivasImage />
+            <div className="flex flex-col justify-start items-start">
+                <Heading type="h4" text="Srinivas Mandipudi" />
+                <Heading type="h5" text="Founder & CEO at Cloudserv.ai" />
+                <Heading type="h5" text="NJ, USA" />
+            </div>
+        </div>
+    );
+};
+
+export default Srinivas;

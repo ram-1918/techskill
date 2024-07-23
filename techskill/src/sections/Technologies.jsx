@@ -1,0 +1,252 @@
+import { useEffect, useRef, useState } from "react";
+import APGOV from "../components/APGOV";
+import APSSDC from "../components/APSSDC";
+import Heading from "../components/Heading";
+import { AwsIcon, azureIcon, cppIcon, gcpIcon, GoIcon, JavaIcon, JavascriptIcon, MatlabIcon, OracleIcon, PowerBiIcon, PythonIcon, RstudioIcon, SparkIcon, TableauIcon } from "../components/icons";
+
+const technology_list = {
+    "cloud technologies": {
+        id: 1,
+        name: "cloud technologies",
+        sublist: [
+            {
+                id: 1,
+                icon: AwsIcon,
+                name: "Amazon Web Services (AWS)"
+            },
+            {
+                id: 2,
+                icon: azureIcon,
+                name: "Microsoft Azure"
+            },
+            {
+                id: 3,
+                icon: gcpIcon,
+                name: "Google Cloud Platform(GCP)"
+            },
+            {
+                id: 4,
+                icon: OracleIcon,
+                name: "Oracle Cloud Infrastructure(OCI)"
+            }
+        ]
+    },
+    "ai/ml": {
+        id: 2,
+        name: "ai/ml",
+        sublist: [
+            {
+                id: 1, 
+                icon: PythonIcon,
+                name: "Python"
+            },
+            {
+                id: 2, 
+                icon: RstudioIcon,
+                name: "R Studio"
+            },
+            {
+                id: 4, 
+                icon: SparkIcon,
+                name: "Apache Spark"
+            },
+            {
+                id: 5, 
+                icon: MatlabIcon,
+                name: "Matlab"
+            },
+            {
+                id: 6, 
+                icon: TableauIcon,
+                name: "Tableau"
+            },            
+            {
+                id: 7, 
+                icon: PowerBiIcon,
+                name: "PowerBI"
+            }
+        ]
+        // sublist: [PythonIcon, RstudioIcon, "SQL", "Statistics", "Pandas", "NumPy", "ETL Pipelines", "ML algorithms"]
+    },
+    "programming languages": {
+        id: 3,
+        name: "programming languages",
+        sublist: [
+            {
+                id: 1, 
+                icon: PythonIcon,
+                name: "Python"
+            },
+            {
+                id: 2, 
+                icon: RstudioIcon,
+                name: "R Studio"
+            },            
+            {
+                id: 3, 
+                icon: cppIcon,
+                name: "C++"
+            },            
+            {
+                id: 4, 
+                icon: GoIcon,
+                name: "Go"
+            },
+            {
+                id: 5, 
+                icon: JavaIcon,
+                name: "Java"
+            },
+            {
+                id: 6, 
+                icon: JavascriptIcon,
+                name: "Java Script"
+            }
+        ]
+        // sublist: ["Python, R Studio, C++, Go, Java"]
+    },
+    "devops": {
+        id: 4,
+        name: "devops",
+        sublist: [
+            {
+                id: 1, 
+                icon: PythonIcon,
+                name: "Python"
+            },
+            {
+                id: 2, 
+                icon: RstudioIcon,
+                name: "R Studio"
+            },            
+            {
+                id: 3, 
+                icon: cppIcon,
+                name: "C++"
+            },            
+            {
+                id: 4, 
+                icon: GoIcon,
+                name: "Go"
+            },
+            {
+                id: 5, 
+                icon: JavaIcon,
+                name: "Java"
+            },
+            {
+                id: 6, 
+                icon: JavascriptIcon,
+                name: "Java Script"
+            }
+        ]
+        // sublist: ["Python, R Studio, C++, Go, Java"]
+    },
+    "advanced": {
+        id: 5,
+        name: "advanced",
+        sublist: [
+            {
+                id: 1, 
+                icon: PythonIcon,
+                name: "Python"
+            },
+            {
+                id: 2, 
+                icon: RstudioIcon,
+                name: "R Studio"
+            },            
+            {
+                id: 3, 
+                icon: cppIcon,
+                name: "C++"
+            },            
+            {
+                id: 4, 
+                icon: GoIcon,
+                name: "Go"
+            },
+            {
+                id: 5, 
+                icon: JavaIcon,
+                name: "Java"
+            },
+            {
+                id: 6, 
+                icon: JavascriptIcon,
+                name: "Java Script"
+            }
+        ]
+        // sublist: ["Python, R Studio, C++, Go, Java"]
+    }
+};
+
+const Technologies = ({keys}) => {
+    return (
+        <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
+            <div className="w-full flex justify-between items-center">
+                <APSSDC />
+                <Heading type="h2" text="Our program will span across various technologies" /> 
+                <APGOV />
+            </div>
+            <div className="w-full p-2 flex flex-col justify-center items-center space-y-4">
+                <span className="text-xl font-light">Disruptive Technologies Shaping the Coming Decades</span>
+                <TechnologiesListDisplay keys={keys} />
+            </div>
+        </section>
+    )
+};
+
+
+const TechnologiesListDisplay = ({keys}) => {
+    return (
+        <ul className="w-full flex justify-evenly items-start gap-3 p-2">
+            {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}
+        </ul>
+    )
+};
+
+const ListItem = ({tech:{name, sublist}}) => {
+    const divRef = useRef(null);
+    const [divHeight, setDivHeight] = useState(0);
+
+    useEffect(() => {
+        const handle_resize = () => {
+            if(divRef.current) {
+                setDivHeight(divRef.current.clientHeight);
+            }
+        };
+        window.addEventListener('resize', handle_resize);
+        handle_resize();
+        return () => {
+            window.removeEventListener('resize', handle_resize);
+        }
+    }, [divRef]);
+    return (
+        <div className="flex flex-col items-start justify-start">
+            <span className="text-lg font-semibold uppercase">{name}</span>
+            <div className="h-full flex justify-start items-center">
+                <span style={{height: divHeight}} className="h-full w-0.5 bg-sky-700 border border-dotted"></span>
+                <SubListDisplay divRef={divRef} sublist={sublist} />
+            </div>
+        </div>
+    )
+};
+
+const SubListDisplay = ({divRef, sublist}) => {
+    return (
+        <ul ref={divRef} className="flex flex-col justify-start items-start gap-1">
+            {
+            sublist.map(
+                ({id, icon, name}) => 
+                <li key={id} className="flex justify-start items-center gap-2 text-sm font-medium">
+                    <span className="h-0.5 w-10 bg-sky-700 border border-dotted"></span>
+                    <span>{icon}</span>
+                    <span>{name}</span>
+                </li>
+            )}
+        </ul>
+    )
+};
+
+export default Technologies;

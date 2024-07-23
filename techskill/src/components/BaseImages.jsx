@@ -1,0 +1,3 @@
+export const CBNImage = () => <div className="border shadow-md w-32 h-32 bg-cbn bg-cover bg-no-repeat rounded-full"></div>;
+export const LokeshImage = () => <div className="border shadow-md w-32 h-32 bg-lokesh bg-cover bg-center bg-no-repeat rounded-full"></div>
+export const SrinivasImage = ({size="w-24 h-24"}) => <div className={`${size} border shadow-md bg-srinivas bg-cover bg-center bg-no-repeat rounded-full`}></div>
