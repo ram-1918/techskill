@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import APGOV from "../components/APGOV";
-import APSSDC from "../components/APSSDC";
-import Heading from "../components/Heading";
 import { AwsIcon, azureIcon, cppIcon, gcpIcon, GoIcon, JavaIcon, JavascriptIcon, MatlabIcon, OracleIcon, PowerBiIcon, PythonIcon, RstudioIcon, SparkIcon, TableauIcon } from "../components/icons";
+import BaseHeader from "../components/BaseHeader";
+import BaseContentDiv from "../components/BaseContentDiv";
 
 const technology_list = {
     "cloud technologies": {
@@ -184,15 +183,10 @@ const technology_list = {
 const Technologies = ({keys}) => {
     return (
         <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
-            <div className="w-full flex justify-between items-center">
-                <APSSDC />
-                <Heading type="h2" text="Our program will span across various technologies" /> 
-                <APGOV />
-            </div>
-            <div className="w-full p-2 flex flex-col justify-center items-center space-y-4">
-                <span className="text-xl font-light">Disruptive Technologies Shaping the Coming Decades</span>
+            <BaseHeader text="Our program will span across various technologies" />
+            <BaseContentDiv text="Disruptive Technologies Shaping the Coming Decades">
                 <TechnologiesListDisplay keys={keys} />
-            </div>
+            </BaseContentDiv>
         </section>
     )
 };

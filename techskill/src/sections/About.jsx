@@ -1,32 +1,53 @@
 import BaseHeader from "../components/BaseHeader";
 import { SrinivasImage } from "../components/BaseImages";
-import { FacebookIcon, GmailIcon, InstagramIcon, LinkedinIcon } from "../components/icons";
+import BaseSlide from "../components/BaseSlide";
+import {
+    FacebookIcon,
+    GmailIcon,
+    InstagramIcon,
+    LinkedinIcon,
+} from "../components/icons";
 import Subhead from "../components/Subhead";
 
 function About() {
-    const content = 'As the CEO of Cloudserv.ai specializing in Oracle-based products, I lead a dedicated team of 125 professionals. Our mission is to develop innovative solutions that not only drive business success but also contribute to the development of our country. By leveraging cutting-edge technology, we aim to create products that enhance the quality of life for our community and beyond.';
   return (
-    <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col justify-center items-center">
+    <BaseSlide>
         <BaseHeader text="Comprehensive & robust personality development program" />
         <Subhead text="About me & company" />
-        <div className="flex justify-center items-center gap-4">
-            <SrinivasImage size="w-40 h-40" />
-            <span className="w-[50%] whitespace-pre-wrap font-light text-lg">{content}</span>
-        </div>
+        <ContentDiv />
         <SocialMedia />
-    </section>
+    </BaseSlide>
   );
 }
 
-const SocialMedia = () => {
+const ContentDiv = () => {
     return (
-        <div className="flex justify-center items-center gap-10 py-10">
-            {LinkedinIcon}
-            {FacebookIcon}
-            {InstagramIcon}
-            {GmailIcon}
-        </div>
+        <div className="flex justify-center items-center gap-4">
+      <SrinivasImage size="w-40 h-40" />
+      <Content />
+    </div>
+  );
+};
+
+const Content = () => {
+    const content =
+      "As the CEO of Cloudserv.ai specializing in Oracle-based products, I lead a dedicated team of 125 professionals. Our mission is to develop innovative solutions that not only drive business success but also contribute to the development of our country. By leveraging cutting-edge technology, we aim to create products that enhance the quality of life for our community and beyond.";
+    return (
+        <span className="w-[50%] whitespace-pre-wrap font-light text-lg">
+            {content}
+        </span>
     )
 }
+
+const SocialMedia = () => {
+  return (
+    <div className="w-full flex justify-center items-center gap-10 py-10">
+      {LinkedinIcon}
+      {FacebookIcon}
+      {InstagramIcon}
+      {GmailIcon}
+    </div>
+  );
+};
 
 export default About;

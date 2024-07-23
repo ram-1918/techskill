@@ -1,6 +1,6 @@
+import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
-import { CertifiedIcon, CommunicationIcon, InterviewIcon, LocationsIcon, PlacedIcon, RegistedIcon, SoftIcon } from "../components/icons";
-import Subhead from "../components/Subhead";
+import { CertifiedIcon, LocationsIcon, PlacedIcon, RegistedIcon } from "../components/icons";
 
 const reporting_items = [
     {
@@ -33,10 +33,9 @@ const Reporting = () => {
   return (
     <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
         <BaseHeader text="Comprehensive & robust personality development program" />
-        <div className="w-full p-2 flex flex-col justify-center items-start gap-5">
-            <Subhead text="Progress Reporting Attributes" />
+        <BaseContentDiv text="Progress Reporting Attributes">
             <PDItems />
-        </div>
+        </BaseContentDiv>
     </section>
   );
 }

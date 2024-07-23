@@ -1,5 +1,5 @@
+import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
-import { CommunicationIcon, InterviewIcon, SoftIcon } from "../components/icons";
 
 const skills_items = [
     {
@@ -20,12 +20,12 @@ const SkillCheck = () => {
   return (
     <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
         <BaseHeader text="Comprehensive & robust personality development program" />
-        <div className="w-full p-2 flex flex-col justify-center items-start gap-5">
+        <BaseContentDiv text="">
             <span className="font-light text-xl text-sky-700 underline underline-offset-2">Skill Check Attribute Criteria</span>
             <SkillCheckList  />
             <span className="font-light text-xl text-sky-700 underline underline-offset-2">Benefits</span>
             <SkillCheckList  />
-        </div>
+        </BaseContentDiv>
     </section>
   );
 }

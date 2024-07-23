@@ -1,5 +1,4 @@
-import APGOV from "./APGOV";
-import APSSDC from "./APSSDC";
+import { APGOV, APSSDC } from "./BaseImages";
 import Heading from "./Heading";
 
 const BaseHeader = ({text}) => {

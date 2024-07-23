@@ -1,6 +1,5 @@
-import APGOV from "../components/APGOV";
-import APSSDC from "../components/APSSDC";
-import Heading from "../components/Heading";
+import BaseContentDiv from "../components/BaseContentDiv";
+import BaseHeader from "../components/BaseHeader";
 
 const regions_list = [
     'paderu',
@@ -30,15 +29,12 @@ const regions_list = [
 const Regions = () => {
     return (
         <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
-            <div className="w-full flex justify-between items-center">
-                <APSSDC />
-                <Heading type="h2" text="Regions Likely to Experience Program Advantages" /> 
-                <APGOV />
-            </div>
-            <div className="w-full p-2 flex flex-col justify-center items-center space-y-4">
-                <span className="text-xl font-light">Below are the {regions_list.length} proposed regions</span>
-                <RegionsListDisplay />
-            </div>
+            <BaseHeader text="Regions Likely to Experience Program Advantages" />
+            <BaseContentDiv text={`Below are the ${regions_list.length} proposed regions`}>
+                <div className="w-full p-2 flex flex-col justify-center items-center">
+                    <RegionsListDisplay />
+                </div>
+            </BaseContentDiv>
         </section>
     )
 };

@@ -1,5 +1,6 @@
+import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
-import { AccentureIcon, CognizantIcon, CommunicationIcon, HCLIcon, IBMIcon, InfosysIcon, InterviewIcon, SoftIcon, TCSIcon, WiproIcon, ZohoIcon } from "../components/icons";
+import { AccentureIcon, CognizantIcon, HCLIcon, IBMIcon, InfosysIcon, TCSIcon, WiproIcon, ZohoIcon } from "../components/icons";
 
 const pd_items = [
     {
@@ -53,17 +54,16 @@ const Placements = () => {
   return (
     <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
         <BaseHeader text="Comprehensive & robust personality development program" />
-        <div className="w-full p-2 flex flex-col justify-center items-start gap-5">
-            <span className="font-light text-xl text-sky-700 underline underline-offset-2">Program Execution Partners</span>
-            <PDItems />
+        <BaseContentDiv text="Program Execution Partners">
+            <PlacementItems />
             <span className="w-full text-center font-light">... and many others</span>
-        </div>
+        </BaseContentDiv>
     </section>
   );
 }
 
-const PDItems = () => {
-    return (
+const PlacementItems = () => {
+return (
         <ul className="w-full flex justify-center items-center flex-wrap gap-4 px-2">
             { pd_items.map(item => <ListItem key={item.id} item={item} />) }
         </ul>
