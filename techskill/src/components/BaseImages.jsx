@@ -1,7 +1,7 @@
 import BaseBGImage from "./BaseBGImage";
 
 export const APImage = ({}) => (
-<div className={`mobile:hidden bg-bg7 w-[33rem] h-[33rem] bg-contain px-2 bg-no-repeat`}></div>
+<div className={`mobile:hidden bg-bg9 w-[33rem] h-[33rem] bg-contain px-2 bg-no-repeat`}></div>
 );
 
 
@@ -11,12 +11,12 @@ export const CBNImage = () => {
     <BaseBGImage
       image="bg-cbn bg-center"
       size={`${
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-24 h-24"
+        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-32 h-32"
       } + " " + "border shadow-md"`}
     />
   );
 };
-export const LokeshImage = ({ size = "w-24 h-24" }) => {
+export const LokeshImage = ({ size = "w-32 h-32" }) => {
   const screen = localStorage.getItem("screen") || "laptop";
   return (
     <BaseBGImage
@@ -40,7 +40,7 @@ export const APGOV = () => {
     <BaseBGImage
       image="bg-apgov"
       size={
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-32 h-32"
+        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-24 h-24"
       }
     />
   );

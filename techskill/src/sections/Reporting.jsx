@@ -17,13 +17,13 @@ const reporting_items = [
     },
     {
         id: 3,
-        name: "Certified youth",
+        name: "Certified Resources",
         icon: CertifiedIcon,
         content: "2,302,251"
     },
     {
         id: 4,
-        name: "Placed youth",
+        name: "Placed Resources",
         icon: PlacedIcon,
         content: "2,000,375"
     }

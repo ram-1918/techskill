@@ -3,7 +3,7 @@ export const heading_font_size = {
         mobile: "0.9rem",
         tablet: "1.1rem",
         laptop: "1.3rem",
-        desktop: "1.5rem",
+        desktop: "1.8rem",
     },
     sub: {
         mobile: "0.6rem",
@@ -15,7 +15,7 @@ export const heading_font_size = {
         mobile: "0.5rem",
         tablet: "0.6rem",
         laptop: "0.7rem",
-        desktop: "0.95rem",
+        desktop: "1.1rem",
     },
     subcontent: {
         mobile: "0.5rem",
@@ -27,9 +27,9 @@ export const heading_font_size = {
 export const content_font = "0.9rem";
 
 export const colors = {
-    main: "#000080",
-    sub: "#000080",
-    content: "#4c4ca6",
+    main: "black",
+    sub: "#304463",
+    content: "#304463",
     subcontent: "black"
 }
 export const main_heading_fontstyle = "anaheim, roboto, lexend, sans"; // lexend, roboto, anaheim

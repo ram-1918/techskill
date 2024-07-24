@@ -18,7 +18,7 @@ import interviewprep from "../assets/icons/interviewprep.png";
 import communication from "../assets/icons/communication.png";
 
 import register from "../assets/icons/customer.png";
-import certified from "../assets/icons/professional.png";
+import certified from "../assets/icons/certified.png";
 import locations from "../assets/icons/location.png";
 import placed from "../assets/icons/portfolio.png";
 

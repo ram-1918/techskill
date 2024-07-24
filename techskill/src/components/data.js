@@ -1,7 +1,7 @@
 export const main_headings = {
     slide1:{
         id: 1,
-        text: "Concept to launch a Regional Skills Development Program."
+        text: "Concept to launch a Regional Skills Development Program"
     },
     slide2:{
         id: 2,

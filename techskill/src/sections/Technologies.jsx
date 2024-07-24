@@ -222,7 +222,7 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <span style={{fontSize: heading_font_size.content[screen]}} className="font-semibold uppercase">{name}</span>
+            <span style={{fontSize: heading_font_size.content[screen]}} className="font-semibold uppercase leading-6 tracking-wide">{name}</span>
             <div className="h-full flex justify-start items-center">
                 <span style={{height: divHeight}} className="h-full w-0.5 bg-sky-700 border border-dotted"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />

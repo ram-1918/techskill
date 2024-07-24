@@ -15,6 +15,13 @@ module.exports = {
         'srinivas': "url('assets/images/srinivas.png')",
         'ap': "url('assets/images/ap.png')",
         'bg7': "url('assets/images/bg5.png')",
+        'bg9': "url('assets/images/bg9.png')",
+        'bg10': "url('assets/images/bg10.webp')",
+        'bg11': "url('assets/images/bg11.png')",
+      },
+      clipPath: {
+        'rect': 'polygon(0 0, 50% 0, 50% 100%, 0% 100%)',
+        'rect-left': 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)',
       }
     },
     screens: {
@@ -25,6 +32,17 @@ module.exports = {
       'desktop': '1280px',
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.clip-rect': {
+          'clip-path': 'polygon(0 0, 50% 0, 50% 100%, 0% 100%)',
+        },
+        '.clip-rect-left': {
+          'clip-path': 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)',
+        },
+      })
+    }
+  ]
 }
 

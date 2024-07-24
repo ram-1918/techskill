@@ -24,7 +24,7 @@ const Subhead = ({ text }) => {
         <Head divRef={divRef} text={text} />
         <div className="flex justify-center items-center space-x-2">
             <span style={{width: divWidth/3}} className={`h-0.5 bg-[#000080]`}></span>
-            <span sclassName={`bg-red-500`}><FontAwesomeIcon icon={faCogs} /></span>
+            <span className={``}><FontAwesomeIcon icon={faCogs} /></span>
             <span style={{width: divWidth/3}} className={`h-0.5 bg-[#000080]`}></span>
         </div>
     </div>

@@ -1,5 +1,7 @@
+import { heading_font_size } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
+import BaseSlide from "../components/BaseSlide";
 import { CommunicationIcon, InterviewIcon, SoftIcon } from "../components/icons";
 
 const pd_items = [
@@ -25,30 +27,32 @@ const pd_items = [
 
 const Personality = () => {
   return (
-    <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
+    // <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
+    <BaseSlide>
         <BaseHeader text="Comprehensive & robust personality development program" />
         <BaseContentDiv text="Personality Development Program Curricullam">
             <PDItems />
         </BaseContentDiv>
-    </section>
+    </BaseSlide>
   );
 }
 
 const PDItems = () => {
     return (
-        <ul className="w-full flex justify-between items-center gap-4 px-2">
+        <ul className="w-full flex justify-end items-center gap-4 px-2">
             { pd_items.map(item => <ListItem key={item.id} item={item} />) }
         </ul>
     )
 };
 
 const ListItem = ({item:{icon, name, content}}) => {
+    const screen = localStorage.getItem('screen') || 'laptop';
     return (
         <li className="w-72 h-64 flex flex-col justify-start items-start gap-3">
             <span className="w-24 h-24">{icon}</span>
             <div className="flex flex-col justify-start items-start">
-                <span className="text-xl font-semibold">{name}</span>
-                <span className="text-sm font-light whitespace-pre-wrap">{content}</span>
+                <span style={{fontSize:heading_font_size.sub[screen]}} className="text-xl font-semibold">{name}</span>
+                <span style={{fontSize:heading_font_size.subcontent[screen]}} className="text-sm font-light whitespace-pre-wrap">{content}</span>
             </div>
         </li>
     );
