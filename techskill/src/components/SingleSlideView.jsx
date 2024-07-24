@@ -6,17 +6,22 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const SingleSlideView = ({slides}) => {
     const [slideNum, setSlideNum] = useState(0);
     return (
-    //   <div className="px-[15%] py-10 space-y-5 select-none">
-    <>
+    <div className="mobile:h-[40rem] bg-red-300 mobile:flex flex-col justify-center items-center px-2 space-y-4">
         {slides[slideNum]}
-        <div className="w-full flex justify-between px-2">
-            <span className="cursor-pointer" onClick={() => setSlideNum(slideNum > 0 ? slideNum - 1: slides.length - 1)}><FontAwesomeIcon icon={faArrowLeft} /></span>
-            <PageNums slides={slides} setSlideNum={setSlideNum} slideNum={slideNum} />
-            <span className="cursor-pointer" onClick={() => setSlideNum(slideNum < slides.length - 1 ? slideNum + 1: 0)}><FontAwesomeIcon icon={faArrowRight} /> </span>
-        </div>
-      </>
+        <Navigation slides={slides} slideNum={slideNum} setSlideNum={setSlideNum} />
+      </div>
     );
   };
+
+  const Navigation = ({setSlideNum, slides, slideNum}) => {
+    return (
+      <div className="w-full flex justify-between px-2 space-x-10">
+        <span className="cursor-pointer" onClick={() => setSlideNum(slideNum > 0 ? slideNum - 1: slides.length - 1)}><FontAwesomeIcon icon={faArrowLeft} /></span>
+        <PageNums slides={slides} setSlideNum={setSlideNum} slideNum={slideNum} />
+        <span className="cursor-pointer" onClick={() => setSlideNum(slideNum < slides.length - 1 ? slideNum + 1: 0)}><FontAwesomeIcon icon={faArrowRight} /> </span>
+    </div>
+    )
+  }
 
   const PageNums = ({slides, setSlideNum, slideNum}) => {
     return (

@@ -7,7 +7,7 @@ const pd_items = [
         id: 1,
         name: "Communication Skills",
         icon: CommunicationIcon,
-        content: "In today's competitive job market, developing effective communication skills is essential for conveying information efficiently and effectively in the business world."
+        content: "Effective communication skills are key to advancing careers, enhancing professional competence, and fostering reflective learning within organizations."
     },
     {
         id: 3,

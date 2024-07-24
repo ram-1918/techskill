@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { AwsIcon, azureIcon, cppIcon, gcpIcon, GoIcon, JavaIcon, JavascriptIcon, MatlabIcon, OracleIcon, PowerBiIcon, PythonIcon, RstudioIcon, SparkIcon, TableauIcon } from "../components/icons";
 import BaseHeader from "../components/BaseHeader";
 import BaseContentDiv from "../components/BaseContentDiv";
+import { main_headings } from "../components/data";
+import { heading_font_size } from "../Base";
+import BaseSlide from "../components/BaseSlide";
 
 const technology_list = {
     "cloud technologies": {
@@ -182,12 +185,12 @@ const technology_list = {
 
 const Technologies = ({keys}) => {
     return (
-        <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
-            <BaseHeader text="Our program will span across various technologies" />
+        <BaseSlide>
+            <BaseHeader text={main_headings.slide3.text} />
             <BaseContentDiv text="Disruptive Technologies Shaping the Coming Decades">
                 <TechnologiesListDisplay keys={keys} />
             </BaseContentDiv>
-        </section>
+        </BaseSlide>
     )
 };
 
@@ -201,6 +204,7 @@ const TechnologiesListDisplay = ({keys}) => {
 };
 
 const ListItem = ({tech:{name, sublist}}) => {
+    const screen = localStorage.getItem('screen') || 'laptop';
     const divRef = useRef(null);
     const [divHeight, setDivHeight] = useState(0);
 
@@ -218,7 +222,7 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <span className="text-lg font-semibold uppercase">{name}</span>
+            <span style={{fontSize: heading_font_size.content[screen]}} className="font-semibold uppercase">{name}</span>
             <div className="h-full flex justify-start items-center">
                 <span style={{height: divHeight}} className="h-full w-0.5 bg-sky-700 border border-dotted"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
@@ -228,12 +232,15 @@ const ListItem = ({tech:{name, sublist}}) => {
 };
 
 const SubListDisplay = ({divRef, sublist}) => {
+    const screen = localStorage.getItem('screen') || 'laptop';
     return (
         <ul ref={divRef} className="flex flex-col justify-start items-start gap-1">
             {
             sublist.map(
                 ({id, icon, name}) => 
-                <li key={id} className="flex justify-start items-center gap-2 text-sm font-medium">
+                <li key={id}
+                style={{fontSize:heading_font_size.subcontent[screen]}}
+                className="flex justify-start items-center gap-2 font-medium">
                     <span className="h-0.5 w-10 bg-sky-700 border border-dotted"></span>
                     <span>{icon}</span>
                     <span>{name}</span>

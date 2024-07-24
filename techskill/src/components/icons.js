@@ -83,6 +83,6 @@ export const FacebookIcon = <img className={icon_style} src={facebook} alt="Face
 export const LinkedinIcon = <img className={icon_style} src={linkedin} alt="Linkedin icon" />;
 export const GmailIcon = <img className={icon_style} src={gmail} alt="Gmail icon" />;
 
-export const DotIcon = <img className={icon_style} src={dot} alt="Dot icon" />;
+export const DotIcon = <img className={'w-6 h-6'} src={dot} alt="Dot icon" />;
 export const ScrollIcon = <img className={''} src={scroll} alt="Scroll icon" />;
 export const SlideshowIcon = <img className={''} src={slideshow} alt="SlideShow icon" />;

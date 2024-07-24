@@ -1,6 +1,52 @@
-const Subhead = ({text}) => {
-    const styles = "w-full text-center font-light text-xl text-sky-700 underline underline-offset-2";
-    return <span className={styles}>{text}</span>;
+import { useEffect, useRef, useState } from "react";
+import { colors, heading_font_size, sub_heading_fontstyle } from "../Base";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCogs} from '@fortawesome/free-solid-svg-icons';
+
+const Subhead = ({ text }) => {
+  const divRef = useRef(null);
+  const [divWidth, setDivWidth] = useState(0);
+
+  useEffect(() => {
+      const handle_resize = () => {
+          if(divRef.current) {
+                setDivWidth(divRef.current.clientWidth);
+          }
+      };
+      window.addEventListener('resize', handle_resize);
+      handle_resize();
+      return () => {
+          window.removeEventListener('resize', handle_resize);
+      }
+  }, [divRef]);
+  return (
+    <div className="w-full flex flex-col justify-center items-center -space-y-2">
+        <Head divRef={divRef} text={text} />
+        <div className="flex justify-center items-center space-x-2">
+            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#000080]`}></span>
+            <span sclassName={`bg-red-500`}><FontAwesomeIcon icon={faCogs} /></span>
+            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#000080]`}></span>
+        </div>
+    </div>
+  );
 };
+
+const Head = ({text, divRef}) => {
+    const screen = localStorage.getItem("screen") || "laptop";
+    const styles = "text-center font-semibold text-orange-700";
+    return (
+        <span
+            ref = {divRef}
+            style={{ 
+                fontSize: heading_font_size.sub[screen], 
+                fontFamily: sub_heading_fontstyle,
+                color: colors.sub 
+            }}
+            className={styles}
+            >
+            {text}
+        </span>
+    )
+}
 
 export default Subhead;

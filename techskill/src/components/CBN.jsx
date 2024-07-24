@@ -6,9 +6,9 @@ const CBN = () => {
         <div className="flex justify-center items-center space-x-4">
             <CBNImage />
             <div className="flex flex-col justify-start items-start">
-                <Heading type="h3" text="Shri Nara Chandrababu Naidu" />
-                <Heading type="h4" text="Hon'ble Chief Minister" />
-                <Heading type="h4" text="Government of Andhra Pradesh" />
+                <Heading type="sub" text="Shri Nara Chandrababu Naidu" />
+                <Heading type="content" text="Hon'ble Chief Minister" />
+                <Heading type="content" text="Government of Andhra Pradesh" />
             </div>
         </div>
     );
