@@ -6,11 +6,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import Subhead from "../components/Subhead";
 import { colors } from "../Base";
+import { main_headings } from "../components/data";
 
 const Breakdown = () => {
   return (
     <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-0 py-2 px-4 flex flex-col justify-start items-end">
-        <BaseHeader text="Comprehensive & robust personality development program" />
+        <BaseHeader text={main_headings.slide9.text} />
         <div className="w-full p-2 flex flex-col justify-center items-center gap-1">
           <Subhead text="Skill Check Score Breakdown & Calculation" />
             <div className="w-full flex justify-between items-center gap-6">

@@ -11,6 +11,8 @@ import Reporting from "./sections/Reporting";
 import SkillCheck from "./sections/SkillCheck";
 import Technologies from "./sections/Technologies";
 import { ScrollIcon, SlideshowIcon } from "./components/icons";
+import Why from "./sections/Why";
+import Certifications from "./sections/Certifications";
 
 function App() {
   const [screen, setScreen] = useState('');
@@ -42,9 +44,11 @@ function App() {
 
   const slides = [
   <Home />, 
+  <Why keys={[0,1,2,3]} />,
+  <Why keys={[4,5,6,7]} />,
   <Regions />, 
   <Technologies keys={['cloud technologies', 'ai/ml', 'programming languages']} />,
-  <Technologies keys={['devops', 'advanced']} />,
+  <Certifications />,
   <Personality />,
   <SkillCheck />,
   <Placements />,

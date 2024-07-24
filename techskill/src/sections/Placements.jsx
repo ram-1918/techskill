@@ -1,5 +1,6 @@
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
+import { main_headings } from "../components/data";
 import { AccentureIcon, CognizantIcon, HCLIcon, IBMIcon, InfosysIcon, TCSIcon, WiproIcon, ZohoIcon } from "../components/icons";
 
 const pd_items = [
@@ -53,7 +54,7 @@ const pd_items = [
 const Placements = () => {
   return (
     <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
-        <BaseHeader text="Comprehensive & robust personality development program" />
+        <BaseHeader text={main_headings.slide7.text}/>
         <BaseContentDiv text="Program Execution Partners">
             <PlacementItems />
             <span className="w-full text-center font-light">... and many others</span>

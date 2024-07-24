@@ -1,6 +1,7 @@
 import BaseHeader from "../components/BaseHeader";
 import { SrinivasImage } from "../components/BaseImages";
 import BaseSlide from "../components/BaseSlide";
+import { main_headings } from "../components/data";
 import {
     FacebookIcon,
     GmailIcon,
@@ -12,7 +13,7 @@ import Subhead from "../components/Subhead";
 function About() {
   return (
     <BaseSlide>
-        <BaseHeader text="Comprehensive & robust personality development program" />
+        <BaseHeader text={main_headings.slide10.text} />
         <Subhead text="About me & company" />
         <ContentDiv />
         <SocialMedia />

@@ -2,6 +2,7 @@ import { colors, heading_font_size } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
+import { main_headings } from "../components/data";
 import Subhead from "../components/Subhead";
 
 const content = {
@@ -36,7 +37,7 @@ const SkillCheck = () => {
   return (
     // <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
     <BaseSlide>
-        <BaseHeader text="Comprehensive & robust personality development program" />
+        <BaseHeader text={main_headings.slide6.text} />
         <BaseContentDiv text="">
             {/* <span style={{fontSize:heading_font_size.sub[screen], color:colors.sub}} className="font-light text-xl">Skill Check Attribute Criteria</span> */}
             <Subhead text="Skill Check Attribute Criteria" />

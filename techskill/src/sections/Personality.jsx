@@ -2,6 +2,7 @@ import { heading_font_size } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
+import { main_headings } from "../components/data";
 import { CommunicationIcon, InterviewIcon, SoftIcon } from "../components/icons";
 
 const pd_items = [
@@ -29,7 +30,7 @@ const Personality = () => {
   return (
     // <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
     <BaseSlide>
-        <BaseHeader text="Comprehensive & robust personality development program" />
+        <BaseHeader text={main_headings.slide5.text} />
         <BaseContentDiv text="Personality Development Program Curricullam">
             <PDItems />
         </BaseContentDiv>

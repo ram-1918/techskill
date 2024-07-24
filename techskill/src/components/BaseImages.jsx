@@ -51,7 +51,7 @@ export const APSSDC = () => {
     <BaseBGImage
       image="bg-apssdc"
       size={
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-32 h-32"
+        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-24 h-24"
       }
     />
   );
