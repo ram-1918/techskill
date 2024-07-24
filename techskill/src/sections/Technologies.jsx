@@ -242,7 +242,7 @@ const SubListDisplay = ({divRef, sublist}) => {
                 style={{fontSize:heading_font_size.subcontent[screen]}}
                 className="flex justify-start items-center gap-2 font-medium">
                     <span className="h-0.5 w-10 bg-sky-700 border border-dotted"></span>
-                    <span>{icon}</span>
+                    <span className="w-8 h-8">{icon}</span>
                     <span>{name}</span>
                 </li>
             )}

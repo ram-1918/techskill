@@ -2,20 +2,50 @@ import BaseHeader from "../components/BaseHeader";
 import { APImage } from "../components/BaseImages";
 import BaseSlide from "../components/BaseSlide";
 import { main_headings } from "../components/data";
-import { AwsIcon } from "../components/icons";
+import { AwsIcon, azureIcon, gcpIcon, HerokuIcon, OracleIcon, PowerBiIcon, SalesforceIcon, ServicenowIcon, TableauIcon, TerraformIcon } from "../components/icons";
+import Subhead from "../components/Subhead";
 
 const certification_list = [
     {
         id: 1,
-        name: "Amazon Web Services",
         icon: AwsIcon,
-        certs: [
-            'AWS Cloud Practitioner',
-            'AWS Solutions Architect Assosiate',
-            'AWS Developer',
-            'and others'
-        ]
-    }
+    },
+    {
+        id: 2,
+        icon: azureIcon,
+    },
+    {
+        id: 3,
+        icon: gcpIcon,
+    },
+    {
+        id: 4,
+        icon: OracleIcon,
+    },
+    {
+        id: 5,
+        icon: ServicenowIcon,
+    },
+    {
+        id: 6,
+        icon: SalesforceIcon,
+    },
+    {
+        id: 7,
+        icon: TableauIcon,
+    },
+    {
+        id: 8,
+        icon: PowerBiIcon,
+    },
+    {
+        id: 9,
+        icon: TerraformIcon,
+    },
+    {
+        id: 10,
+        icon: HerokuIcon,
+    },
 ]
 
 
@@ -23,21 +53,18 @@ const Certifications = () => {
     return (
         <BaseSlide>
             <BaseHeader text={main_headings.slide4.text} />
-            <div className="w-full flex justify-around items-center gap-2">
-                {certification_list.map(item => <Item key={item.id} items={item.certs} icon={item.icon} name={item.name} />)}
+            <Subhead text="Offers training for the following certifications" />
+            <div className="w-full flex justify-center items-center flex-wrap gap-4">
+                {certification_list.map(item => <Item key={item.id} icon={item.icon} />)}
             </div>
         </BaseSlide>
     )
 };
 
-const Item = ({icon="", items, name}) => {
+const Item = ({icon}) => {
     return (
-        <div className="w-96 h-36 flex justify-start items-start bg-white shadow rounded p-2">
-            <div className="w-[25%] h-full bg-red-100 text-[2rem]">{icon}</div>
-            <div className="w-[75%] h-full flex flex-col justify-start items-start bg-blue-100">
-                <span className="font-semibold text-lg">{name}</span>
-                {items.map((item, idx) => <li key={idx} className="text-sm">{item}</li>)}
-            </div>
+        <div className="w-28 h-28 border border-gray-200 bg-gray-50 shadow-lg rounded-full flex justify-center items-center">
+            <span className="w-20 h-20">{icon}</span>
         </div>
     )
 }

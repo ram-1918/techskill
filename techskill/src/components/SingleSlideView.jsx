@@ -6,7 +6,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const SingleSlideView = ({slides}) => {
     const [slideNum, setSlideNum] = useState(0);
     return (
-    <div className="mobile:h-[40rem] bg-red-300 mobile:flex flex-col justify-center items-center px-2 space-y-4">
+    <div className="mobile:h-[40rem] mobile:flex flex-col justify-center items-center px-2 space-y-4">
         {slides[slideNum]}
         <Navigation slides={slides} slideNum={slideNum} setSlideNum={setSlideNum} />
       </div>

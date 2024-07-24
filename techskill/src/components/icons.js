@@ -16,6 +16,10 @@ import go from "../assets/icons/Go.png";
 import soft from "../assets/icons/soft.png";
 import interviewprep from "../assets/icons/interviewprep.png";
 import communication from "../assets/icons/communication.png";
+import heroku from "../assets/icons/heroku.png";
+import terraform from "../assets/icons/terraform.png";
+import servicenow from "../assets/icons/servicenow.png";
+import salesforce from "../assets/icons/salesforce.png";
 
 import register from "../assets/icons/customer.png";
 import certified from "../assets/icons/certified.png";
@@ -42,26 +46,32 @@ import slideshow from "../assets/icons/slideshow.png";
 import scroll from "../assets/icons/scroll.png";
 
 
-
 const icon_style = "w-8 h-8";
 export const PythonIcon = <img className={icon_style} src={python} alt="python icon" />;
-export const AwsIcon = <img className={icon_style} src={aws} alt="AWS icon" />;
-export const RstudioIcon = <img className={icon_style} src={r} alt="R icon" />;
-export const gcpIcon = <img className={icon_style} src={gcp} alt="GCP icon" />;
-export const azureIcon = <img className={icon_style} src={azure} alt="Azure icon" />;
-export const cppIcon = <img className={icon_style} src={cpp} alt="CPP icon" />;
-export const ai_mlIcon = <img className={icon_style} src={ai_ml} alt="AI/ML icon" />;
-export const OracleIcon = <img className={icon_style} src={oci} alt="Oracle icon" />;
-export const SparkIcon = <img className={icon_style} src={spark} alt="Spark icon" />;
-export const PowerBiIcon = <img className={icon_style} src={powerbi} alt="Powerbi icon" />;
-export const TableauIcon = <img className={icon_style} src={tableau} alt="Tableau icon" />;
-export const MatlabIcon = <img className={icon_style} src={matlab} alt="Maitalb icon" />;
-export const JavaIcon = <img className={icon_style} src={java} alt="Java icon" />;
-export const JavascriptIcon = <img className={icon_style} src={javascript} alt="Javascript icon" />;
-export const GoIcon = <img className={icon_style} src={go} alt="Go icon" />;
+
+export const AwsIcon = <img className={''} src={aws} alt="AWS icon" />;
+export const gcpIcon = <img className={''} src={gcp} alt="GCP icon" />;
+export const azureIcon = <img className={''} src={azure} alt="Azure icon" />;
+export const OracleIcon = <img className={''} src={oci} alt="Oracle icon" />;
+export const PowerBiIcon = <img className={''} src={powerbi} alt="Powerbi icon" />;
+export const TableauIcon = <img className={''} src={tableau} alt="Tableau icon" />;
+export const HerokuIcon = <img className={''} src={heroku} alt="Heroku icon" />;
+export const TerraformIcon = <img className={''} src={terraform} alt="Terraform icon" />;
+export const ServicenowIcon = <img className={''} src={servicenow} alt="Servicenow icon" />;
+export const SalesforceIcon = <img className={''} src={salesforce} alt="Salesforce icon" />;
+
+export const RstudioIcon = <img className={''} src={r} alt="R icon" />;
+export const cppIcon = <img className={''} src={cpp} alt="CPP icon" />;
+export const ai_mlIcon = <img className={''} src={ai_ml} alt="AI/ML icon" />;
+export const SparkIcon = <img className={''} src={spark} alt="Spark icon" />;
+export const MatlabIcon = <img className={''} src={matlab} alt="Maitalb icon" />;
+export const JavaIcon = <img className={''} src={java} alt="Java icon" />;
+export const JavascriptIcon = <img className={''} src={javascript} alt="Javascript icon" />;
+export const GoIcon = <img className={''} src={go} alt="Go icon" />;
 export const SoftIcon = <img className={''} src={soft} alt="Soft icon" />;
 export const CommunicationIcon = <img className={''} src={interviewprep} alt="Interview prep icon" />;
 export const InterviewIcon = <img className={''} src={communication} alt="Communication icon" />;
+
 
 export const RegistedIcon = <img className={''} src={register} alt="Registed icon" />;
 export const CertifiedIcon = <img className={''} src={certified} alt="Certified icon" />;

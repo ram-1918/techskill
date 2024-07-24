@@ -54,11 +54,11 @@ function App() {
   <Placements />,
   <Reporting />,
   <Breakdown />,
-  <About />
+  // <About />
 ];
   return (
     <>
-      {JSON.stringify(localStorage.getItem('screen'))}
+      {/* {JSON.stringify(localStorage.getItem('screen'))} */}
       <div className="hidden mobile:block tablet:block">
         <SmallScreenView slides={slides} />
       </div>
@@ -80,8 +80,9 @@ const BigScreenView = ({slides}) => {
   const active = 'bg-sky-100';
   const buttonstyles = 'px-2 py-1 rounded-lg cursor-pointer'
   return (
-    <div className="mobile:px-0 px-[15%] py-0 space-y-5">
+    <div className="mobile:px-0 px-[15%] space-y-5 py-10">
       <div className="w-full flex justify-end items-center gap-2">
+        View: 
         <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{ScrollIcon}</span>
         <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
       </div>
