@@ -52,49 +52,40 @@ const ProgressBarDiv = () => {
     }
   }, [progressRef]);
   const scores = [83, 78, 82, 60, 92];
-  const total_score = scores.reduce((s, sc) => sc + s);
+  const weightages = [50, 10, 20, 10, 10];
   const max_score = scores.length * 100;
-  const relative_percents = scores.map(sc => sc);
+  // const relative_percents = scores.map((sc, idx) => sc);
+  const relative_percents = scores.map((sc, idx) => (sc * weightages[idx]) / 100);
+  const total_score = scores.reduce((s, sc) => sc + s);
   const text_styles = "text-[0.9rem] font-light";
   const line_styles = "h-full border border-slate-700 border-spacing-0.5 border-dotted"
   return (
     <div>
-                <div style={{width:total_score}} className="relative flex justify-start items-start">
-                  {/* <div style={{width:total_score}} className="absolute bg-red-500 h-1"></div> */}
-                  <div style={{width:relative_percents[0]}} className={`${text_styles} text-center`}>GPA</div>
-                  <div style={{width:relative_percents[4]}} className={''}></div>
-                  <div style={{width:relative_percents[2]}} className={`${text_styles} text-left`}>Assessments</div>
-                  <div style={{width:relative_percents[3]}} className={''}></div>
-                  <div style={{width:relative_percents[1]}} className={`${text_styles} text-center`}>Aptitude</div>
+                <div style={{width:total_score}} className="relative pl-10 flex justify-between items-center gap-10">
+                  <div style={{width:`${relative_percents[0]}%`}} className={`${text_styles} text-right`}>Academics</div>
+                  <div style={{width:`${relative_percents[2]}%`}} className={`${text_styles} text-left`}>Assessments</div>
+                  <div style={{width:`${relative_percents[1]}%`}} className={`${text_styles} text-center`}>Aptitude</div>
                 </div>
-                <div style={{width:total_score}} className="relative h-10 flex justify-around items-start">
+                <div style={{width:total_score}} className="relative h-10 pl-40 flex justify-between items-start gap-10">
                   <div className={line_styles}></div>
-                  <div className="w-2 h-full "></div>
                   <div className={line_styles}></div>
-                  <div className="w-2 h-full "></div>
                   <div className={line_styles}></div>
                 </div>
                 <ProgressBar progressRef={progressRef} max_score={max_score} relative_percents={relative_percents} total_score={total_score} />
-                <div style={{width:total_score}} className="relative h-10  flex justify-around items-start">
-                  <div className="w-2 h-full "></div>
+                <div style={{width:total_score}} className="relative h-10 pl-48 gap-x-8 flex justify-around items-start">
                   <div className={line_styles}></div>
-                  <div className="w-2 h-full "></div>
                   <div className={line_styles}></div>
-                  <div className="w-2 h-full "></div>
                 </div>
-                <div style={{width:total_score}} className="relative flex justify-start items-start space-x-0">
-                  <div style={{width:relative_percents[0]}} className={''}></div>
+                <div style={{width:total_score}} className="relative pl-48 gap-x-28 flex justify-start items-start space-x-0">
                   <div style={{width:relative_percents[4]}} className={`${text_styles} text-center`}>Personality Assessments</div>
-                  <div style={{width:relative_percents[2]}} className={'text_styles'}></div>
                   <div style={{width:relative_percents[3]}} className={`${text_styles} text-left`}>Certifications</div>
-                  <div style={{width:relative_percents[1]}} className={'text_styles'}></div>
-                  {/* <div style={{width:total_score}} className="absolute bottom-0 bg-red-500 h-1"></div> */}
                 </div>
     </div>
   )
 }
 
 const ProgressBar = ({progressRef, max_score, relative_percents, total_score}) => {
+  const skillcheck_score = rounded_num(relative_percents.reduce((sc, prev) => sc + prev))/10;
   return (
     <div ref={progressRef} style={{borderColor:colors.sub, width:max_score}} className="h-8 border-2 bg-gray-100 rounded flex justify-start items-center overflow-hidden">
       <BachelorsBar  score={relative_percents[0]} total_score={total_score} bg_color="#526D82" />
@@ -102,7 +93,7 @@ const ProgressBar = ({progressRef, max_score, relative_percents, total_score}) =
       <AssessmentsBar  score={relative_percents[2]} total_score={total_score}  bg_color="#CDE8E5" />
       <CertificationsBar  score={relative_percents[3]} total_score={total_score} bg_color="#93BFCF" />
       <ApptitudeBar  score={relative_percents[1]} total_score={total_score} bg_color="#BDCDD6" />
-      <span className="px-4 font-semibold text-green-500">79%</span>
+      <span className="px-4 font-semibold text-green-500">~{skillcheck_score}</span>
     </div>
   )
 }
@@ -114,28 +105,28 @@ const rounded_num = (val) => {
 
 const BachelorsBar = ({score=10, bg_color, total_score}) => {
   return (
-      <div style={{backgroundColor: bg_color, width:score}} className={bar_styles}>{rounded_num((score/total_score)*100)} %</div>
+      <div style={{backgroundColor: bg_color, width:`${score}%`}} className={bar_styles}></div>
   )
 };
 
 const CertificationsBar = ({score=10, bg_color, total_score}) => {
   return (
-      <div style={{backgroundColor: bg_color, width:score}} className={bar_styles}>{rounded_num((score/total_score)*100)} %</div>
+      <div style={{backgroundColor: bg_color, width:`${score}%`}} className={bar_styles}></div>
   )
 }
 const AssessmentsBar = ({score=10, bg_color, total_score}) => {
   return (
-      <div style={{backgroundColor: bg_color, width:score}} className={bar_styles}>{rounded_num((score/total_score)*100)} % </div>
+      <div style={{backgroundColor: bg_color, width:`${score}%`}} className={bar_styles}> </div>
   )
 }
 const PersonalityBar = ({score=10, bg_color, total_score}) => {
   return (
-      <div style={{backgroundColor: bg_color, width:score}} className={bar_styles}>{rounded_num((score/total_score)*100)} % </div>
+      <div style={{backgroundColor: bg_color, width:`${score}%`}} className={bar_styles}></div>
   )
 }
 const ApptitudeBar = ({score=10, bg_color, total_score}) => {
   return (
-      <div style={{backgroundColor: bg_color, width:score}} className={`${bar_styles} border-r-4 border-r-green-500`}>{rounded_num((score/total_score)*100)} % </div>
+      <div style={{backgroundColor: bg_color, width:`${score}%`}} className={`${bar_styles} border-r-4 border-r-green-500`}> </div>
   )
 }
 

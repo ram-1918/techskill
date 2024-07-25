@@ -38,6 +38,7 @@ const Reporting = () => {
         <BaseContentDiv text="Progress Reporting Attributes">
             <PDItems />
         </BaseContentDiv>
+        <span className="absolute bottom-0 text-[0.8rem]">* Above numerical figures are just for illustration purposes.</span>
     </BaseSlide>
   );
 }
