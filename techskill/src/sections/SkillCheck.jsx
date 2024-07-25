@@ -35,11 +35,9 @@ const content = {
 const SkillCheck = () => {
     const screen = localStorage.getItem('screen') || 'laptop';
   return (
-    // <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
     <BaseSlide>
         <BaseHeader text={main_headings.slide6.text} />
         <BaseContentDiv text="">
-            {/* <span style={{fontSize:heading_font_size.sub[screen], color:colors.sub}} className="font-light text-xl">Skill Check Attribute Criteria</span> */}
             <Subhead text="Skill Check Attribute Criteria" />
             <SkillCheckList type='attributes'  />
             <Subhead text="Who Benefits From Skill Check Score?" />

@@ -7,31 +7,32 @@ import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import Subhead from "../components/Subhead";
 import { colors } from "../Base";
 import { main_headings } from "../components/data";
+import BaseSlide from "../components/BaseSlide";
+import BaseContentDiv from "../components/BaseContentDiv";
 
 const Breakdown = () => {
   return (
-    <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-0 py-2 px-4 flex flex-col justify-start items-end">
+      <BaseSlide>
         <BaseHeader text={main_headings.slide9.text} />
-        <div className="w-full p-2 flex flex-col justify-center items-center gap-1">
-          <Subhead text="Skill Check Score Breakdown & Calculation" />
-            <div className="w-full flex justify-between items-center gap-6">
-              <div className="w-[55%] h-full">
-                  <BreakdownDiv />
-              </div>
-              <div className="w-[55%] h-96 flex flex-col justify-start items-start gap-2">
-                <div className="text-sm font-light p-2">
-                  <span className="font-semibold">A typical student's "skill check" score calculation</span>
-                  <li>Bachelor's degree: 83%</li>
-                  <li>Aptitude Test: 78%</li>
-                  <li>Assessments Average: 82.5%</li>
-                  <li>Certifications: 60%</li>
-                  <li>Personality Developement: 92%</li>
+        <BaseContentDiv text="Skill Check Score Breakdown & Calculation">
+              <div className="w-full flex justify-between items-center gap-6">
+                <div className="w-[55%] h-full">
+                    <BreakdownDiv />
                 </div>
-                <ProgressBarDiv />
+                <div className="w-[55%] h-96 flex flex-col justify-start items-start gap-2">
+                  <div className="text-sm font-light p-2">
+                    <span className="font-semibold">A typical student's "skill check" score calculation</span>
+                    <li>Bachelor's degree: 83%</li>
+                    <li>Aptitude Test: 78%</li>
+                    <li>Assessments Average: 82.5%</li>
+                    <li>Certifications: 60%</li>
+                    <li>Personality Developement: 92%</li>
+                  </div>
+                  <ProgressBarDiv />
+                </div>
               </div>
-            </div>
-        </div>
-    </section>
+        </BaseContentDiv>
+      </BaseSlide>
   );
 }
 
@@ -140,8 +141,8 @@ const ApptitudeBar = ({score=10, bg_color, total_score}) => {
 
 const BreakdownDiv = () => {
   return (
-      <div className="relative w-[26rem] h-[26rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
-        <div className="absolute top-[33%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2">
+      <div className="relative w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
+        <div className="absolute top-[37%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2">
           <span className="text-md font-bold">Scores Weightage</span>
           <ul>
             <li>Bachelor's degree: 50%</li>

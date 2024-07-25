@@ -31,6 +31,14 @@ import tcs from "../assets/icons/companies/tcs.png";
 import ibm from "../assets/icons/companies/ibm.png";
 import zoho from "../assets/icons/companies/zoho.png";
 
+import google from "../assets/icons/companies/google.png";
+import microsoft from "../assets/icons/companies/microsoft.png";
+import amazon from "../assets/icons/companies/amazon.png";
+import meta from "../assets/icons/companies/meta.png";
+
+import dell from "../assets/icons/companies/dell.png";
+import deloitte from "../assets/icons/companies/deloitte.png";
+
 import accenture from "../assets/icons/companies/accenture.png";
 import cognizant from "../assets/icons/companies/cognizant.jpeg";
 import hcl from "../assets/icons/companies/hcl.png";
@@ -82,6 +90,14 @@ export const InfosysIcon = <img className={''} src={infosys} alt="Communication 
 export const TCSIcon = <img className={''} src={tcs} alt="TCS icon" />;
 export const ZohoIcon = <img className={''} src={zoho} alt="Zoho icon" />;
 export const IBMIcon = <img className={''} src={ibm} alt="IBM icon" />;
+
+export const GoogleIcon = <img className={''} src={google} alt="Google icon" />;
+export const MetaIcon = <img className={''} src={meta} alt="Meta icon" />;
+export const AmazonIcon = <img className={''} src={amazon} alt="Amazon icon" />;
+export const MicrosoftIcon = <img className={''} src={microsoft} alt="Microsoft icon" />;
+
+export const DellIcon = <img className={''} src={dell} alt="Dell icon" />;
+export const DeloitteIcon = <img className={''} src={deloitte} alt="Deloitte icon" />;
 
 export const WiproIcon = <img className={''} src={wipro} alt="Wipro icon" />;
 export const HCLIcon = <img className={''} src={hcl} alt="HCL icon" />;

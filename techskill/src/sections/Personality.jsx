@@ -40,7 +40,7 @@ const Personality = () => {
 
 const PDItems = () => {
     return (
-        <ul className="w-full flex justify-end items-center gap-4 px-2">
+        <ul className="w-full flex justify-center items-center gap-4 px-2">
             { pd_items.map(item => <ListItem key={item.id} item={item} />) }
         </ul>
     )
@@ -49,11 +49,11 @@ const PDItems = () => {
 const ListItem = ({item:{icon, name, content}}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
-        <li className="w-72 h-64 flex flex-col justify-start items-start gap-3">
+        <li className="w-72 h-64 flex flex-col justify-center items-center gap-3">
             <span className="w-24 h-24">{icon}</span>
-            <div className="flex flex-col justify-start items-start">
+            <div className="flex flex-col justify-center items-center gap-1.5">
                 <span style={{fontSize:heading_font_size.sub[screen]}} className="text-xl font-semibold">{name}</span>
-                <span style={{fontSize:heading_font_size.subcontent[screen]}} className="text-sm font-light whitespace-pre-wrap">{content}</span>
+                <span style={{fontSize:heading_font_size.subcontent[screen]}} className="text-center text-sm font-light whitespace-pre-wrap">{content}</span>
             </div>
         </li>
     );

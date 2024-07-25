@@ -1,3 +1,5 @@
+
+import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import { APImage } from "../components/BaseImages";
 import BaseSlide from "../components/BaseSlide";
@@ -10,19 +12,19 @@ const Home = () => {
     return (
         <BaseSlide>
             <BaseHeader text={main_headings.slide1.text} />
-            <div className="w-full flex justify-around items-center gap-2">
-                <div className="w-[40%] flex justify-center items-center">
+            <BaseContentDiv>
+                <div className="w-full flex justify-center items-center ">
                     <APImage />
+                    <Body />
                 </div>
-                <Body />
-            </div>
+            </BaseContentDiv>
         </BaseSlide>
     )
 };
 
 const Body = () => {
     return (
-        <div className="h-full w-[60%] flex flex-col justify-start items-start gap-2">
+        <div className="h-full w-[55%] flex flex-col justify-start items-center gap-2 pt-10">
             <CBN />
             <Lokesh />
         </div>

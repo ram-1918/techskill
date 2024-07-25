@@ -44,7 +44,7 @@ function App() {
 
   const slides = [
   <Home />, 
-  <Why keys={[0,1,2,3]} />,
+  <Why keys={[0,1,2]} />,
   <Why keys={[4,5,6,7]} />,
   <Regions />, 
   <Technologies keys={['cloud technologies', 'ai/ml', 'programming languages']} />,
@@ -77,17 +77,23 @@ const SmallScreenView = ({slides}) => {
 
 const BigScreenView = ({slides}) => {
   const [isView, setIsView] = useState('scroll');
+  return (
+    <div className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-gray-50">
+      <ViewOptions isView={isView} setIsView={setIsView} />
+      {isView === "single" && <SingleSlideView slides={slides} />}
+      {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
+    </div>
+  )
+}
+
+const ViewOptions = ({setIsView, isView}) => {
   const active = 'bg-sky-100';
   const buttonstyles = 'px-2 py-1 rounded-lg cursor-pointer'
   return (
-    <div className="mobile:px-0 px-[15%] space-y-5 py-10">
-      <div className="w-full flex justify-end items-center gap-2">
-        View: 
-        <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{ScrollIcon}</span>
-        <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
-      </div>
-      {isView === "single" && <SingleSlideView slides={slides} />}
-      {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
+    <div className="w-[74rem] flex justify-end items-center gap-2">
+      View: 
+      <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{ScrollIcon}</span>
+      <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
     </div>
   )
 }

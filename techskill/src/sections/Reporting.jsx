@@ -1,5 +1,6 @@
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
+import BaseSlide from "../components/BaseSlide";
 import { main_headings } from "../components/data";
 import { CertifiedIcon, LocationsIcon, PlacedIcon, RegistedIcon } from "../components/icons";
 
@@ -32,12 +33,12 @@ const reporting_items = [
 
 const Reporting = () => {
   return (
-    <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
+    <BaseSlide>
         <BaseHeader text={main_headings.slide8.text} />
         <BaseContentDiv text="Progress Reporting Attributes">
             <PDItems />
         </BaseContentDiv>
-    </section>
+    </BaseSlide>
   );
 }
 

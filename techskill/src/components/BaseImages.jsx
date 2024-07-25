@@ -1,7 +1,9 @@
 import BaseBGImage from "./BaseBGImage";
 
 export const APImage = ({}) => (
-<div className={`mobile:hidden bg-bg9 w-[33rem] h-[33rem] bg-contain px-2 bg-no-repeat`}></div>
+    <div className="w-[45%] flex justify-center items-center">
+      <div className={`mobile:hidden bg-bg9 w-[33rem] h-[25rem] bg-contain px-2 bg-no-repeat`}></div>
+    </div>
 );
 
 
@@ -51,7 +53,7 @@ export const APSSDC = () => {
     <BaseBGImage
       image="bg-apssdc"
       size={
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-24 h-24"
+        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-28 h-28"
       }
     />
   );
