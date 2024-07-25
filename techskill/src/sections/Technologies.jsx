@@ -3,7 +3,7 @@ import { AwsIcon, azureIcon, cppIcon, gcpIcon, GoIcon, JavaIcon, JavascriptIcon,
 import BaseHeader from "../components/BaseHeader";
 import BaseContentDiv from "../components/BaseContentDiv";
 import { main_headings } from "../components/data";
-import { heading_font_size } from "../Base";
+import { colors, heading_font_size } from "../Base";
 import BaseSlide from "../components/BaseSlide";
 
 const technology_list = {
@@ -222,9 +222,9 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <span style={{fontSize: heading_font_size.content[screen]}} className="font-semibold uppercase leading-6 tracking-wide">{name}</span>
+            <span style={{fontSize: heading_font_size.content[screen], color:colors.content}} className="font-semibold uppercase leading-6 tracking-wide">{name}</span>
             <div className="h-full flex justify-start items-center">
-                <span style={{height: divHeight}} className="h-full w-0.5 bg-sky-700 border border-dotted"></span>
+                <span style={{height: divHeight, borderColor:colors.subcontent}} className="h-full w-0.5 bg-sky-700 border border-dotted"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
             </div>
         </div>
@@ -239,9 +239,9 @@ const SubListDisplay = ({divRef, sublist}) => {
             sublist.map(
                 ({id, icon, name}) => 
                 <li key={id}
-                style={{fontSize:heading_font_size.subcontent[screen]}}
+                style={{fontSize:heading_font_size.subcontent[screen], color:colors.subcontent}}
                 className="flex justify-start items-center gap-2 font-medium">
-                    <span className="h-0.5 w-10 bg-sky-700 border border-dotted"></span>
+                    <span style={{borderColor:colors.subcontent}} className="h-0.5 w-10 border border-dotted"></span>
                     <span className="w-8 h-8">{icon}</span>
                     <span>{name}</span>
                 </li>

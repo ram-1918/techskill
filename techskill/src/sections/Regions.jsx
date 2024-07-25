@@ -5,35 +5,36 @@ import BaseSlide from "../components/BaseSlide";
 import { main_headings } from "../components/data";
 
 const regions_list = [
-    'paderu',
-    'pitapuram',
-    'nuziveedu',
-    'amalapuram',
-    'machilipatnam',
-    'bapatla',
-    'tenali',
-    'piduguralla',
-    'markapuram',
-    'kavali',
-    'rajampeta',
-    'guduru',
-    'alla gadda',
-    'pulivendhala',
-    'chittor',
-    'naidupeta',
-    'rajampeta',
-    'guduru',
-    'alla gadda',
-    'pulivendhala',
-    'chittor',
-    'naidupeta'
-];
+    "Addanki",
+    "Akividu",
+    "Addateegala",
+    "Araku Valley",
+    "Badvel",
+    "Ballikurava",
+    "Bhogapuram",
+    "Bobbili",
+    "Denkada",
+    "Duggirala",
+    "Gajuwaka",
+    "Gudlavalleru",
+    "Guntur West",
+    "Kakinada (Rural)",
+    "Kuppam",
+    "Mangalagiri",
+    "Pakala",
+    "Pithapuram",
+    "Pulivendla",
+    "Rajanagaram",
+    "Rajam",
+    "Vijayawada Central",
+    "tadepalligudem"
+  ];
 
 const Regions = () => {
     return (
         <BaseSlide>
             <BaseHeader text={main_headings.slide2.text} />
-            <BaseContentDiv text="">
+            <BaseContentDiv text="List of Mandals">
                 <div className="w-full flex flex-col justify-center items-center">
                     <RegionsListDisplay />
                 </div>
@@ -44,7 +45,7 @@ const Regions = () => {
 
 const RegionsListDisplay = () => {
     return (
-        <ul className="w-[40rem] flex flex-wrap justify-center items-center gap-3 p-2">
+        <ul className="w-[40rem] flex flex-wrap justify-start items-start gap-3 p-2">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>
     )

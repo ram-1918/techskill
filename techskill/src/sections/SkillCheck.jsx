@@ -59,7 +59,7 @@ const ListItem = ({item:{content}}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
         <li className="list-disc ">
-            <span style={{fontSize:heading_font_size.content[screen]}} className="whitespace-pre-wrap">{content}</span>
+            <span style={{fontSize:heading_font_size.content[screen], color:colors.subcontent}} className="whitespace-pre-wrap">{content}</span>
         </li>
     );
 };

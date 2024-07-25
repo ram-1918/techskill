@@ -54,7 +54,7 @@ const PDItems = () => {
 const ListItem = ({item:{icon, name, content}}) => {
     return (
         <li className="w-72 h-64 flex flex-col justify-center items-center gap-3">
-            <span className="w-24 h-24">{icon}</span>
+            <span className="w-28 h-28 bg-white p-4 rounded-full">{icon}</span>
             <div className="flex flex-col justify-center items-center">
                 <span className="text-2xl font-semibold">{content}</span>
                 <span className="text-md font-light whitespace-pre-wrap">{name}</span>

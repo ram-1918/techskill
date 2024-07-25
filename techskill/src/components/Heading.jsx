@@ -10,7 +10,7 @@ const Heading = ({ text, type }) => {
         fontWeight: type !== 'main' && "600",
         fontSize: heading_font_size[type][screen]
       }}
-      className="bg-blue-300 eading-7 py-0.5 tracking-tight capitalize font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-700 to-orange-700"
+      className="leading-7 py-1 tracking-tight capitalize font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-200 to-orange-700"
     >
       {text} 
     </span>

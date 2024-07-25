@@ -1,4 +1,4 @@
-import { heading_font_size } from "../Base";
+import { colors, heading_font_size } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
@@ -50,10 +50,10 @@ const ListItem = ({item:{icon, name, content}}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
         <li className="w-72 h-64 flex flex-col justify-center items-center gap-3">
-            <span className="w-24 h-24">{icon}</span>
+            <span className="w-24 h-24 bg-white p-2 rounded">{icon}</span>
             <div className="flex flex-col justify-center items-center gap-1.5">
-                <span style={{fontSize:heading_font_size.sub[screen]}} className="text-xl font-semibold">{name}</span>
-                <span style={{fontSize:heading_font_size.subcontent[screen]}} className="text-center text-sm font-light whitespace-pre-wrap">{content}</span>
+                <span style={{fontSize:heading_font_size.sub[screen], color: colors.content}} className="text-xl font-semibold">{name}</span>
+                <span style={{fontSize:heading_font_size.subcontent[screen], color: colors.subcontent}} className="text-center text-sm font-light whitespace-pre-wrap">{content}</span>
             </div>
         </li>
     );

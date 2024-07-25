@@ -78,7 +78,7 @@ const SmallScreenView = ({slides}) => {
 const BigScreenView = ({slides}) => {
   const [isView, setIsView] = useState('scroll');
   return (
-    <div className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-gray-50">
+    <div className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-gray-50 text-white">
       <ViewOptions isView={isView} setIsView={setIsView} />
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}

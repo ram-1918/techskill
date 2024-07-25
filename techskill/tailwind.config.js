@@ -18,6 +18,7 @@ module.exports = {
         'bg9': "url('assets/images/bg9.png')",
         'bg10': "url('assets/images/bg10.webp')",
         'bg11': "url('assets/images/bg11.png')",
+        'bg12': "url('assets/images/pptbg4.png')",
       },
       clipPath: {
         'rect': 'polygon(0 0, 50% 0, 50% 100%, 0% 100%)',

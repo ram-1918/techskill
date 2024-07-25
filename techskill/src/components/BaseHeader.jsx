@@ -24,7 +24,7 @@ const SmallScreenHeader = ({text}) => {
 
 const BigScreenHeader = ({text}) => {
     return (
-        <div className="hidden laptop:flex tablet:flex desktop:flex w-full justify-between items-center">
+        <div className="hidden laptop:flex tablet:flex desktop:flex w-full justify-between items-center p-1">
             <APSSDC />
             <Heading type="main" text={text} /> 
             <APGOV />

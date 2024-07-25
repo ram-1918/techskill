@@ -58,7 +58,7 @@ const ProgressBarDiv = () => {
   const relative_percents = scores.map((sc, idx) => (sc * weightages[idx]) / 100);
   const total_score = scores.reduce((s, sc) => sc + s);
   const text_styles = "text-[0.9rem] font-light";
-  const line_styles = "h-full border border-slate-700 border-spacing-0.5 border-dotted"
+  const line_styles = "h-full border border-spacing-0.5 border-dotted"
   return (
     <div>
                 <div style={{width:total_score}} className="relative pl-10 flex justify-between items-center gap-10">
@@ -133,7 +133,7 @@ const ApptitudeBar = ({score=10, bg_color, total_score}) => {
 const BreakdownDiv = () => {
   return (
       <div className="relative w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
-        <div className="absolute top-[37%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2">
+        <div className="absolute top-[37%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2 text-black">
           <span className="text-md font-bold">Scores Weightage</span>
           <ul>
             <li>Bachelor's degree: 50%</li>

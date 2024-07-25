@@ -27,11 +27,19 @@ export const heading_font_size = {
 export const content_font = "0.9rem";
 
 export const colors = {
-    main: "black",
-    sub: "#304463",
-    content: "#304463",
-    subcontent: "black"
+    main: "#E7D488",
+    sub: "#CCBF8A",
+    content: "#F2E7BA",
+    subcontent: "#E8DDCF"
 }
+
+export const colors_backup = {
+    main: "white",
+    sub: "white",
+    content: "white",
+    subcontent: "black"
+};
+
 export const main_heading_fontstyle = "anaheim, roboto, lexend, sans"; // lexend, roboto, anaheim
 export const sub_heading_fontstyle = "anaheim, roboto, lexend, sans";
 export const content_fontstyle = "anaheim, roboto, lexend, sans";
