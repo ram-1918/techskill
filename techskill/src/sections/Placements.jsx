@@ -100,8 +100,8 @@ return (
 
 const ListItem = ({item:{icon, name}}) => {
     return (
-        <li className="group relative px-4 flex flex-col justify-center items-center gap-2">
-            <span className="w-20 h-20 rounded-full overflow-hidden bg-center bg-cover">{icon}</span>
+        <li className="group relative px-4 mobile:px-1 flex flex-col justify-center items-center gap-2">
+            <span className="w-20 h-20 mobile:w-8 mobile:h-8 rounded-full overflow-hidden bg-center bg-cover">{icon}</span>
             <Tooltip name={name} />
         </li>
     );

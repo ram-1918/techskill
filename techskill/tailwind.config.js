@@ -43,7 +43,14 @@ module.exports = {
           'clip-path': 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)',
         },
       })
-    }
+    },
+    function({ addUtilities }) {
+      addUtilities({
+        '.list-checkmark': {
+          'list-style-image': 'url("assets/icons/next.png")',
+        },
+      });
+    },
   ]
 }
 

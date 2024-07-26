@@ -55,7 +55,7 @@ import scroll from "../assets/icons/scroll.png";
 
 
 const icon_style = "w-8 h-8";
-export const PythonIcon = <img className={icon_style} src={python} alt="python icon" />;
+export const PythonIcon = <img className={''} src={python} alt="python icon" />;
 
 export const AwsIcon = <img className={''} src={aws} alt="AWS icon" />;
 export const gcpIcon = <img className={''} src={gcp} alt="GCP icon" />;

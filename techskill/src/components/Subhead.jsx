@@ -20,13 +20,9 @@ const Subhead = ({ text }) => {
       }
   }, [divRef]);
   return (
-    <div className="w-full flex flex-col justify-center items-center -space-y-2">
+    <div className="w-full flex flex-col justify-center items-center">
         <Head divRef={divRef} text={text} />
-        <div className="flex justify-center items-center space-x-2">
-            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
-            <span className={``}><FontAwesomeIcon icon={faCogs} /></span>
-            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
-        </div>
+        <UnderlineDesign divWidth={divWidth} />
     </div>
   );
 };
@@ -47,6 +43,17 @@ const Head = ({text, divRef}) => {
             {text}
         </span>
     )
-}
+};
+
+const UnderlineDesign = ({divWidth}) => {
+    const screen = localStorage.getItem('screen') || 'laptop';
+    return (
+        <div style={{fontSize: heading_font_size.content[screen]}} className="flex justify-center items-center space-x-2">
+            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
+            <span className={``}><FontAwesomeIcon icon={faCogs} /></span>
+            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
+        </div>
+    );
+};
 
 export default Subhead;

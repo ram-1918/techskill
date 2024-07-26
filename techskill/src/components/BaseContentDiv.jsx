@@ -4,7 +4,7 @@ import Subhead from "./Subhead";
 
 const BaseContentDiv = ({children, text=''}) => {
     return (
-        <div className="w-full py-8 pl-24 rounded-xl flex flex-col justify-center items-start gap-4">
+        <div className="mobile:w-[22.5rem] w-[60rem] mobile:h-full overflow-hidden mobile:pl-0 flex flex-col justify-start items-center gap-4">
             {text && <Subhead text={text} />}
             {children}
         </div>

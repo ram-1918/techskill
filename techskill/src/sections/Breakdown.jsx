@@ -15,11 +15,11 @@ const Breakdown = () => {
       <BaseSlide>
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="Skill Check Score Breakdown & Calculation">
-              <div className="w-full flex justify-between items-center gap-6">
+              <div className="w-full flex mobile:flex-col mobile:overflow-x-scroll mobile:overflow-y-scroll justify-between items-center gap-6">
                 <div className="w-[55%] h-full">
                     <BreakdownDiv />
                 </div>
-                <div className="w-[55%] h-96 flex flex-col justify-start items-start gap-2">
+                <div className="w-[55%] mobile:w-full h-96 flex flex-col justify-start items-start gap-2">
                   <div className="text-sm font-light p-2">
                     <span className="font-semibold">A typical student's "skill check" score calculation</span>
                     <li>Bachelor's degree: 83%</li>
@@ -132,7 +132,7 @@ const ApptitudeBar = ({score=10, bg_color, total_score}) => {
 
 const BreakdownDiv = () => {
   return (
-      <div className="relative w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
+      <div className="relative mobile:hidden w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
         <div className="absolute top-[37%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2 text-black">
           <span className="text-md font-bold">Scores Weightage</span>
           <ul>

@@ -76,8 +76,8 @@ const Certifications = () => {
 
 const Item = ({icon, name}) => {
     return (
-        <div className="group relative w-28 h-28 border border-gray-200 bg-gray-50 shadow-lg rounded-lg flex justify-center items-center">
-            <span className="w-20 h-20">{icon}</span>
+        <div className="group relative w-28 h-28 mobile:w-12 mobile:h-12 border border-gray-200 bg-gray-50 shadow-lg rounded-lg flex justify-center items-center">
+            <span className="w-20 h-20 mobile:w-10 mobile:h-10">{icon}</span>
             <Tooltip name={name} />
         </div>
     )

@@ -45,7 +45,7 @@ const Regions = () => {
 
 const RegionsListDisplay = () => {
     return (
-        <ul className="w-[40rem] flex flex-wrap justify-start items-start gap-3 p-2">
+        <ul className="w-[90%] mobile:w-full flex flex-wrap justify-start items-center gap-4 p-2">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>
     )
@@ -54,7 +54,7 @@ const RegionsListDisplay = () => {
 const ListItem = ({region, id}) => {
     const list_style = "capitalize font-medium px-2 list-disc list-inside";
     const screen = localStorage.getItem('screen') || 'laptop';
-    return <li style={{width: regions_list.length > 20 ? "30%": "33.33%", color: colors.subcontent, fontSize: heading_font_size.content[screen]}} className={list_style} key={id}>{region}</li>
+    return <li style={{width: regions_list.length > 20 ? (screen === 'mobile' ? "29%": "20%"): "35.33%", color: colors.subcontent, fontSize: heading_font_size.subcontent[screen]}} className={list_style} key={id}>{region}</li>
 }
 
 export default Regions;

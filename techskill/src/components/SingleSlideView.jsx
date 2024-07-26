@@ -6,7 +6,7 @@ import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 const SingleSlideView = ({slides}) => {
     const [slideNum, setSlideNum] = useState(0);
     return (
-    <div className="mobile:h-[40rem] mobile:flex flex-col justify-center items-center px-2 space-y-4">
+    <div className="mobile:h-[44rem] mobile:flex flex-col justify-center items-center px-2 space-y-4 text-white">
         {slides[slideNum]}
         <Navigation slides={slides} slideNum={slideNum} setSlideNum={setSlideNum} />
       </div>
@@ -16,9 +16,9 @@ const SingleSlideView = ({slides}) => {
   const Navigation = ({setSlideNum, slides, slideNum}) => {
     return (
       <div className="w-full flex justify-between px-2 space-x-10">
-        <span className="cursor-pointer" onClick={() => setSlideNum(slideNum > 0 ? slideNum - 1: slides.length - 1)}><FontAwesomeIcon icon={faArrowLeft} /></span>
+        <span className="cursor-pointer text-black" onClick={() => setSlideNum(slideNum > 0 ? slideNum - 1: slides.length - 1)}><FontAwesomeIcon icon={faArrowLeft} /></span>
         <PageNums slides={slides} setSlideNum={setSlideNum} slideNum={slideNum} />
-        <span className="cursor-pointer" onClick={() => setSlideNum(slideNum < slides.length - 1 ? slideNum + 1: 0)}><FontAwesomeIcon icon={faArrowRight} /> </span>
+        <span className="cursor-pointer text-black" onClick={() => setSlideNum(slideNum < slides.length - 1 ? slideNum + 1: 0)}><FontAwesomeIcon icon={faArrowRight} /> </span>
     </div>
     )
   }

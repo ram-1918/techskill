@@ -197,7 +197,7 @@ const Technologies = ({keys}) => {
 
 const TechnologiesListDisplay = ({keys}) => {
     return (
-        <ul className="w-full flex justify-evenly items-start gap-3 p-2">
+        <ul className="w-full flex justify-between items-start gap-3 p-2">
             {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}
         </ul>
     )
@@ -222,9 +222,9 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <span style={{fontSize: heading_font_size.content[screen], color:colors.content}} className="font-semibold uppercase leading-6 tracking-wide">{name}</span>
+            <span style={{fontSize: heading_font_size.subcontent[screen], color:colors.content}} className="font-semibold uppercase leading-6 tracking-wide">{name}</span>
             <div className="h-full flex justify-start items-center">
-                <span style={{height: divHeight, borderColor:colors.subcontent}} className="h-full w-0.5 bg-sky-700 border border-dotted"></span>
+                <span style={{height: divHeight, borderColor:colors.subcontent}} className="mobile:hidden h-full w-0.5 border border-dotted"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
             </div>
         </div>
@@ -241,8 +241,8 @@ const SubListDisplay = ({divRef, sublist}) => {
                 <li key={id}
                 style={{fontSize:heading_font_size.subcontent[screen], color:colors.subcontent}}
                 className="flex justify-start items-center gap-2 font-medium">
-                    <span style={{borderColor:colors.subcontent}} className="h-0.5 w-10 border border-dotted"></span>
-                    <span className="w-8 h-8">{icon}</span>
+                    <span style={{borderColor:colors.subcontent}} className="mobile:hidden h-0.5 w-10 border border-dotted"></span>
+                    <span className="w-8 h-8 mobile:w-4 mobile:h-4">{icon}</span>
                     <span>{name}</span>
                 </li>
             )}

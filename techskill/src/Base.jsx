@@ -1,26 +1,26 @@
 export const heading_font_size = {
     main: {
-        mobile: "0.9rem",
+        mobile: "0.75rem",
         tablet: "1.1rem",
-        laptop: "1.3rem",
-        desktop: "2.2rem",
+        laptop: "2.1rem",
+        desktop: "2.25rem",
     },
     sub: {
-        mobile: "0.6rem",
-        tablet: "0.7rem",
-        laptop: "0.9rem",
-        desktop: "1.4rem",
+        mobile: "0.9rem",
+        tablet: "0.9rem",
+        laptop: "1.6rem",
+        desktop: "1.6rem",
     },
     content: {
-        mobile: "0.5rem",
-        tablet: "0.6rem",
-        laptop: "0.7rem",
+        mobile: "0.65rem",
+        tablet: "0.7rem",
+        laptop: "1rem",
         desktop: "1.1rem",
     },
     subcontent: {
         mobile: "0.5rem",
         tablet: "0.6rem",
-        laptop: "0.7rem",
+        laptop: "0.9rem",
         desktop: "0.9rem",
     }
 }

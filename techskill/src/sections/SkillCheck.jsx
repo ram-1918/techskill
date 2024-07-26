@@ -49,7 +49,7 @@ const SkillCheck = () => {
 
 const SkillCheckList = ({type}) => {
     return (
-        <ul className="w-full flex flex-col justify-start items-start gap-2 px-2">
+        <ul className="w-full flex flex-col justify-start items-start gap-2 px-2 overflow-scroll">
             {content[type].map(item => <ListItem key={item} item={item} />)}
         </ul>
     );
@@ -58,7 +58,7 @@ const SkillCheckList = ({type}) => {
 const ListItem = ({item:{content}}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
-        <li className="list-disc ">
+        <li className="list-disc mobile:leading-3">
             <span style={{fontSize:heading_font_size.content[screen], color:colors.subcontent}} className="whitespace-pre-wrap">{content}</span>
         </li>
     );

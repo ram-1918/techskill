@@ -1,7 +1,7 @@
 import BaseBGImage from "./BaseBGImage";
 
 export const APImage = ({}) => (
-    <div className="w-[40%] flex justify-center items-center">
+    <div className="mobile:hidden w-[40%] flex justify-center items-center">
       <div className={`mobile:hidden bg-bg9 w-[33rem] h-[25rem] bg-contain px-2 bg-no-repeat`}></div>
     </div>
 );
@@ -13,7 +13,7 @@ export const CBNImage = () => {
     <BaseBGImage
       image="bg-cbn bg-center"
       size={`${
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-32 h-32"
+        screen === "mobile" ? "w-16 h-16" : "w-32 h-32"
       } + " " + "border shadow-md"`}
     />
   );
@@ -24,7 +24,7 @@ export const LokeshImage = ({ size = "w-32 h-32" }) => {
     <BaseBGImage
       image="bg-lokesh bg-center"
       size={`${
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : size
+        screen === "mobile" ? "w-16 h-16" : size
       } + " " + "border shadow-md"`}
     />
   );
@@ -42,7 +42,7 @@ export const APGOV = () => {
     <BaseBGImage
       image="bg-apgov"
       size={
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-28 h-28"
+        screen === "mobile" || screen === "tablet" ? "w-12 h-12" : "w-28 h-28"
       }
     />
   );
@@ -53,7 +53,7 @@ export const APSSDC = () => {
     <BaseBGImage
       image="bg-apssdc"
       size={
-        screen === "mobile" || screen === "tablet" ? "w-20 h-20" : "w-28 h-28"
+        screen === "mobile" || screen === "tablet" ? "w-12 h-12" : "w-28 h-28"
       }
     />
   );

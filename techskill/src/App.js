@@ -13,6 +13,8 @@ import Technologies from "./sections/Technologies";
 import { ScrollIcon, SlideshowIcon } from "./components/icons";
 import Why from "./sections/Why";
 import Certifications from "./sections/Certifications";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faEye } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   const [screen, setScreen] = useState('');
@@ -78,7 +80,7 @@ const SmallScreenView = ({slides}) => {
 const BigScreenView = ({slides}) => {
   const [isView, setIsView] = useState('scroll');
   return (
-    <div className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-gray-50 text-white">
+    <div className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-gray-200 text-white">
       <ViewOptions isView={isView} setIsView={setIsView} />
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
@@ -87,12 +89,13 @@ const BigScreenView = ({slides}) => {
 }
 
 const ViewOptions = ({setIsView, isView}) => {
-  const active = 'bg-sky-100';
+  const active = 'bg-sky-300';
   const buttonstyles = 'px-2 py-1 rounded-lg cursor-pointer'
   return (
-    <div className="w-[74rem] flex justify-end items-center gap-2">
-      View: 
-      <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{ScrollIcon}</span>
+    // <div className="w-[74rem] flex justify-end items-center gap-2">
+    <div className="w-[64rem] flex justify-end items-center gap-2">
+      <span className="text-black font-light text-lg"><FontAwesomeIcon icon={faEye} /> View: </span>
+      <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-8 h-8`}>{ScrollIcon}</span>
       <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
     </div>
   )
