@@ -34,7 +34,7 @@ const regions_list = [
 
 const Regions = () => {
     return (
-        <BaseSlide>
+        <BaseSlide id="regions">
             <BaseHeader text={main_headings.slide2.text} />
             <BaseContentDiv text="List of Mandals">
                 <div className="w-full flex justify-between items-center space-x-4">

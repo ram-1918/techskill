@@ -29,7 +29,7 @@ const pd_items = [
 const Personality = () => {
   return (
     // <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
-    <BaseSlide>
+    <BaseSlide id="personality">
         <BaseHeader text={main_headings.slide5.text} />
         <BaseContentDiv text="Personality Development Program Curricullam">
             <PDItems />

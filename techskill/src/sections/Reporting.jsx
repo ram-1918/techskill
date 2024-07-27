@@ -35,7 +35,7 @@ const reporting_items = [
 const Reporting = () => {
     const screen = localStorage.getItem('screen') || 'laptop'; 
     return (
-    <BaseSlide>
+    <BaseSlide id="reporting">
         <BaseHeader text={main_headings.slide8.text} />
         <BaseContentDiv text="Progress Reporting Attributes">
             <PDItems />

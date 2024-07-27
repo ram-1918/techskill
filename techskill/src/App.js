@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import ScrollsSlidesView from "./components/ScrollSlidesView";
 import SingleSlideView from "./components/SingleSlideView";
-import About from "./sections/About";
 import Breakdown from "./sections/Breakdown";
 import Home from "./sections/Home";
 import Personality from "./sections/Personality";
@@ -16,6 +15,10 @@ import Certifications from "./sections/Certifications";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { main_heading_fontstyle } from "./Base";
+import Menu from "./sections/Menu";
+import ThankYou from "./sections/Thankyou";
+
+import './i18n';
 
 function App() {
   const [screen, setScreen] = useState('');
@@ -47,6 +50,7 @@ function App() {
 
   const slides = [
   <Home />, 
+  <Menu />,
   <Why />,
   <Regions />, 
   <Technologies keys={['ai/ml', 'programming languages', 'cloud technologies']} />,
@@ -56,7 +60,7 @@ function App() {
   <Placements />,
   <Reporting />,
   <Breakdown />,
-  // <About />
+  <ThankYou />
 ];
   return (
     <>

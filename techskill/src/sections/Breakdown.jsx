@@ -12,21 +12,22 @@ import BaseContentDiv from "../components/BaseContentDiv";
 
 const Breakdown = () => {
   return (
-      <BaseSlide>
+      <BaseSlide id="breakdown">
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="Skill Check Score Breakdown & Calculation">
-              <div className="w-full flex mobile:flex-col mobile:overflow-x-scroll mobile:overflow-y-scroll justify-between items-center gap-6">
+              <div className="w-full flex mobile:flex-col mobile:overflow-x-scroll mobile:overflow-y-scroll justify-between items-start gap-6">
                 <div className="w-[55%] h-full">
                     <BreakdownDiv />
                 </div>
                 <div className="w-[55%] mobile:w-full h-96 flex flex-col justify-start items-start gap-2">
                   <div className="text-sm font-light p-2">
-                    <span className="font-semibold">A typical student's "skill check" score calculation</span>
-                    <li>Bachelor's degree: 83%</li>
+                    <span className="font-semibold">A typical student's "skill check" score for the below attributes:</span>
+                    <li>Academics: 83%</li>
                     <li>Aptitude Test: 78%</li>
                     <li>Assessments Average: 82.5%</li>
                     <li>Certifications: 60%</li>
                     <li>Personality Developement: 92%</li>
+                    <span className="text-lg py-1 font-medium text-green-700">Skill Check Score: 8.1 / 10</span>
                   </div>
                   <ProgressBarDiv />
                 </div>
@@ -61,25 +62,25 @@ const ProgressBarDiv = () => {
   const line_styles = "h-full border border-spacing-0.5 border-black border-dotted"
   return (
     <div>
-                <div style={{width:total_score}} className="relative pl-10 flex justify-between items-center gap-10">
-                  <div style={{width:`${relative_percents[0]}%`}} className={`${text_styles} text-right`}>Academics</div>
-                  <div style={{width:`${relative_percents[2]}%`}} className={`${text_styles} text-left`}>Assessments</div>
-                  <div style={{width:`${relative_percents[1]}%`}} className={`${text_styles} text-center`}>Aptitude</div>
-                </div>
-                <div style={{width:total_score}} className="relative h-10 pl-40 flex justify-between items-start gap-10">
-                  <div className={line_styles}></div>
-                  <div className={line_styles}></div>
-                  <div className={line_styles}></div>
-                </div>
-                <ProgressBar progressRef={progressRef} max_score={max_score} relative_percents={relative_percents} total_score={total_score} />
-                <div style={{width:total_score}} className="relative h-10 pl-48 gap-x-8 flex justify-around items-start">
-                  <div className={line_styles}></div>
-                  <div className={line_styles}></div>
-                </div>
-                <div style={{width:total_score}} className="relative pl-48 gap-x-28 flex justify-start items-start space-x-0">
-                  <div style={{width:relative_percents[4]}} className={`${text_styles} text-center`}>Personality Assessments</div>
-                  <div style={{width:relative_percents[3]}} className={`${text_styles} text-left`}>Certifications</div>
-                </div>
+        <div style={{width:total_score}} className="relative pl-10 flex justify-between items-center gap-10">
+          <div style={{width:`${relative_percents[0]}%`}} className={`${text_styles} text-right`}>Academics</div>
+          <div style={{width:`${relative_percents[2]}%`}} className={`${text_styles} text-left`}>Assessments</div>
+          <div style={{width:`${relative_percents[1]}%`}} className={`${text_styles} text-center`}>Aptitude</div>
+        </div>
+        <div style={{width:total_score}} className="relative h-10 pl-40 flex justify-between items-start gap-10">
+          <div className={line_styles}></div>
+          <div className={line_styles}></div>
+          <div className={line_styles}></div>
+        </div>
+        <ProgressBar progressRef={progressRef} max_score={max_score} relative_percents={relative_percents} total_score={total_score} />
+        <div style={{width:total_score}} className="relative h-10 pl-48 gap-x-8 flex justify-around items-start">
+          <div className={line_styles}></div>
+          <div className={line_styles}></div>
+        </div>
+        <div style={{width:total_score}} className="relative pl-48 gap-x-28 flex justify-start items-start space-x-0">
+          <div style={{width:relative_percents[4]}} className={`${text_styles} text-center`}>Personality Assessments</div>
+          <div style={{width:relative_percents[3]}} className={`${text_styles} text-left`}>Certifications</div>
+        </div>
     </div>
   )
 }
@@ -93,7 +94,7 @@ const ProgressBar = ({progressRef, max_score, relative_percents, total_score}) =
       <AssessmentsBar  score={relative_percents[2]} total_score={total_score}  bg_color="#CDE8E5" />
       <CertificationsBar  score={relative_percents[3]} total_score={total_score} bg_color="#93BFCF" />
       <ApptitudeBar  score={relative_percents[1]} total_score={total_score} bg_color="#BDCDD6" />
-      <span className="px-4 font-semibold text-green-800">~{skillcheck_score}</span>
+      <span className="pl-4 font-bold text-green-800">{skillcheck_score}</span>/10
     </div>
   )
 }

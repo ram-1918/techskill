@@ -42,6 +42,7 @@ import tcs from "../assets/icons/companies/tcs.png";
 import ibm from "../assets/icons/companies/ibm.png";
 import zoho from "../assets/icons/companies/zoho.png";
 
+import apple from "../assets/icons/companies/apple.png";
 import google from "../assets/icons/companies/google.png";
 import microsoft from "../assets/icons/companies/microsoft.png";
 import amazon from "../assets/icons/companies/amazon.png";
@@ -49,6 +50,8 @@ import meta from "../assets/icons/companies/meta.png";
 
 import dell from "../assets/icons/companies/dell.png";
 import deloitte from "../assets/icons/companies/deloitte.png";
+import techm from "../assets/icons/companies/techm.png";
+import mindtree from "../assets/icons/companies/mindtree.png";
 
 import accenture from "../assets/icons/companies/accenture.png";
 import cognizant from "../assets/icons/companies/cognizant.jpeg";
@@ -64,6 +67,7 @@ import dot from "../assets/icons/dot.png";
 import slideshow from "../assets/icons/slideshow.png";
 import scroll from "../assets/icons/scroll.png";
 import design from "../assets/icons/shape.png";
+import leftbracket from '../assets/icons/leftbracket.png';
 
 
 const icon_style = "w-8 h-8";
@@ -113,6 +117,7 @@ export const TCSIcon = <img className={''} src={tcs} alt="TCS icon" />;
 export const ZohoIcon = <img className={''} src={zoho} alt="Zoho icon" />;
 export const IBMIcon = <img className={''} src={ibm} alt="IBM icon" />;
 
+export const AppleIcon = <img className={''} src={apple} alt="Apple icon" />;
 export const GoogleIcon = <img className={''} src={google} alt="Google icon" />;
 export const MetaIcon = <img className={''} src={meta} alt="Meta icon" />;
 export const AmazonIcon = <img className={''} src={amazon} alt="Amazon icon" />;
@@ -120,6 +125,8 @@ export const MicrosoftIcon = <img className={''} src={microsoft} alt="Microsoft 
 
 export const DellIcon = <img className={''} src={dell} alt="Dell icon" />;
 export const DeloitteIcon = <img className={''} src={deloitte} alt="Deloitte icon" />;
+export const TechMIcon = <img className={''} src={techm} alt="Tech M icon" />;
+export const MindtreeIcon = <img className={''} src={mindtree} alt="LTI Mindtree icon" />;
 
 export const WiproIcon = <img className={''} src={wipro} alt="Wipro icon" />;
 export const HCLIcon = <img className={''} src={hcl} alt="HCL icon" />;
@@ -135,3 +142,4 @@ export const DotIcon = <img className={'w-6 h-6'} src={dot} alt="Dot icon" />;
 export const ScrollIcon = <img className={''} src={scroll} alt="Scroll icon" />;
 export const SlideshowIcon = <img className={''} src={slideshow} alt="SlideShow icon" />;
 export const DesignIcon = <img className={''} src={design} alt="Design icon" />;
+export const LeftBracketIcon = <img className={'h-40 w-10'} src={leftbracket} alt="LeftOpen icon" />;

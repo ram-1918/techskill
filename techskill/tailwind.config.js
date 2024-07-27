@@ -5,12 +5,13 @@ module.exports = {
     extend: {
       backgroundImage: {
         'cbn': "url('assets/images/chandrababu.png')",
+        'pk': "url('assets/images/pk1.png')",
         'lokesh': "url('assets/images/lokesh.png')",
         'apssdc': "url('assets/images/apssdc.png')",
         'apgov': "url('assets/images/apgov.png')",
         'srinivas': "url('assets/images/srinivas.png')",
         'future':  "url('assets/images/futuretech.png')",
-        'mandals':  "url('assets/images/futuretown.png')",
+        'mandals':  "url('assets/images/futuretown2.png')",
         'technologies':  "url('assets/images/technologies.png')",
         'bg1': "url('assets/images/slides/first.png')",
         'bg2': "url('assets/images/slides/second.png')",

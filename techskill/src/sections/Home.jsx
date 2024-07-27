@@ -6,6 +6,7 @@ import BaseSlide from "../components/BaseSlide";
 import CBN from "../components/CBN";
 import { main_headings } from "../components/data";
 import Lokesh from "../components/Lokesh";
+import PK from "../components/PK";
 
 
 const Home = () => {
@@ -26,6 +27,7 @@ const Body = () => {
     return (
         <div className="h-full w-[45%] mobile:w-full mobile:h-full mobile:pt-0 mobile:pl-10 flex flex-col justify-center items-start gap-2 pt-10">
             <CBN />
+            <PK />
             <Lokesh />
         </div>
     );

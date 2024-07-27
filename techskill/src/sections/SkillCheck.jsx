@@ -1,10 +1,12 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { colors, heading_font_size } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
 import { main_headings } from "../components/data";
-import { AcademicsIcon, AptitudeIcon, AssessmentIcon, CertificateIcon, PersonalityIcon } from "../components/icons";
+import { AcademicsIcon, AptitudeIcon, AssessmentIcon, CertificateIcon, LeftBracketIcon, PersonalityIcon } from "../components/icons";
 import Subhead from "../components/Subhead";
+import { faBarChart, faLineChart } from "@fortawesome/free-solid-svg-icons";
 
 // const content = {
 //     attributes: [
@@ -64,7 +66,7 @@ const attributes = [
 const SkillCheck = () => {
     const screen = localStorage.getItem('screen') || 'laptop';
   return (
-    <BaseSlide>
+    <BaseSlide id="skillcheck">
         <BaseHeader text={main_headings.slide6.text} />
         <BaseContentDiv text="">
             <Subhead text="Skill Check Attribute Criteria" />
@@ -94,9 +96,9 @@ const AttributeItem = ({item: {name, icon}}) => {
 
 const AttributeDisplay = () => {
     return (
-        <div className="w-[50%] flex justify-center items-center -space-x-5">
+        <div className="w-[50%] h-56 overflow-hidden flex justify-center items-center -space-x-5">
             <div className="text-xl px-7">Skill Check Attributes</div>
-            <span className="flex justify-start text-[15rem] font-lighter text-teal-600">{`{`}</span>
+            <span className="text-[15rem] leading-None font-light inline-block align-text-top p-0 text-teal-500">{`{`}</span>
             <div className="flex flex-col items-start justify-around space-y-2">
                 {attributes.map(item => <AttributeItem key={item.id} item={item} />)}
             </div>
@@ -112,6 +114,9 @@ const BenefitsDisplay = () => {
                 <li>100% Job Placements</li>
                 <li>Technological Advancements</li>
                 <li>Higher Employment Rate</li>
+            </div>
+            <div>
+                {/* <FontAwesomeIcon className="text-[10rem]" icon={faLineChart} /> */}
             </div>
         </div>
     )

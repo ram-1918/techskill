@@ -8,9 +8,9 @@ import list_icon from '../assets/icons/next.png'
 
 function Why({keys}) {
   return (
-        <BaseSlide image="bg-bg2">
-            <BaseHeader text="Purpose of this program" />
-            <BaseContentDiv text="7 essentials" >
+        <BaseSlide image="bg-bg2" id="why">
+            <BaseHeader text="Skill Development program after graduation" />
+            <BaseContentDiv text="7 Essentials for higher emplpoyment rate" >
             <Concepts />
             {/* <WhyBackup keys={keys} /> */}
             </BaseContentDiv>
@@ -89,9 +89,9 @@ const LeftEdges = () => {
 const LeftData = () => {
     return (
         <div className="w-fit h-full  flex flex-col justify-between items-right">
-            <TextDiv text="ADAPTING TO TECHNOLOGICAL CHANGES" align="text-right" />
-            <TextDiv text="MEETING INDUSTRY REQUIREMENTS" align="text-right" />
-            <TextDiv text="ENHANCING EMPLOYABILITYS" align="text-right" />
+            <TextDiv text="ADAPTING TO TECHNOLOGICAL CHANGES" align="text-right border-r border-green-800" />
+            <TextDiv text="MEETING INDUSTRY REQUIREMENTS" align="text-right border-r border-green-800" />
+            <TextDiv text="ENHANCING EMPLOYABILITYS" align="text-right border-r border-green-800" />
         </div>
     )
 }
@@ -99,14 +99,14 @@ const LeftData = () => {
 const RightData = () => {
     return (
         <div className="w-fit h-full  flex flex-col justify-between items-left space-y-10">
-            <TextDiv text="PERSONAL DEVELOPMENT" align="text-left" />
-            <TextDiv text="NETWORKING OPPORTUNITIES" align="text-left" />
-            <TextDiv text="GLOBAL COMPETITIVENESS" align="text-left" />
+            <TextDiv text="PERSONAL DEVELOPMENT" align="text-left border-l border-green-800" />
+            <TextDiv text="NETWORKING OPPORTUNITIES" align="text-left border-l border-green-800" />
+            <TextDiv text="GLOBAL COMPETITIVENESS" align="text-left border-l border-green-800" />
         </div>
     )
 }
 const TextDiv = ({text, align}) => {
-    const text_styles = "text-left border-0 rounded p-1 text-[0.9rem] border-green-800 font-semibold";
+    const text_styles = "text-left px-1.5 py-1 text-[0.9rem] border-green-800 font-bold";
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
         <div styles={{fontSize: heading_font_size.content[screen]}} className={`${text_styles} ${align}`}>{text}</div>
@@ -117,7 +117,7 @@ const BottomSpan = () => {
     return (
         <div className="h-20 w-full flex flex-col justify-center items-center">
             <div style={{borderColor: bg_color}} className="h-16 border-l"></div>
-            <TextDiv text="ADAPTABILITY AND PROBLEM-SOLVING" />
+            <TextDiv text="ADAPTABILITY AND PROBLEM-SOLVING" align="border-t" />
         </div>
     )
 }

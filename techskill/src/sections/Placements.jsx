@@ -2,10 +2,15 @@ import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
 import { main_headings } from "../components/data";
-import { AccentureIcon, AmazonIcon, CognizantIcon, DellIcon, DeloitteIcon, GoogleIcon, HCLIcon, IBMIcon, InfosysIcon, MetaIcon, MicrosoftIcon, TCSIcon, WiproIcon, ZohoIcon } from "../components/icons";
+import { AccentureIcon, AmazonIcon, AppleIcon, CognizantIcon, DellIcon, DeloitteIcon, GoogleIcon, HCLIcon, IBMIcon, InfosysIcon, MetaIcon, MicrosoftIcon, MindtreeIcon, TCSIcon, TechMIcon, WiproIcon, ZohoIcon } from "../components/icons";
 import Tooltip from "../components/Tooltip";
 
 const pd_items = [
+    {
+        id: 15,
+        name: "Apple",
+        icon: AppleIcon
+    },
     {
         id: 1,
         name: "Google",
@@ -27,6 +32,11 @@ const pd_items = [
         icon: MicrosoftIcon
     },
     {
+        id: 10,
+        name: "Dell",
+        icon: DellIcon
+    },
+    {
         id: 5,
         name: "Infosys",
         icon: InfosysIcon
@@ -43,18 +53,18 @@ const pd_items = [
     },
     {
         id: 8,
-        name: "Zoho",
-        icon: ZohoIcon
+        name: "Tech Mahindra",
+        icon: TechMIcon
+    },
+    {
+        id: 16,
+        name: "LTI mindtree",
+        icon: MindtreeIcon
     },
     {
         id: 9,
         name: "IBM",
         icon: IBMIcon
-    },
-    {
-        id: 10,
-        name: "Dell",
-        icon: DellIcon
     },
     {
         id: 11,
@@ -80,7 +90,7 @@ const pd_items = [
 
 const Placements = () => {
   return (
-    <BaseSlide>
+    <BaseSlide id="placements">
         <BaseHeader text={main_headings.slide7.text}/>
         <BaseContentDiv text="Program Execution Partners">
             <PlacementItems />

@@ -13,12 +13,24 @@ export const CBNImage = () => {
     <BaseBGImage
       image="bg-cbn bg-center"
       size={`${
-        screen === "mobile" ? "w-16 h-16" : "w-32 h-32"
+        screen === "mobile" ? "w-16 h-16" : "w-28 h-28"
       } + " " + "border shadow-md"`}
     />
   );
 };
-export const LokeshImage = ({ size = "w-32 h-32" }) => {
+
+export const PKImage = () => {
+  const screen = localStorage.getItem("screen") || "laptop";
+  return (
+    <BaseBGImage
+      image="bg-pk bg-center"
+      size={`${
+        screen === "mobile" ? "w-16 h-16" : "w-28 h-28"
+      } + " " + "border shadow-md"`}
+    />
+  );
+}
+export const LokeshImage = ({ size = "w-28 h-28" }) => {
   const screen = localStorage.getItem("screen") || "laptop";
   return (
     <BaseBGImage

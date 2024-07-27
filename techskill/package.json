@@ -10,9 +10,13 @@
     "@testing-library/user-event": "^13.5.0",
     "chart.js": "^4.4.3",
     "chartjs-plugin-datalabels": "^2.2.0",
+    "i18next": "^23.12.2",
+    "i18next-browser-languagedetector": "^8.0.0",
+    "i18next-http-backend": "^2.5.2",
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
+    "react-i18next": "^15.0.0",
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.4.6",
     "web-vitals": "^2.1.4"

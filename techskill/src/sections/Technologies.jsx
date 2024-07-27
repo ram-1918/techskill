@@ -200,7 +200,7 @@ const technology_list = {
 
 const Technologies = ({keys}) => {
     return (
-        <BaseSlide>
+        <BaseSlide id="technologies">
             <BaseHeader text={main_headings.slide3.text} />
             <BaseContentDiv text="Disruptive Technologies Shaping the Coming Decades">
                 <TechnologiesListDisplay keys={keys} />

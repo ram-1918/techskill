@@ -63,7 +63,7 @@ const certification_list = [
 
 const Certifications = () => {
     return (
-        <BaseSlide>
+        <BaseSlide id="certifications">
             <BaseHeader text={main_headings.slide4.text} />
             <BaseContentDiv text="Offers training for the following certifications">
                 <div className="w-full flex justify-center items-center flex-wrap gap-10">
