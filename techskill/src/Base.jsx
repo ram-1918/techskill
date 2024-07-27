@@ -9,28 +9,28 @@ export const heading_font_size = {
         mobile: "0.9rem",
         tablet: "0.9rem",
         laptop: "1.6rem",
-        desktop: "1.6rem",
+        desktop: "1.3rem",
     },
     content: {
         mobile: "0.65rem",
         tablet: "0.7rem",
         laptop: "1rem",
-        desktop: "1.1rem",
+        desktop: "1rem",
     },
     subcontent: {
         mobile: "0.5rem",
         tablet: "0.6rem",
         laptop: "0.9rem",
-        desktop: "0.9rem",
+        desktop: "1.05rem",
     }
 }
 export const content_font = "0.9rem";
 
 export const colors = {
-    main: "#E7D488",
-    sub: "#CCBF8A",
-    content: "#F2E7BA",
-    subcontent: "#E8DDCF"
+    main: "#01204E",
+    sub: "#27374D",
+    content: "#134B70",
+    subcontent: "#405D72"
 }
 
 export const colors_backup = {
@@ -40,7 +40,7 @@ export const colors_backup = {
     subcontent: "black"
 };
 
-export const main_heading_fontstyle = "anaheim, roboto, lexend, sans"; // lexend, roboto, anaheim
+export const main_heading_fontstyle = "anaheim"; // lexend, roboto, anaheim
 export const sub_heading_fontstyle = "anaheim, roboto, lexend, sans";
 export const content_fontstyle = "anaheim, roboto, lexend, sans";
 

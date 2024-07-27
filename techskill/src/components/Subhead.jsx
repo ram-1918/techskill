@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { colors, heading_font_size, sub_heading_fontstyle } from "../Base";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCogs} from '@fortawesome/free-solid-svg-icons';
+import { DesignIcon } from "./icons";
 
 const Subhead = ({ text }) => {
   const divRef = useRef(null);
@@ -29,7 +30,7 @@ const Subhead = ({ text }) => {
 
 const Head = ({text, divRef}) => {
     const screen = localStorage.getItem("screen") || "laptop";
-    const styles = "text-center font-semibold text-orange-700";
+    const styles = "text-center font-semibold text-orange-700 uppercase";
     return (
         <span
             ref = {divRef}
@@ -50,7 +51,7 @@ const UnderlineDesign = ({divWidth}) => {
     return (
         <div style={{fontSize: heading_font_size.content[screen]}} className="flex justify-center items-center space-x-2">
             <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
-            <span className={``}><FontAwesomeIcon icon={faCogs} /></span>
+            <span className={``}>{<FontAwesomeIcon icon={faCogs} />}</span>
             <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
         </div>
     );

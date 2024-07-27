@@ -46,8 +46,7 @@ function App() {
 
   const slides = [
   <Home />, 
-  <Why keys={[0,1,2]} />,
-  <Why keys={[4,5,6,7]} />,
+  <Why />,
   <Regions />, 
   <Technologies keys={['cloud technologies', 'ai/ml', 'programming languages']} />,
   <Certifications />,
@@ -80,7 +79,7 @@ const SmallScreenView = ({slides}) => {
 const BigScreenView = ({slides}) => {
   const [isView, setIsView] = useState('scroll');
   return (
-    <div className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-gray-200 text-white">
+    <div className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-zinc-300 text-black">
       <ViewOptions isView={isView} setIsView={setIsView} />
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}

@@ -93,7 +93,7 @@ const ProgressBar = ({progressRef, max_score, relative_percents, total_score}) =
       <AssessmentsBar  score={relative_percents[2]} total_score={total_score}  bg_color="#CDE8E5" />
       <CertificationsBar  score={relative_percents[3]} total_score={total_score} bg_color="#93BFCF" />
       <ApptitudeBar  score={relative_percents[1]} total_score={total_score} bg_color="#BDCDD6" />
-      <span className="px-4 font-semibold text-green-500">~{skillcheck_score}</span>
+      <span className="px-4 font-semibold text-green-800">~{skillcheck_score}</span>
     </div>
   )
 }
@@ -126,7 +126,7 @@ const PersonalityBar = ({score=10, bg_color, total_score}) => {
 }
 const ApptitudeBar = ({score=10, bg_color, total_score}) => {
   return (
-      <div style={{backgroundColor: bg_color, width:`${score}%`}} className={`${bar_styles} border-r-4 border-r-green-500`}> </div>
+      <div style={{backgroundColor: bg_color, width:`${score}%`}} className={`${bar_styles} border-r-4 border-r-green-800`}> </div>
   )
 }
 

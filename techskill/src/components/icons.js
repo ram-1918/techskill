@@ -52,6 +52,7 @@ import gmail from "../assets/icons/social/gmail.png";
 import dot from "../assets/icons/dot.png";
 import slideshow from "../assets/icons/slideshow.png";
 import scroll from "../assets/icons/scroll.png";
+import design from "../assets/icons/shape.png";
 
 
 const icon_style = "w-8 h-8";
@@ -112,3 +113,4 @@ export const GmailIcon = <img className={icon_style} src={gmail} alt="Gmail icon
 export const DotIcon = <img className={'w-6 h-6'} src={dot} alt="Dot icon" />;
 export const ScrollIcon = <img className={''} src={scroll} alt="Scroll icon" />;
 export const SlideshowIcon = <img className={''} src={slideshow} alt="SlideShow icon" />;
+export const DesignIcon = <img className={''} src={design} alt="Design icon" />;

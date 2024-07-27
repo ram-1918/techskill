@@ -18,7 +18,6 @@ const regions_list = [
     "Gajuwaka",
     "Gudlavalleru",
     "Guntur West",
-    "Kakinada (Rural)",
     "Kuppam",
     "Mangalagiri",
     "Pakala",
@@ -26,16 +25,20 @@ const regions_list = [
     "Pulivendla",
     "Rajanagaram",
     "Rajam",
-    "Vijayawada Central",
-    "tadepalligudem"
+    "tadepalligudem",
+    "Kakinada",
+    "Vijayawada"
   ];
+
+
 
 const Regions = () => {
     return (
         <BaseSlide>
             <BaseHeader text={main_headings.slide2.text} />
             <BaseContentDiv text="List of Mandals">
-                <div className="w-full flex flex-col justify-center items-center">
+                <div className="w-full flex justify-between items-center space-x-4">
+                    <ImageSpan />
                     <RegionsListDisplay />
                 </div>
             </BaseContentDiv>
@@ -43,9 +46,15 @@ const Regions = () => {
     )
 };
 
+const ImageSpan = () => {
+    return (
+        <div className="w-[30%] h-56 rounded-lg shadow-lg bg-mandals bg-center bg-cover"></div>
+    )
+}
+
 const RegionsListDisplay = () => {
     return (
-        <ul className="w-[90%] mobile:w-full flex flex-wrap justify-start items-center gap-4 p-2">
+        <ul className="w-[70%] mobile:w-full flex flex-wrap justify-start items-center gap-y-4 gap-x-2">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>
     )
@@ -54,7 +63,7 @@ const RegionsListDisplay = () => {
 const ListItem = ({region, id}) => {
     const list_style = "capitalize font-medium px-2 list-disc list-inside";
     const screen = localStorage.getItem('screen') || 'laptop';
-    return <li style={{width: regions_list.length > 20 ? (screen === 'mobile' ? "29%": "20%"): "35.33%", color: colors.subcontent, fontSize: heading_font_size.subcontent[screen]}} className={list_style} key={id}>{region}</li>
+    return <li style={{width: regions_list.length > 20 ? (screen === 'mobile' ? "29%": "28%"): "33.33%", color: colors.subcontent, fontSize: heading_font_size.subcontent[screen]}} className={list_style} key={id}>{region}</li>
 }
 
 export default Regions;

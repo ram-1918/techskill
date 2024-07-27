@@ -4,21 +4,22 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'bg1': "url('assets/images/bg1.png')",
-        'bg2': "url('assets/images/bg2.png')",
-        'bg3': "url('assets/images/bg3.png')",
-        'bg4': "url('assets/images/bg4.png')",
         'cbn': "url('assets/images/chandrababu.png')",
         'lokesh': "url('assets/images/lokesh.png')",
         'apssdc': "url('assets/images/apssdc.png')",
         'apgov': "url('assets/images/apgov.png')",
         'srinivas': "url('assets/images/srinivas.png')",
+        'future':  "url('assets/images/futuretech.png')",
+        'mandals':  "url('assets/images/futurecity.png')",
+        'bg1': "url('assets/images/slides/first.png')",
+        'bg2': "url('assets/images/slides/second.png')",
+        'bg3': "url('assets/images/bg3.png')",
+        'bg4': "url('assets/images/bg4.png')",
         'ap': "url('assets/images/ap.png')",
         'bg7': "url('assets/images/bg5.png')",
         'bg9': "url('assets/images/bg9.png')",
         'bg10': "url('assets/images/bg10.webp')",
         'bg11': "url('assets/images/bg11.png')",
-        'bg12': "url('assets/images/pptbg4.png')",
       },
       clipPath: {
         'rect': 'polygon(0 0, 50% 0, 50% 100%, 0% 100%)',

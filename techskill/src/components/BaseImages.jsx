@@ -2,7 +2,7 @@ import BaseBGImage from "./BaseBGImage";
 
 export const APImage = ({}) => (
     <div className="mobile:hidden w-[40%] flex justify-center items-center">
-      <div className={`mobile:hidden bg-bg9 w-[33rem] h-[25rem] bg-contain px-2 bg-no-repeat`}></div>
+      <div className={`mobile:hidden bg-bg9 w-[33rem] h-[24rem] bg-center bg-contain bg-no-repeat`}></div>
     </div>
 );
 
