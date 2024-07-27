@@ -26,8 +26,8 @@ const regions_list = [
     "Rajanagaram",
     "Rajam",
     "tadepalligudem",
-    "Kakinada",
-    "Vijayawada"
+    "Kakinada (rural)",
+    "Vijayawada central"
   ];
 
 
@@ -48,13 +48,13 @@ const Regions = () => {
 
 const ImageSpan = () => {
     return (
-        <div className="w-[30%] h-56 rounded-lg shadow-lg bg-mandals bg-center bg-cover"></div>
+        <div className="w-[35%] h-56 bg-red-400 rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80"></div>
     )
 }
 
 const RegionsListDisplay = () => {
     return (
-        <ul className="w-[70%] mobile:w-full flex flex-wrap justify-start items-center gap-y-4 gap-x-2">
+        <ul className="w-[65%] mobile:w-full grid grid-flow-row grid-cols-3 gap-4 px-4 py-1">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>
     )
@@ -63,7 +63,15 @@ const RegionsListDisplay = () => {
 const ListItem = ({region, id}) => {
     const list_style = "capitalize font-medium px-2 list-disc list-inside";
     const screen = localStorage.getItem('screen') || 'laptop';
-    return <li style={{width: regions_list.length > 20 ? (screen === 'mobile' ? "29%": "28%"): "33.33%", color: colors.subcontent, fontSize: heading_font_size.subcontent[screen]}} className={list_style} key={id}>{region}</li>
+    return <li 
+    style={
+        {
+            // width: regions_list.length > 20 ? (screen === 'mobile' ? "29%": "28%"): "33.33%", 
+            color: colors.subcontent, 
+            fontSize: heading_font_size.subcontent[screen]
+        }
+    } 
+    className={list_style} key={id}>{region}</li>
 }
 
 export default Regions;

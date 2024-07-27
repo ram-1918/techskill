@@ -35,7 +35,7 @@ const Head = ({text, divRef}) => {
         <span
             ref = {divRef}
             style={{ 
-                fontSize: heading_font_size.sub[screen], 
+                fontSize: heading_font_size.content[screen], 
                 fontFamily: sub_heading_fontstyle,
                 color: colors.sub 
             }}

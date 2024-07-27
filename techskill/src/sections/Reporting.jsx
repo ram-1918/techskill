@@ -59,7 +59,7 @@ const ListItem = ({item:{icon, name, content}}) => {
         <li className="w-72 h-64 mobile:h-44 flex flex-col justify-start items-center gap-3">
             <span className="w-28 h-28 mobile:w-16 mobile:h-16 bg-white p-4 rounded-full">{icon}</span>
             <div className="flex flex-col justify-center items-center">
-                <span style={{fontSize:heading_font_size.content[screen], color: colors.content}} className="text-xl font-semibold mobile:leading-3">{content}</span>
+                <span style={{fontSize:heading_font_size.sub[screen], color: colors.content}} className="text-xl font-semibold mobile:leading-3">{content}</span>
                 <span style={{fontSize:heading_font_size.subcontent[screen], color: colors.subcontent}} className="text-center text-sm font-light whitespace-pre-wrap mobile:leading-3">{name}</span>
             </div>
         </li>

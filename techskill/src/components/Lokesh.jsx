@@ -7,8 +7,8 @@ const Lokesh = () => {
             <LokeshImage />
             <div className="flex flex-col justify-start items-start mobile:-space-y-2">
                 <Heading type="sub" text="Shri Lokesh Nara" />
-                <Heading type="content" text="Hon'ble Minister for Human Resources" />
-                <Heading type="content" text="Development of Andhra Pradesh" />
+                <Heading type="subcontent" text="Hon'ble Minister for Human Resources" />
+                <Heading type="subcontent" text="Development of Andhra Pradesh" />
             </div>
         </div>
     );

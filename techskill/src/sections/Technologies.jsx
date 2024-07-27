@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { AwsIcon, azureIcon, cppIcon, gcpIcon, GoIcon, JavaIcon, JavascriptIcon, MatlabIcon, OracleIcon, PowerBiIcon, PythonIcon, RstudioIcon, SparkIcon, TableauIcon } from "../components/icons";
+import { AwsIcon, azureIcon, cppIcon, gcpIcon, GoIcon, JavaIcon, JavascriptIcon, MatlabIcon, NumpyIcon, OracleIcon, PandasIcon, PowerBiIcon, PythonIcon, PytorchIcon, RstudioIcon, SparkIcon, TableauIcon, TensorflowIcon } from "../components/icons";
 import BaseHeader from "../components/BaseHeader";
 import BaseContentDiv from "../components/BaseContentDiv";
 import { main_headings } from "../components/data";
@@ -7,32 +7,6 @@ import { colors, heading_font_size } from "../Base";
 import BaseSlide from "../components/BaseSlide";
 
 const technology_list = {
-    "cloud technologies": {
-        id: 1,
-        name: "cloud technologies",
-        sublist: [
-            {
-                id: 1,
-                icon: AwsIcon,
-                name: "Amazon Web Services (AWS)"
-            },
-            {
-                id: 2,
-                icon: azureIcon,
-                name: "Microsoft Azure"
-            },
-            {
-                id: 3,
-                icon: gcpIcon,
-                name: "Google Cloud Platform(GCP)"
-            },
-            {
-                id: 4,
-                icon: OracleIcon,
-                name: "Oracle Cloud Infrastructure(OCI)"
-            }
-        ]
-    },
     "ai/ml": {
         id: 2,
         name: "ai/ml",
@@ -53,17 +27,32 @@ const technology_list = {
                 name: "Apache Spark"
             },
             {
-                id: 5, 
-                icon: MatlabIcon,
-                name: "Matlab"
-            },
-            {
                 id: 6, 
+                icon: TensorflowIcon,
+                name: "TensorFlow"
+            },            
+            {
+                id: 7, 
+                icon: PytorchIcon,
+                name: "PyTorch"
+            },            
+            {
+                id: 8, 
+                icon: PandasIcon,
+                name: "Pandas"
+            },            
+            {
+                id: 9, 
+                icon: NumpyIcon,
+                name: "NumPy"
+            },            
+            {
+                id: 10, 
                 icon: TableauIcon,
                 name: "Tableau"
             },            
             {
-                id: 7, 
+                id: 11, 
                 icon: PowerBiIcon,
                 name: "PowerBI"
             }
@@ -95,17 +84,43 @@ const technology_list = {
                 name: "Go"
             },
             {
+                id: 6, 
+                icon: JavascriptIcon,
+                name: "JavaScript"
+            },
+            {
                 id: 5, 
                 icon: JavaIcon,
                 name: "Java"
-            },
-            {
-                id: 6, 
-                icon: JavascriptIcon,
-                name: "Java Script"
             }
         ]
         // sublist: ["Python, R Studio, C++, Go, Java"]
+    },
+    "cloud technologies": {
+        id: 1,
+        name: "cloud technologies",
+        sublist: [
+            {
+                id: 1,
+                icon: AwsIcon,
+                name: "Amazon Web Services (AWS)"
+            },
+            {
+                id: 2,
+                icon: azureIcon,
+                name: "Microsoft Azure"
+            },
+            {
+                id: 3,
+                icon: gcpIcon,
+                name: "Google Cloud Platform(GCP)"
+            },
+            {
+                id: 4,
+                icon: OracleIcon,
+                name: "Oracle Cloud Infrastructure(OCI)"
+            }
+        ]
     },
     "devops": {
         id: 4,
@@ -197,8 +212,11 @@ const Technologies = ({keys}) => {
 
 const TechnologiesListDisplay = ({keys}) => {
     return (
-        <ul className="w-full flex justify-between items-start gap-3 p-2">
-            {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}
+        <ul className="w-full flex justify-between items-center">
+            <div className="w-40 h-40 bg-technologies bg-cover bg-center rounded-xl shadow-xl"></div>
+            <div className="w-[80%] flex justify-around items-start gap-4">
+                {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}
+            </div>
         </ul>
     )
 };
@@ -222,9 +240,9 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <span style={{fontSize: heading_font_size.subcontent[screen], color:colors.content}} className="font-semibold uppercase leading-6 tracking-wide">{name}</span>
+            <span style={{fontSize: heading_font_size.subcontent[screen], color:colors.content}} className="font-semibold uppercase leading-6 border border-black border-dotted px-2">{name}</span>
             <div className="h-full flex justify-start items-center">
-                <span style={{height: divHeight, borderColor:colors.subcontent}} className="mobile:hidden h-full w-0.5 border border-dotted"></span>
+                <span style={{height: divHeight, borderColor:colors.subcontent}} className="mobile:hidden h-full border-l border-dotted"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
             </div>
         </div>
@@ -241,7 +259,7 @@ const SubListDisplay = ({divRef, sublist}) => {
                 <li key={id}
                 style={{fontSize:heading_font_size.subcontent[screen], color:colors.subcontent}}
                 className="flex justify-start items-center gap-2 font-medium">
-                    <span style={{borderColor:colors.subcontent}} className="mobile:hidden h-0.5 w-10 border border-dotted"></span>
+                    <span style={{borderColor:colors.subcontent}} className="mobile:hidden w-7 border-t border-dotted"></span>
                     <span className="w-8 h-8 mobile:w-4 mobile:h-4">{icon}</span>
                     <span>{name}</span>
                 </li>

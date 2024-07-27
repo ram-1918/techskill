@@ -1,4 +1,8 @@
 import python from "../assets/icons/Python.png";
+import pandas from "../assets/icons/pandas.png";
+import numpy from "../assets/icons/numpy.png";
+import Tensorflow from "../assets/icons/tensorflow.png";
+import pytorch from "../assets/icons/pytorch.png";
 import r from "../assets/icons/R.png";
 import aws from "../assets/icons/AWS.png";
 import azure from "../assets/icons/azure.png";
@@ -25,6 +29,13 @@ import register from "../assets/icons/customer.png";
 import certified from "../assets/icons/certified.png";
 import locations from "../assets/icons/location.png";
 import placed from "../assets/icons/portfolio.png";
+
+import academics from "../assets/icons/academics.png";
+import aptitude from "../assets/icons/aptitude.png";
+import assessments from "../assets/icons/assessment.png";
+import certificate from "../assets/icons/certificate.png";
+import personality from "../assets/icons/personality.png";
+
 
 import infosys from "../assets/icons/companies/infosys.png";
 import tcs from "../assets/icons/companies/tcs.png";
@@ -57,6 +68,10 @@ import design from "../assets/icons/shape.png";
 
 const icon_style = "w-8 h-8";
 export const PythonIcon = <img className={''} src={python} alt="python icon" />;
+export const PandasIcon = <img className={''} src={pandas} alt="Pandas icon" />;
+export const NumpyIcon = <img className={''} src={numpy} alt="Numpy icon" />;
+export const TensorflowIcon = <img className={''} src={Tensorflow} alt="Tensorflow icon" />;
+export const PytorchIcon = <img className={''} src={pytorch} alt="Pytorch icon" />;
 
 export const AwsIcon = <img className={''} src={aws} alt="AWS icon" />;
 export const gcpIcon = <img className={''} src={gcp} alt="GCP icon" />;
@@ -86,6 +101,12 @@ export const RegistedIcon = <img className={''} src={register} alt="Registed ico
 export const CertifiedIcon = <img className={''} src={certified} alt="Certified icon" />;
 export const LocationsIcon = <img className={''} src={locations} alt="Locations icon" />;
 export const PlacedIcon = <img className={''} src={placed} alt="Placed icon" />;
+
+export const AcademicsIcon = <img className={'w-7 h-7'} src={academics} alt="Academics Icon" />;
+export const AptitudeIcon = <img className={''} src={aptitude} alt="Placed icon" />;
+export const AssessmentIcon = <img className={''} src={assessments} alt="Placed icon" />;
+export const CertificateIcon = <img className={''} src={certificate} alt="Placed icon" />;
+export const PersonalityIcon = <img className={''} src={personality} alt="Placed icon" />;
 
 export const InfosysIcon = <img className={''} src={infosys} alt="Communication icon" />;
 export const TCSIcon = <img className={''} src={tcs} alt="TCS icon" />;

@@ -58,7 +58,7 @@ const ProgressBarDiv = () => {
   const relative_percents = scores.map((sc, idx) => (sc * weightages[idx]) / 100);
   const total_score = scores.reduce((s, sc) => sc + s);
   const text_styles = "text-[0.9rem] font-light";
-  const line_styles = "h-full border border-spacing-0.5 border-dotted"
+  const line_styles = "h-full border border-spacing-0.5 border-black border-dotted"
   return (
     <div>
                 <div style={{width:total_score}} className="relative pl-10 flex justify-between items-center gap-10">
@@ -99,6 +99,7 @@ const ProgressBar = ({progressRef, max_score, relative_percents, total_score}) =
 }
 
 const bar_styles = "h-full bg-gray-200 border-r-2 border-white text-center font-semibold";
+
 const rounded_num = (val) => {
   return Math.round(val)
 }

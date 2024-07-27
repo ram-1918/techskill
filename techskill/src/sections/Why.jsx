@@ -7,7 +7,6 @@ import { colors } from "../Base";
 import list_icon from '../assets/icons/next.png'
 
 function Why({keys}) {
-    const screen = localStorage.getItem('screen') || 'laptop';
   return (
         <BaseSlide image="bg-bg2">
             <BaseHeader text="Purpose of this program" />
@@ -107,9 +106,10 @@ const RightData = () => {
     )
 }
 const TextDiv = ({text, align}) => {
-    const text_styles = "text-left border-0 rounded p-1 text-[0.8rem] border-green-800 font-semibold";
+    const text_styles = "text-left border-0 rounded p-1 text-[0.9rem] border-green-800 font-semibold";
+    const screen = localStorage.getItem('screen') || 'laptop';
     return (
-        <div className={`${text_styles} ${align}`}>{text}</div>
+        <div styles={{fontSize: heading_font_size.content[screen]}} className={`${text_styles} ${align}`}>{text}</div>
     )
 }
 

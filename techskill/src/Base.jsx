@@ -8,20 +8,20 @@ export const heading_font_size = {
     sub: {
         mobile: "0.9rem",
         tablet: "0.9rem",
-        laptop: "1.6rem",
-        desktop: "1.3rem",
+        laptop: "1.1rem",
+        desktop: "1.5rem",
     },
     content: {
         mobile: "0.65rem",
         tablet: "0.7rem",
         laptop: "1rem",
-        desktop: "1rem",
+        desktop: "1.1rem",
     },
     subcontent: {
         mobile: "0.5rem",
         tablet: "0.6rem",
         laptop: "0.9rem",
-        desktop: "1.05rem",
+        desktop: "1rem",
     }
 }
 export const content_font = "0.9rem";
