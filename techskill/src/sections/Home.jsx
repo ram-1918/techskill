@@ -25,7 +25,7 @@ const Home = () => {
 
 const Body = () => {
     return (
-        <div className="h-full w-[55%] mobile:w-full mobile:h-full mobile:pt-0 mobile:pl-10 flex flex-col justify-start mobile:justify-center items-start gap-2">
+        <div className="h-full w-[55%] mobile:w-full mobile:h-full mobile:pt-0 mobile:pl-10 flex flex-col justify-center mobile:justify-center items-start gap-2">
             <CBN />
             <PK />
             <Lokesh />

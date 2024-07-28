@@ -5,7 +5,7 @@ import Subhead from "./Subhead";
 
 const BaseContentDiv = ({children, text=''}) => {
     return (
-        <div className="w-full h-full overflow-hidden  desktop:px-10 laptop:px-10 tablet:px-4 mobile:px-2 small:px-1 flex flex-col justify-start items-center gap-4 mobile:gap-1">
+        <div className="w-full h-full overflow-hidden desktop:px-10 laptop:px-10 tablet:px-4 mobile:px-2 small:px-1 flex flex-col justify-around items-center gap-4 mobile:gap-1 tablet:gap-0">
             {text && <Subhead text={text} />}
             {children}
         </div>

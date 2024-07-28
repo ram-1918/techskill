@@ -213,7 +213,7 @@ const Technologies = ({keys}) => {
 
 const TechnologiesListDisplay = ({keys}) => {
     return (
-        <ul className="w-full flex desktop:flex-row justify-between items-center mobile:flex-col small:flex-col mobile:gap-2 small:gap-2">
+        <ul className="w-full flex desktop:flex-row laptop:flex-row tablet:flex-row justify-between items-center mobile:flex-col small:flex-col mobile:gap-2 small:gap-2">
             <div className="w-64 h-64 desktop:flex laptop:flex tablet:flex mobile:hidden small:hidden  bg-technologies bg-cover bg-center rounded-xl shadow-xl"></div>
             <div className="w-[80%] mobile:w-full small:w-full mobile:px-2 flex justify-around items-start gap-4 mobile:gap-2 small:gap-1">
                 {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}

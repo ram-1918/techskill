@@ -80,7 +80,7 @@ const BigScreenView = ({slides}) => {
   const [isView, setIsView] = useState('scroll');
   return (
     <div style={{fontFamily: main_heading_fontstyle}} className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-zinc-300 text-black">
-      {/* <ViewOptions isView={isView} setIsView={setIsView} /> */}
+      <ViewOptions isView={isView} setIsView={setIsView} />
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
     </div>
@@ -108,7 +108,7 @@ const ViewOptions = ({setIsView, isView}) => {
   }, [setCurrLang]);
 
   return (
-    <div className="flex justify-end items-center gap-8">
+    <div className="flex justify-end items-center gap-8 desktop:flex-row laptop:flex-row tablet:flex-row small:flex-col mobile:flex-col mobile:gap-1 small:gap-1 mobile:justify-start mobile:items-end">
       <div className="flex justify-center items-center gap-2">
         <span >Translation: </span>
         <span className={`${transButton} ${currLang === 'en' && "bg-sky-400 text-black font-semibold"}`} onClick={() => changeLanguage('en')}>English</span> |
