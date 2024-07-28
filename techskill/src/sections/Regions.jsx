@@ -40,6 +40,7 @@ const Regions = () => {
             <BaseContentDiv text="list of mandals">
                 <div className="
                 w-full flex justify-between items-center space-x-4
+                tablet:flex-row laptop:flex-row desktop:flex-row
                 mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4 
                 ">
                     <ImageSpan />

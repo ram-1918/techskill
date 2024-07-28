@@ -213,8 +213,8 @@ const Technologies = ({keys}) => {
 
 const TechnologiesListDisplay = ({keys}) => {
     return (
-        <ul className="w-full flex justify-between items-center mobile:flex-col small:flex-col mobile:gap-2 small:gap-2">
-            <div className="w-52 h-52 mobile:hidden small:hidden bg-technologies bg-cover bg-center rounded-xl shadow-xl"></div>
+        <ul className="w-full flex desktop:flex-row justify-between items-center mobile:flex-col small:flex-col mobile:gap-2 small:gap-2">
+            <div className="w-64 h-64 desktop:flex laptop:flex tablet:flex mobile:hidden small:hidden  bg-technologies bg-cover bg-center rounded-xl shadow-xl"></div>
             <div className="w-[80%] mobile:w-full small:w-full mobile:px-2 flex justify-around items-start gap-4 mobile:gap-2 small:gap-1">
                 {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}
             </div>
@@ -242,7 +242,7 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <p style={{fontSize: heading_font_size.subcontent[screen], color:colors.content, borderColor:colors.subcontent}} className="overflow-hidden text-ellipsis font-semibold capitalize border-b border-dotted px-2 mobile:px-0">{t(name)}</p>
+            <p style={{fontSize: heading_font_size.subcontent[screen], color:colors.content, borderColor:colors.subcontent}} className="overflow-hidden text-ellipsis font-semibold tracking-tighter uppercase border-b border-dotted px-2 mobile:px-0">{t(name)}</p>
             <div className="mobile:w-full h-full flex justify-start mobile:justify-center items-center">
                 <span style={{height: divHeight, borderColor:colors.subcontent}} className="mobile:hidden h-full border-l border-dotted"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />

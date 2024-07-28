@@ -49,7 +49,7 @@ const Reporting = () => {
 
 const PDItems = () => {
     return (
-        <ul className="w-full h-full mobile:h-[60%] grid grid-flow-row grid-cols-4 mobile:grid-cols-2 small:grid-cols-2 gap-4 px-2 mobile:px-0 small:px-0">
+        <ul className="w-full h-full mobile:h-[60%] grid grid-flow-row desktop:grid-cols-4 laptop:grid-cols-4 tablet:grid-cols-4 mobile:grid-cols-2 small:grid-cols-2 gap-4 px-2 mobile:px-0 small:px-0">
             { reporting_items.map(item => <ListItem key={item.id} item={item} />) }
         </ul>
     )

@@ -56,7 +56,7 @@ const RightSpan = () => {
         </div>
     )
 }
-const FutureImg = () => <div className="w-60 h-60 mobile:w-24 mobile:h-24 small:w-24 small:h-24 rounded-xl shadow-lg bg-future bg-cover bg-center"></div>
+const FutureImg = () => <div className="desktop:w-60 desktop:h-60 laptop:w-60 laptop:h-60 tablet:w-60 tablet:h-60 mobile:w-24 mobile:h-24 small:w-24 small:h-24 rounded-xl shadow-lg bg-future bg-cover bg-center"></div>
 
 const MiddleLine = () => {
     return (

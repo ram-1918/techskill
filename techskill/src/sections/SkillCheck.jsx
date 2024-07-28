@@ -91,8 +91,8 @@ const AttributeDisplay = () => {
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
         <div className="w-[50%] mobile:w-full mobile:h-fit h-64 flex justify-center items-center -space-x-5">
-            <div style={{fontSize:heading_font_size.sub[screen]}} className="overflow-hidden border rounded rounded-bl rounded-br flex flex-col items-start justify-start mobile:space-y-1 small:space-y-1 space-y-2">
-                <div style={{fontSize:heading_font_size.sub[screen]}} className="px-7 bg-blue-300 w-full capitalize">{t("skill check attributes")}</div>
+            <div style={{fontSize:heading_font_size.content[screen]}} className="overflow-hidden border border-black rounded rounded-bl rounded-br flex flex-col items-start justify-start mobile:space-y-1 small:space-y-1 space-y-2">
+                <div style={{fontSize:heading_font_size.content[screen]}} className="px-7 bg-blue-300 w-full capitalize">{t("skill check attributes")}</div>
                 {attributes.map(item => <AttributeItem key={item.id} item={item} />)}
             </div>
         </div>
