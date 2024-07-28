@@ -7,6 +7,7 @@ import { main_headings } from "../components/data";
 import { AcademicsIcon, AptitudeIcon, AssessmentIcon, CertificateIcon, LeftBracketIcon, PersonalityIcon } from "../components/icons";
 import Subhead from "../components/Subhead";
 import { faBarChart, faLineChart } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
 
 // const content = {
 //     attributes: [
@@ -38,27 +39,27 @@ import { faBarChart, faLineChart } from "@fortawesome/free-solid-svg-icons";
 const attributes = [
     {
         id: 1,
-        name: "Academics",
+        name: "academics",
         icon: AcademicsIcon
     },
     {
         id: 2,
-        name: "Aptitude Tests",
+        name: "aptitude tests",
         icon: AptitudeIcon
     },
     {
         id: 3,
-        name: "Assessments",
+        name: "assessments",
         icon: AssessmentIcon
     },
     {
         id: 4,
-        name: "Personality Development",
+        name: "personality development",
         icon: PersonalityIcon
     },
     {
         id: 5,
-        name: "Certifications",
+        name: "certifications",
         icon: CertificateIcon
     },
 ]
@@ -69,7 +70,7 @@ const SkillCheck = () => {
     <BaseSlide id="skillcheck">
         <BaseHeader text={main_headings.slide6.text} />
         <BaseContentDiv text="">
-            <Subhead text="Skill Check Attribute Criteria" />
+            <Subhead text="skill check attribute criteria" />
             <Content />
         </BaseContentDiv>
     </BaseSlide>
@@ -85,23 +86,25 @@ const Content = () => {
     )
 }
 
-const AttributeItem = ({item: {name, icon}}) => {
+const AttributeDisplay = () => {
+    const { t } = useTranslation();
     return (
-        <div className="flex justify-start items-center space-x-2">
-            <span className="w-7 h-7">{icon}</span>
-            <span className="">{name}</span>
+        <div className="w-[50%] h-64 overflow-hidden flex justify-center items-center -space-x-5">
+            <div className="text-xl px-7">{t("skill check attributes")}</div>
+            <span className="text-[16rem] leading-None font-light inline-block align-text-top p-0 text-teal-500">{`{`}</span>
+            <div className="flex flex-col items-start justify-around space-y-2">
+                {attributes.map(item => <AttributeItem key={item.id} item={item} />)}
+            </div>
         </div>
     )
 }
 
-const AttributeDisplay = () => {
+const AttributeItem = ({item: {name, icon}}) => {
+    const { t } = useTranslation();
     return (
-        <div className="w-[50%] h-56 overflow-hidden flex justify-center items-center -space-x-5">
-            <div className="text-xl px-7">Skill Check Attributes</div>
-            <span className="text-[15rem] leading-None font-light inline-block align-text-top p-0 text-teal-500">{`{`}</span>
-            <div className="flex flex-col items-start justify-around space-y-2">
-                {attributes.map(item => <AttributeItem key={item.id} item={item} />)}
-            </div>
+        <div className="flex justify-start items-center space-x-2">
+            <span className="w-7 h-7">{icon}</span>
+            <span className="">{t(name)}</span>
         </div>
     )
 }

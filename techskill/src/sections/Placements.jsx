@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
@@ -89,12 +90,13 @@ const pd_items = [
 ]
 
 const Placements = () => {
+    const { t } = useTranslation();
   return (
     <BaseSlide id="placements">
         <BaseHeader text={main_headings.slide7.text}/>
-        <BaseContentDiv text="Program Execution Partners">
+        <BaseContentDiv text="program execution partners">
             <PlacementItems />
-            <span className="w-full text-center font-light">... and many others</span>
+            <span className="w-full text-center font-light">... {t("and many others")}</span>
         </BaseContentDiv>
     </BaseSlide>
   );

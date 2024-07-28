@@ -5,6 +5,7 @@ import BaseContentDiv from "../components/BaseContentDiv";
 import { main_headings } from "../components/data";
 import { colors, heading_font_size } from "../Base";
 import BaseSlide from "../components/BaseSlide";
+import { useTranslation } from "react-i18next";
 
 const technology_list = {
     "ai/ml": {
@@ -202,7 +203,7 @@ const Technologies = ({keys}) => {
     return (
         <BaseSlide id="technologies">
             <BaseHeader text={main_headings.slide3.text} />
-            <BaseContentDiv text="Disruptive Technologies Shaping the Coming Decades">
+            <BaseContentDiv text="disruptive technologies shaping the coming decades">
                 <TechnologiesListDisplay keys={keys} />
             </BaseContentDiv>
         </BaseSlide>
@@ -212,8 +213,8 @@ const Technologies = ({keys}) => {
 
 const TechnologiesListDisplay = ({keys}) => {
     return (
-        <ul className="w-full flex justify-between items-center">
-            <div className="w-40 h-40 bg-technologies bg-cover bg-center rounded-xl shadow-xl"></div>
+        <ul className="w-full flex justify-between items-center ">
+            <div className="w-52 h-52 bg-technologies bg-cover bg-center rounded-xl shadow-xl"></div>
             <div className="w-[80%] flex justify-around items-start gap-4">
                 {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}
             </div>
@@ -225,6 +226,7 @@ const ListItem = ({tech:{name, sublist}}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     const divRef = useRef(null);
     const [divHeight, setDivHeight] = useState(0);
+    const { t } = useTranslation();
 
     useEffect(() => {
         const handle_resize = () => {
@@ -240,7 +242,7 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <span style={{fontSize: heading_font_size.subcontent[screen], color:colors.content}} className="font-semibold uppercase leading-6 border border-black border-dotted px-2">{name}</span>
+            <span style={{fontSize: heading_font_size.subcontent[screen], color:colors.content, borderColor:colors.subcontent}} className="font-semibold uppercase leading-6 border-b border-dotted px-2">{t(name)}</span>
             <div className="h-full flex justify-start items-center">
                 <span style={{height: divHeight, borderColor:colors.subcontent}} className="mobile:hidden h-full border-l border-dotted"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
@@ -251,6 +253,7 @@ const ListItem = ({tech:{name, sublist}}) => {
 
 const SubListDisplay = ({divRef, sublist}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
+    const { t } = useTranslation();
     return (
         <ul ref={divRef} className="flex flex-col justify-start items-start gap-1">
             {
@@ -261,7 +264,7 @@ const SubListDisplay = ({divRef, sublist}) => {
                 className="flex justify-start items-center gap-2 font-medium">
                     <span style={{borderColor:colors.subcontent}} className="mobile:hidden w-7 border-t border-dotted"></span>
                     <span className="w-8 h-8 mobile:w-4 mobile:h-4">{icon}</span>
-                    <span>{name}</span>
+                    <span>{t(name)}</span>
                 </li>
             )}
         </ul>

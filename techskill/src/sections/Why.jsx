@@ -5,14 +5,14 @@ import BaseSlide from "../components/BaseSlide";
 import { purposes } from "../components/data";
 import { colors } from "../Base";
 import list_icon from '../assets/icons/next.png'
+import { useTranslation } from "react-i18next";
 
 function Why({keys}) {
   return (
         <BaseSlide image="bg-bg2" id="why">
-            <BaseHeader text="Skill Development program after graduation" />
-            <BaseContentDiv text="7 Essentials for higher emplpoyment rate" >
+            <BaseHeader text="skill development program after graduation" />
+            <BaseContentDiv text="7 essentials for higher emplpoyment rate" >
             <Concepts />
-            {/* <WhyBackup keys={keys} /> */}
             </BaseContentDiv>
         </BaseSlide>
     );
@@ -89,9 +89,9 @@ const LeftEdges = () => {
 const LeftData = () => {
     return (
         <div className="w-fit h-full  flex flex-col justify-between items-right">
-            <TextDiv text="ADAPTING TO TECHNOLOGICAL CHANGES" align="text-right border-r border-green-800" />
-            <TextDiv text="MEETING INDUSTRY REQUIREMENTS" align="text-right border-r border-green-800" />
-            <TextDiv text="ENHANCING EMPLOYABILITYS" align="text-right border-r border-green-800" />
+            <TextDiv text="adapting to technological changes" align="text-right border-r border-green-800" />
+            <TextDiv text="meeting industry requirements" align="text-right border-r border-green-800" />
+            <TextDiv text="enhancing employabilites" align="text-right border-r border-green-800" />
         </div>
     )
 }
@@ -99,17 +99,18 @@ const LeftData = () => {
 const RightData = () => {
     return (
         <div className="w-fit h-full  flex flex-col justify-between items-left space-y-10">
-            <TextDiv text="PERSONAL DEVELOPMENT" align="text-left border-l border-green-800" />
-            <TextDiv text="NETWORKING OPPORTUNITIES" align="text-left border-l border-green-800" />
-            <TextDiv text="GLOBAL COMPETITIVENESS" align="text-left border-l border-green-800" />
+            <TextDiv text="personal development" align="text-left border-l border-green-800" />
+            <TextDiv text="networking opportunities" align="text-left border-l border-green-800" />
+            <TextDiv text="global competitiveness" align="text-left border-l border-green-800" />
         </div>
     )
 }
 const TextDiv = ({text, align}) => {
-    const text_styles = "text-left px-1.5 py-1 text-[0.9rem] border-green-800 font-bold";
+    const text_styles = "border text-left px-1.5 py-1 border-green-800 capitalize font-bold";
     const screen = localStorage.getItem('screen') || 'laptop';
+    const { t } = useTranslation();
     return (
-        <div styles={{fontSize: heading_font_size.content[screen]}} className={`${text_styles} ${align}`}>{text}</div>
+        <div style={{backgroundColor: colors.bg_color,fontSize: heading_font_size.subcontent[screen]}} className={`${text_styles} ${align}`}>{t(text)}</div>
     )
 }
 
@@ -117,7 +118,7 @@ const BottomSpan = () => {
     return (
         <div className="h-20 w-full flex flex-col justify-center items-center">
             <div style={{borderColor: bg_color}} className="h-16 border-l"></div>
-            <TextDiv text="ADAPTABILITY AND PROBLEM-SOLVING" align="border-t" />
+            <TextDiv text="adaptability and problem-solving" align="border-t" />
         </div>
     )
 }

@@ -3,6 +3,7 @@ import { colors, heading_font_size, sub_heading_fontstyle } from "../Base";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faCogs} from '@fortawesome/free-solid-svg-icons';
 import { DesignIcon } from "./icons";
+import { useTranslation } from "react-i18next";
 
 const Subhead = ({ text }) => {
   const divRef = useRef(null);
@@ -21,7 +22,7 @@ const Subhead = ({ text }) => {
       }
   }, [divRef]);
   return (
-    <div className="w-full flex flex-col justify-center items-center">
+    <div className="w-full flex flex-col justify-center items-center py-2">
         <Head divRef={divRef} text={text} />
         <UnderlineDesign divWidth={divWidth} />
     </div>
@@ -31,17 +32,18 @@ const Subhead = ({ text }) => {
 const Head = ({text, divRef}) => {
     const screen = localStorage.getItem("screen") || "laptop";
     const styles = "text-center font-semibold text-orange-700 uppercase";
+    const { t } = useTranslation();
     return (
         <span
             ref = {divRef}
             style={{ 
-                fontSize: heading_font_size.content[screen], 
+                fontSize: heading_font_size.sub[screen], 
                 fontFamily: sub_heading_fontstyle,
                 color: colors.sub 
             }}
             className={styles}
             >
-            {text}
+            {t(text)}
         </span>
     )
 };

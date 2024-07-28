@@ -1,45 +1,46 @@
 export const main_headings = {
-    slide1:{
+    slide1: {
         id: 1,
-        text: "Introducing Regional Skills Development Program"
+        text: "introducing regional skills development program"
     },
-    slide2:{
+    slide2: {
         id: 2,
-        text: "Regions to Benefit from the Program"
+        text: "regions to benefit from the program"
     },
-    slide3:{
+    slide3: {
         id: 3,
-        text: "Encompassing various technologies"
+        text: "encompassing various technologies"
     },
-    slide4:{
+    slide4: {
         id: 4,
-        text: "Value Added Certifications"
+        text: "value added certifications"
     },
-    slide5:{
+    slide5: {
         id: 5,
-        text: "Comprehensive Personality Development Program"
+        text: "comprehensive personality development program"
     },
-    slide6:{
+    slide6: {
         id: 6,
-        text: "About our skill check attribute"
+        text: "about our skill check attribute"
     },
-    slide7:{
+    slide7: {
         id: 7,
-        text: "Companies that can exploit this program"
+        text: "companies that can exploit this program"
     },
-    slide8:{
+    slide8: {
         id: 8,
-        text: "Delivarable Updates"
+        text: "delivarable updates"
     },
-    slide9:{
+    slide9: {
         id: 9,
-        text: "Score check simulation"
+        text: "score check simulation"
     },
-    slide10:{
+    slide10: {
         id: 10,
-        text: "Who am I?"
+        text: "about me"
     }
 };
+
 
 export const purposes = [
     {

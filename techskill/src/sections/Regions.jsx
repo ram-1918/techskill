@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { colors, heading_font_size } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
@@ -5,30 +6,30 @@ import BaseSlide from "../components/BaseSlide";
 import { main_headings } from "../components/data";
 
 const regions_list = [
-    "Addanki",
-    "Akividu",
-    "Addateegala",
-    "Araku Valley",
-    "Badvel",
-    "Ballikurava",
-    "Bhogapuram",
-    "Bobbili",
-    "Denkada",
-    "Duggirala",
-    "Gajuwaka",
-    "Gudlavalleru",
-    "Guntur West",
-    "Kuppam",
-    "Mangalagiri",
-    "Pakala",
-    "Pithapuram",
-    "Pulivendla",
-    "Rajanagaram",
-    "Rajam",
+    "addanki",
+    "akividu",
+    "addateegala",
+    "araku valley",
+    "badvel",
+    "ballikurava",
+    "bhogapuram",
+    "bobbili",
+    "denkada",
+    "duggirala",
+    "gajuwaka",
+    "gudlavalleru",
+    "guntur west",
+    "kuppam",
+    "mangalagiri",
+    "pakala",
+    "pithapuram",
+    "pulivendla",
+    "rajanagaram",
+    "rajam",
     "tadepalligudem",
-    "Kakinada (rural)",
-    "Vijayawada central"
-  ];
+    "kakinada (rural)",
+    "vijayawada central"
+];
 
 
 
@@ -36,7 +37,7 @@ const Regions = () => {
     return (
         <BaseSlide id="regions">
             <BaseHeader text={main_headings.slide2.text} />
-            <BaseContentDiv text="List of Mandals">
+            <BaseContentDiv text="list of mandals">
                 <div className="w-full flex justify-between items-center space-x-4">
                     <ImageSpan />
                     <RegionsListDisplay />
@@ -48,7 +49,7 @@ const Regions = () => {
 
 const ImageSpan = () => {
     return (
-        <div className="w-[35%] h-56 bg-red-400 rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80"></div>
+        <div className="w-[35%] h-56 rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80"></div>
     )
 }
 
@@ -61,17 +62,18 @@ const RegionsListDisplay = () => {
 }
 
 const ListItem = ({region, id}) => {
-    const list_style = "capitalize font-medium px-2 list-disc list-inside";
+    const list_style = "capitalize font-semibold px-2 list-disc list-inside";
     const screen = localStorage.getItem('screen') || 'laptop';
+    const { t } = useTranslation();
     return <li 
     style={
         {
             // width: regions_list.length > 20 ? (screen === 'mobile' ? "29%": "28%"): "33.33%", 
-            color: colors.subcontent, 
+            color: colors.content, 
             fontSize: heading_font_size.subcontent[screen]
         }
     } 
-    className={list_style} key={id}>{region}</li>
+    className={list_style} key={id}>{t(region)}</li>
 }
 
 export default Regions;

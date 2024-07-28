@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'ap': "url('assets/images/ap.png')",
         'cbn': "url('assets/images/chandrababu.png')",
-        'pk': "url('assets/images/pk1.png')",
+        'pk': "url('assets/images/pk4.png')",
         'lokesh': "url('assets/images/lokesh.png')",
         'apssdc': "url('assets/images/apssdc.png')",
         'apgov': "url('assets/images/apgov.png')",
@@ -13,11 +14,11 @@ module.exports = {
         'future':  "url('assets/images/futuretech.png')",
         'mandals':  "url('assets/images/futuretown2.png')",
         'technologies':  "url('assets/images/technologies.png')",
+        'thankyou':  "url('assets/images/thankyou.png')",
         'bg1': "url('assets/images/slides/first.png')",
         'bg2': "url('assets/images/slides/second.png')",
         'bg3': "url('assets/images/bg3.png')",
         'bg4': "url('assets/images/bg4.png')",
-        'ap': "url('assets/images/ap.png')",
         'bg7': "url('assets/images/bg5.png')",
         'bg9': "url('assets/images/bg9.png')",
         'bg10': "url('assets/images/bg10.webp')",

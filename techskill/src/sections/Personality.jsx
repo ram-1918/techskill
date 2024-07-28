@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { colors, heading_font_size } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
@@ -8,21 +9,21 @@ import { CommunicationIcon, InterviewIcon, SoftIcon } from "../components/icons"
 const pd_items = [
     {
         id: 1,
-        name: "Communication Skills",
+        name: "communication skills",
         icon: CommunicationIcon,
-        content: "Effective communication skills are key to advancing careers, enhancing professional competence, and fostering reflective learning within organizations."
+        content: "effective communication skills are key to advancing careers, enhancing professional competence, and fostering reflective learning within organizations."
     },
     {
         id: 3,
-        name: "Soft Skills",
+        name: "soft skills",
         icon: SoftIcon,
-        content: "This program enhances key professional skills such as communication, leadership, negotiation, teamwork, time management, and follow-through."
+        content: "this program enhances key professional skills such as communication, leadership, negotiation, teamwork, time management, and follow-through."
     },
     {
         id: 2,
-        name: "Interview Prepation",
+        name: "interview prepation",
         icon: InterviewIcon,
-        content: "On Demand, In-depth guidance on what to prepare, how to prepare and how to deliver your best interviews"
+        content: "on demand, in-depth guidance on what to prepare, how to prepare and how to deliver your best interviews"
     }
 ]
 
@@ -31,7 +32,7 @@ const Personality = () => {
     // <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
     <BaseSlide id="personality">
         <BaseHeader text={main_headings.slide5.text} />
-        <BaseContentDiv text="Personality Development Program Curricullam">
+        <BaseContentDiv text="personality development program curricullam">
             <PDItems />
         </BaseContentDiv>
     </BaseSlide>
@@ -40,7 +41,7 @@ const Personality = () => {
 
 const PDItems = () => {
     return (
-        <ul className="w-full flex justify-center items-center gap-4 px-2">
+        <ul className="w-full flex justify-around items-center">
             { pd_items.map(item => <ListItem key={item.id} item={item} />) }
         </ul>
     )
@@ -48,12 +49,13 @@ const PDItems = () => {
 
 const ListItem = ({item:{icon, name, content}}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
+    const { t } = useTranslation();
     return (
         <li className="w-72 h-64 flex flex-col justify-start items-center gap-3">
-            <span className="w-24 h-24 mobile:w-16 mobile:h-16 bg-white p-2 rounded">{icon}</span>
+            <span style={{backgroundColor: colors.bg_color}} className="w-32 h-32 mobile:w-16 mobile:h-16 p-2 rounded shadow-md">{icon}</span>
             <div className="flex flex-col justify-center items-center gap-1.5">
-                <span style={{fontSize:heading_font_size.sub[screen], color: colors.content}} className="text-xl font-semibold mobile:leading-3">{name}</span>
-                <span style={{fontSize:heading_font_size.subcontent[screen], color: colors.subcontent}} className="text-center text-sm font-light whitespace-pre-wrap mobile:leading-3">{content}</span>
+                <span style={{fontSize:heading_font_size.sub[screen], color: colors.content}} className="capitalize text-xl font-semibold mobile:leading-3">{t(name)}</span>
+                <span style={{fontSize:heading_font_size.subcontent[screen], color: colors.subcontent}} className="capitalize text-center text-sm font-light whitespace-pre-wrap mobile:leading-3">{t(content)}</span>
             </div>
         </li>
     );

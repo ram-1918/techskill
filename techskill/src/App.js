@@ -19,6 +19,7 @@ import Menu from "./sections/Menu";
 import ThankYou from "./sections/Thankyou";
 
 import './i18n';
+import { useTranslation } from "react-i18next";
 
 function App() {
   const [screen, setScreen] = useState('');
@@ -89,18 +90,42 @@ const BigScreenView = ({slides}) => {
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
     </div>
-  )
-}
+  );
+};
 
 const ViewOptions = ({setIsView, isView}) => {
+  const { t, i18n } = useTranslation();
+  const [currLang, setCurrLang] = useState('en');
   const active = 'bg-sky-300';
-  const buttonstyles = 'px-2 py-1 rounded-lg cursor-pointer'
+  const buttonstyles = 'px-2 py-1 rounded-lg cursor-pointer';
+  const transButton = "cursor-pointer rounded-md py-1 px-2";
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setCurrLang(lng);
+    localStorage.setItem('lang', lng);
+  };
+
+  useEffect(() => {
+    const lang = localStorage.getItem('lang');
+    if (lang) {
+      setCurrLang(lang);
+    }
+  }, [setCurrLang]);
+
   return (
-    // <div className="w-[74rem] flex justify-end items-center gap-2">
-    <div className="w-[64rem] flex justify-end items-center gap-2">
-      <span className="text-black font-light text-lg"><FontAwesomeIcon icon={faEye} /> View: </span>
-      <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-8 h-8`}>{ScrollIcon}</span>
-      <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
+    <div className="w-[64rem] flex justify-end items-center gap-8">
+      <div className="flex justify-center items-center gap-2">
+        <span >Translation: </span>
+        <span className={`${transButton} ${currLang === 'en' && "bg-sky-400 text-black font-semibold"}`} onClick={() => changeLanguage('en')}>English</span> |
+        <span className={`${transButton} ${currLang === 'te' && "bg-sky-400 text-black font-semibold"}`} onClick={() => changeLanguage('te')}>Telugu</span> |
+        <span className={`${transButton} ${currLang === 'hi' && "bg-sky-400 text-black font-semibold"}`}onClick={() => changeLanguage('hi')}>Hindi</span>
+      </div>
+      <div className="flex justify-end items-center gap-2">
+        <span className="text-black font-light text-lg"><FontAwesomeIcon icon={faEye} /> View: </span>
+        <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-8 h-8`}>{ScrollIcon}</span>
+        <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
+      </div>
     </div>
   )
 }

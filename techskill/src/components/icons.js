@@ -68,6 +68,7 @@ import slideshow from "../assets/icons/slideshow.png";
 import scroll from "../assets/icons/scroll.png";
 import design from "../assets/icons/shape.png";
 import leftbracket from '../assets/icons/leftbracket.png';
+import approved from '../assets/icons/approved.png';
 
 
 const icon_style = "w-8 h-8";
@@ -143,3 +144,4 @@ export const ScrollIcon = <img className={''} src={scroll} alt="Scroll icon" />;
 export const SlideshowIcon = <img className={''} src={slideshow} alt="SlideShow icon" />;
 export const DesignIcon = <img className={''} src={design} alt="Design icon" />;
 export const LeftBracketIcon = <img className={'h-40 w-10'} src={leftbracket} alt="LeftOpen icon" />;
+export const approvedIcon = <img className={'w-6 h-6'} src={approved} alt="Approved icon" />;

@@ -1,13 +1,19 @@
 import { useTranslation } from 'react-i18next';
+import BaseSlide from '../components/BaseSlide';
+import BaseHeader from '../components/BaseHeader';
 
 function ThankYou() {
   const { t, i18n } = useTranslation();
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
   return (
-    <div>
-      <h1>{t('welcome')}</h1>
-      <p>{t('greeting', { name: 'welcome' })}</p>
-    </div>
+    <BaseSlide>
+      <BaseHeader text="thank you" />
+      <div className='w-[30rem] h-[30rem] rounded-xl shadow-xl bg-thankyou bg-cover bg-center bg-no-repeat'></div>
+    </BaseSlide>
   );
 }
 

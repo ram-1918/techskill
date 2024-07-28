@@ -3,25 +3,25 @@ export const heading_font_size = {
         mobile: "0.75rem",
         tablet: "1.1rem",
         laptop: "2.1rem",
-        desktop: "2.25rem",
+        desktop: "2.5rem",
     },
     sub: {
         mobile: "0.9rem",
         tablet: "0.9rem",
         laptop: "1.1rem",
-        desktop: "1.5rem",
+        desktop: "1.6rem",
     },
     content: {
         mobile: "0.65rem",
         tablet: "0.7rem",
         laptop: "1rem",
-        desktop: "1.1rem",
+        desktop: "1.2rem",
     },
     subcontent: {
         mobile: "0.5rem",
         tablet: "0.6rem",
         laptop: "0.9rem",
-        desktop: "1rem",
+        desktop: "1.1rem",
     }
 }
 export const content_font = "0.9rem";
@@ -30,7 +30,8 @@ export const colors = {
     main: "#01204E",
     sub: "#27374D",
     content: "#134B70",
-    subcontent: "#405D72"
+    subcontent: "#405D72",
+    bg_color: "#CCF2F4"
 }
 
 export const colors_backup = {

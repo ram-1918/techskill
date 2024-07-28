@@ -1,6 +1,7 @@
+import { useTranslation } from "react-i18next";
 import { color1, colors, heading_font_size, main_heading_fontstyle } from "../Base";
 
-const Heading = ({ text, type }) => {
+const Heading = ({ text, type = 'main' }) => {
   return (
     type === 'main' ? <MainHead text={text} />: <NormalText text={text} type={type} />
   );
@@ -8,21 +9,25 @@ const Heading = ({ text, type }) => {
 
 const MainHead = ({text}) => {
   const screen = localStorage.getItem("screen") || "laptop";
+  const { t } = useTranslation();
+
   return (
     <span
       style={{
         fontFamily: main_heading_fontstyle,
         fontSize: heading_font_size['main'][screen]
       }}
-      className="leading-7 py-2 tracking-tighter capitalize font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-700 to-teal-600"
+      className="leading-7 py-5 tracking-tighter capitalize font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-700 to-teal-600"
     >
-      {text} 
+      {t(text)} 
     </span>
   )
 }
 
 const NormalText = ({text, type}) => {
   const screen = localStorage.getItem("screen") || "laptop";
+  const { t } = useTranslation();
+
   return (
     <span
       style={{
@@ -33,7 +38,7 @@ const NormalText = ({text, type}) => {
       }}
       className="leading-7 -py-1 tracking-tighter capitalize font-bold bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 to-teal-500"
     >
-      {text} 
+      {t(text)}
     </span>
   )
 }

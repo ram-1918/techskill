@@ -65,7 +65,7 @@ const Certifications = () => {
     return (
         <BaseSlide id="certifications">
             <BaseHeader text={main_headings.slide4.text} />
-            <BaseContentDiv text="Offers training for the following certifications">
+            <BaseContentDiv text="offers training for the following certifications">
                 <div className="w-full flex justify-center items-center flex-wrap gap-10">
                     {certification_list.map(item => <Item key={item.id} icon={item.icon} name={item.name} />)}
                 </div>

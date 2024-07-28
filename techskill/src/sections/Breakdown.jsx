@@ -1,33 +1,34 @@
 import { useEffect, useRef, useState } from "react";
 import BaseHeader from "../components/BaseHeader";
-import { LokeshImage } from "../components/BaseImages";
-import PieChart from "../components/PieChart";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGraduationCap } from "@fortawesome/free-solid-svg-icons";
-import Subhead from "../components/Subhead";
 import { colors } from "../Base";
 import { main_headings } from "../components/data";
 import BaseSlide from "../components/BaseSlide";
 import BaseContentDiv from "../components/BaseContentDiv";
+import { useTranslation } from "react-i18next";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { approvedIcon } from "../components/icons";
+
 
 const Breakdown = () => {
+  const { t } = useTranslation();
+  const listitem = (text, percent) => <li className="capitalize">{t(text)}: {percent}</li>;
   return (
       <BaseSlide id="breakdown">
         <BaseHeader text={main_headings.slide9.text} />
-        <BaseContentDiv text="Skill Check Score Breakdown & Calculation">
+        <BaseContentDiv text="skill check score breakdown & calculation">
               <div className="w-full flex mobile:flex-col mobile:overflow-x-scroll mobile:overflow-y-scroll justify-between items-start gap-6">
                 <div className="w-[55%] h-full">
                     <BreakdownDiv />
                 </div>
                 <div className="w-[55%] mobile:w-full h-96 flex flex-col justify-start items-start gap-2">
                   <div className="text-sm font-light p-2">
-                    <span className="font-semibold">A typical student's "skill check" score for the below attributes:</span>
-                    <li>Academics: 83%</li>
-                    <li>Aptitude Test: 78%</li>
-                    <li>Assessments Average: 82.5%</li>
-                    <li>Certifications: 60%</li>
-                    <li>Personality Developement: 92%</li>
-                    <span className="text-lg py-1 font-medium text-green-700">Skill Check Score: 8.1 / 10</span>
+                    <span className="font-semibold">{t("A typical student's \"skill check\" score for the below attributes:")}</span>
+                    {listitem("academics", "83%")}
+                    {listitem("aptitude tests", "78%")}
+                    {listitem("assessments", "82.5%")}
+                    {listitem("certifications", "60%")}
+                    {listitem("personality development", "92%")}
+                    <span className="flex justify-start items-center space-x-2 text-lg py-1 font-medium text-green-800 capitalize"> {t("skill check score")}: {approvedIcon}8.1 / 10</span>
                   </div>
                   <ProgressBarDiv />
                 </div>
@@ -58,14 +59,15 @@ const ProgressBarDiv = () => {
   // const relative_percents = scores.map((sc, idx) => sc);
   const relative_percents = scores.map((sc, idx) => (sc * weightages[idx]) / 100);
   const total_score = scores.reduce((s, sc) => sc + s);
-  const text_styles = "text-[0.9rem] font-light";
-  const line_styles = "h-full border border-spacing-0.5 border-black border-dotted"
+  const text_styles = "text-[0.9rem] font-light capitalize";
+  const line_styles = "h-full border border-spacing-0.5 border-black border-dotted";
+  const { t } = useTranslation();
   return (
     <div>
         <div style={{width:total_score}} className="relative pl-10 flex justify-between items-center gap-10">
-          <div style={{width:`${relative_percents[0]}%`}} className={`${text_styles} text-right`}>Academics</div>
-          <div style={{width:`${relative_percents[2]}%`}} className={`${text_styles} text-left`}>Assessments</div>
-          <div style={{width:`${relative_percents[1]}%`}} className={`${text_styles} text-center`}>Aptitude</div>
+          <div style={{width:`${relative_percents[0]}%`}} className={`${text_styles} text-right`}>{t("academics")}</div>
+          <div style={{width:`${relative_percents[2]}%`}} className={`${text_styles} text-left`}>{t("assessments")}</div>
+          <div style={{width:`${relative_percents[1]}%`}} className={`${text_styles} text-center`}>{t("aptitude")}</div>
         </div>
         <div style={{width:total_score}} className="relative h-10 pl-40 flex justify-between items-start gap-10">
           <div className={line_styles}></div>
@@ -78,8 +80,8 @@ const ProgressBarDiv = () => {
           <div className={line_styles}></div>
         </div>
         <div style={{width:total_score}} className="relative pl-48 gap-x-28 flex justify-start items-start space-x-0">
-          <div style={{width:relative_percents[4]}} className={`${text_styles} text-center`}>Personality Assessments</div>
-          <div style={{width:relative_percents[3]}} className={`${text_styles} text-left`}>Certifications</div>
+          <div style={{width:relative_percents[4]}} className={`${text_styles} text-center`}>{t("personality development")}</div>
+          <div style={{width:relative_percents[3]}} className={`${text_styles} text-left`}>{t("certifications")}</div>
         </div>
     </div>
   )
@@ -133,16 +135,18 @@ const ApptitudeBar = ({score=10, bg_color, total_score}) => {
 }
 
 const BreakdownDiv = () => {
+  const { t } = useTranslation();
+  const listitem = (text, percent) => <li className="capitalize">{t(text)}: {percent}</li>;
   return (
       <div className="relative mobile:hidden w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
         <div className="absolute top-[37%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2 text-black">
-          <span className="text-md font-bold">Scores Weightage</span>
+          <span className="text-md font-bold">{t("scores weightage")}</span>
           <ul>
-            <li>Bachelor's degree: 50%</li>
-            <li>Aptitude Test: 10%</li>
-            <li>Assessments Average: 20%</li>
-            <li>Certifications: 10%</li>
-            <li>Personality Developement: 10%</li>
+            {listitem("academics", "50%")}
+            {listitem("aptitude tests", "10%")}
+            {listitem("assessments", "20%")}
+            {listitem("certifications", "10%")}
+            {listitem("personality development", "10%")}
           </ul>
         </div>
         </div>

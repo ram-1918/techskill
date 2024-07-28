@@ -1,4 +1,5 @@
 
+import { useTranslation } from "react-i18next";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import { APImage } from "../components/BaseImages";
@@ -7,82 +8,82 @@ import CBN from "../components/CBN";
 import { main_headings } from "../components/data";
 import Lokesh from "../components/Lokesh";
 import PK from "../components/PK";
-
-
-const Menu = () => {
-    return (
-        <BaseSlide>
-            <BaseHeader text="Table Of Contents" />
-            <BaseContentDiv>
-            <MenuItems />
-            </BaseContentDiv>
-        </BaseSlide>
-    )
-};
+import { heading_font_size } from "../Base";
 
 const contents = [
     {
         id: 1,
         slidenum: "01",
         slide_id: "why",
-        title: "Skill Development Program After Graduation"
+        title: "skill development program after graduation"
     },
     {
         id: 2,
         slidenum: "02",
         slide_id: "regions",
-        title: "Regions To Benefit From The Program"
+        title: "regions to benefit from the program"
     },
     {
         id: 3,
         slidenum: "03",
         slide_id: "technologies",
-        title: "Encompassing Various Technologies"
+        title: "encompassing various technologies"
     },
     {
         id: 4,
         slidenum: "04",
         slide_id: "certifications",
-        title: "Value Added Certifications"
+        title: "value added certifications"
     },
     {
         id: 5,
         slidenum: "05",
         slide_id: "personality",
-        title: "Comprehensive Personality Development Program"
+        title: "comprehensive personality development program"
     },
     {
         id: 6,
         slidenum: "06",
         slide_id: "skillcheck",
-        title: "About Our Skill Check Attribute"
+        title: "about our skill check attribute"
     },
     {
         id: 7,
         slidenum: "07",
         slide_id: "placements",
-        title: "Companies That Can Exploit This Program"
+        title: "companies that can exploit this program"
     },
     {
         id: 8,
         slidenum: "08",
         slide_id: "reporting",
-        title: "Delivarable Updates"
+        title: "delivarable updates"
     },
     {
         id: 9,
         slidenum: "09",
         slide_id: "breakdown",
-        title: "Score Check Simulation"
+        title: "score check simulation"
     },
     {
         id: 10,
         slidenum: "10",
         slide_id: "thankyou",
-        title: "Thank You"
+        title: "thank you"
     },
 
 ];
+
+const Menu = () => {
+    return (
+        <BaseSlide>
+            <BaseHeader text="table of contents" />
+            <BaseContentDiv>
+            <MenuItems />
+            </BaseContentDiv>
+        </BaseSlide>
+    )
+};
 
 const MenuItems = () => {
     return (
@@ -93,10 +94,12 @@ const MenuItems = () => {
 };
 
 const MenuItem = ({item:{slidenum, title, slide_id}}) => {
+    const { t } = useTranslation();
+    const screen = localStorage.getItem('screen') || 'laptop';
     return (
-        <a href={`#${slide_id}`} className="rounded shadow p-1 flex flex-row justify-start items-center space-x-2 py-1 bg-[#C4DFDF] cursor-pointer">
+        <a style={{fontSize: heading_font_size.content[screen]}} href={`#${slide_id}`} className="capitalize rounded shadow p-1 flex flex-row justify-start items-center space-x-2 py-1 bg-[#C4DFDF] cursor-pointer">
             <span className="text-3xl">{slidenum}</span>
-            <span>{title}</span>
+            <span>{t(title)}</span>
         </a>
     )
 }
