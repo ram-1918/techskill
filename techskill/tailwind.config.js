@@ -30,10 +30,10 @@ module.exports = {
       }
     },
     screens: {
-      'small': {'min': '350px'},
+      'small': {'min': '320px'},
       'mobile': {'min': '350px', 'max': '640px'},
-      'tablet': {'min': '640px', 'max': '1024px'},
-      'laptop': {'min': '1024px', 'max': '1280px'},
+      'tablet': {'min': '640px', 'max': '1025px'},
+      'laptop': {'min': '1025px', 'max': '1280px'},
       'desktop': '1280px',
     },
   },

@@ -79,7 +79,7 @@ const Menu = () => {
         <BaseSlide>
             <BaseHeader text="table of contents" />
             <BaseContentDiv>
-            <MenuItems />
+                <MenuItems />
             </BaseContentDiv>
         </BaseSlide>
     )
@@ -87,7 +87,7 @@ const Menu = () => {
 
 const MenuItems = () => {
     return (
-        <div className="grid grid-flow-row grid-cols-2 gap-4 py-3">
+        <div className="grid grid-flow-row grid-cols-2 gap-2 py-3 mobile:grid-cols-1 ">
             {contents.map(item => <MenuItem id={item.id} item={item} />)}
         </div>
     );
@@ -98,7 +98,7 @@ const MenuItem = ({item:{slidenum, title, slide_id}}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
         <a style={{fontSize: heading_font_size.content[screen]}} href={`#${slide_id}`} className="capitalize rounded shadow p-1 flex flex-row justify-start items-center space-x-2 py-1 bg-[#C4DFDF] cursor-pointer">
-            <span className="text-3xl">{slidenum}</span>
+            <span style={{fontSize: heading_font_size.sub[screen]}}>{slidenum}</span>
             <span>{t(title)}</span>
         </a>
     )

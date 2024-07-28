@@ -29,13 +29,13 @@ function App() {
       if (width >= 350 && width <= 640) {
         localStorage.setItem('screen', 'mobile');
         setScreen('mobile')
-      } else if (width > 640 && width <= 1000) {
+      } else if (width > 640 && width <= 1024) {
         localStorage.setItem('screen', 'tablet');
         setScreen('tablet');
-      } else if (width > 1000 && width <= 1279) {
+      } else if (width > 1024 && width <= 1280) {
         localStorage.setItem('screen', 'laptop');
         setScreen('laptop');
-      } else if (width >= 1280) {
+      } else if (width > 1280) {
         localStorage.setItem('screen', 'desktop');
         setScreen('desktop');
       }
@@ -66,27 +66,21 @@ function App() {
   return (
     <>
       {/* {JSON.stringify(localStorage.getItem('screen'))} */}
-      <div className="hidden mobile:block tablet:block">
+      {/* <div className="hidden mobile:block tablet:block">
         <SmallScreenView slides={slides} />
-      </div>
-      <div className="hidden laptop:block desktop:block">
+      </div> */}
+      {/* <div className="bg-red-500"> */}
         <BigScreenView slides={slides} />
-      </div>
+      {/* </div> */}
     </>
   );
 }
-
-const SmallScreenView = ({slides}) => {
-  return (
-    <SingleSlideView slides={slides} />
-  );
-};
 
 const BigScreenView = ({slides}) => {
   const [isView, setIsView] = useState('scroll');
   return (
     <div style={{fontFamily: main_heading_fontstyle}} className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-zinc-300 text-black">
-      <ViewOptions isView={isView} setIsView={setIsView} />
+      {/* <ViewOptions isView={isView} setIsView={setIsView} /> */}
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
     </div>
@@ -114,7 +108,7 @@ const ViewOptions = ({setIsView, isView}) => {
   }, [setCurrLang]);
 
   return (
-    <div className="w-[64rem] flex justify-end items-center gap-8">
+    <div className="flex justify-end items-center gap-8">
       <div className="flex justify-center items-center gap-2">
         <span >Translation: </span>
         <span className={`${transButton} ${currLang === 'en' && "bg-sky-400 text-black font-semibold"}`} onClick={() => changeLanguage('en')}>English</span> |
@@ -132,7 +126,11 @@ const ViewOptions = ({setIsView, isView}) => {
 
 export default App;
 
-
+const SmallScreenView = ({slides}) => {
+  return (
+    <SingleSlideView slides={slides} />
+  );
+};
 
 /*
 

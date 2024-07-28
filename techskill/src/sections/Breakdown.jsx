@@ -16,11 +16,11 @@ const Breakdown = () => {
       <BaseSlide id="breakdown">
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="skill check score breakdown & calculation">
-              <div className="w-full flex mobile:flex-col mobile:overflow-x-scroll mobile:overflow-y-scroll justify-between items-start gap-6">
-                <div className="w-[55%] h-full">
+              <div className="w-full flex mobile:flex-col justify-between items-start gap-6 mobile:gap-2 mobile:overflow-x-scroll mobile:overflow-y-scroll">
+                <div className="w-[55%] mobile:w-full h-full mobile:h-fit">
                     <BreakdownDiv />
                 </div>
-                <div className="w-[55%] mobile:w-full h-96 flex flex-col justify-start items-start gap-2">
+                <div className="w-[55%] mobile:w-full h-96 mobile:h-fit flex flex-col justify-start items-start gap-2">
                   <div className="text-sm font-light p-2">
                     <span className="font-semibold">{t("A typical student's \"skill check\" score for the below attributes:")}</span>
                     {listitem("academics", "83%")}
@@ -138,7 +138,7 @@ const BreakdownDiv = () => {
   const { t } = useTranslation();
   const listitem = (text, percent) => <li className="capitalize">{t(text)}: {percent}</li>;
   return (
-      <div className="relative mobile:hidden w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
+      <div className="relative mobile:[26rem] mobile:h-[26rem] w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
         <div className="absolute top-[37%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2 text-black">
           <span className="text-md font-bold">{t("scores weightage")}</span>
           <ul>

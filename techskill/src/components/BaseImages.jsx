@@ -54,7 +54,7 @@ export const APGOV = () => {
     <BaseBGImage
       image="bg-apgov"
       size={
-        screen === "mobile" || screen === "tablet" ? "w-12 h-12" : "w-32 h-32"
+        screen === "mobile" || screen === "small" ? "w-16 h-16" : "w-32 h-32"
       }
     />
   );
@@ -65,7 +65,7 @@ export const APSSDC = () => {
     <BaseBGImage
       image="bg-apssdc"
       size={
-        screen === "mobile" || screen === "tablet" ? "w-12 h-12" : "w-32 h-32"
+        screen === "mobile" || screen === "small" ? "w-16 h-16" : "w-32 h-32"
       }
     />
   );

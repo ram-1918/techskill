@@ -38,7 +38,7 @@ const Head = ({text, divRef}) => {
             ref = {divRef}
             style={{ 
                 fontSize: heading_font_size.sub[screen], 
-                fontFamily: sub_heading_fontstyle,
+                // fontFamily: sub_heading_fontstyle,
                 color: colors.sub 
             }}
             className={styles}

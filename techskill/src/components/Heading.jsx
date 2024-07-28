@@ -14,10 +14,10 @@ const MainHead = ({text}) => {
   return (
     <span
       style={{
-        fontFamily: main_heading_fontstyle,
+        // fontFamily: main_heading_fontstyle,
         fontSize: heading_font_size['main'][screen]
       }}
-      className="leading-7 py-5 tracking-tighter capitalize font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-700 to-teal-600"
+      className="text-center leading-7 py-5 mobile:py-2 tracking-tighter capitalize font-bold bg-clip-text text-transparent bg-gradient-to-r from-sky-700 to-teal-600"
     >
       {t(text)} 
     </span>
@@ -31,7 +31,7 @@ const NormalText = ({text, type}) => {
   return (
     <span
       style={{
-        fontFamily: main_heading_fontstyle,
+        // fontFamily: main_heading_fontstyle,
         color: colors[type],
         fontWeight: "600",
         fontSize: heading_font_size[type][screen]

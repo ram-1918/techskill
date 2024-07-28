@@ -79,20 +79,20 @@ const SkillCheck = () => {
 
 const Content = () => {
     return (
-        <div className="w-full flex justify-evenly items-start space-x-4">
+        <div className="w-full flex mobile:flex-col small:flex-col justify-start items-start gap-4 px-4 mobile:gap-1 small:gap-1">
             <AttributeDisplay />
-            <BenefitsDisplay />
+            {/* <BenefitsDisplay /> */}
         </div>
     )
 }
 
 const AttributeDisplay = () => {
     const { t } = useTranslation();
+    const screen = localStorage.getItem('screen') || 'laptop';
     return (
-        <div className="w-[50%] h-64 overflow-hidden flex justify-center items-center -space-x-5">
-            <div className="text-xl px-7">{t("skill check attributes")}</div>
-            <span className="text-[16rem] leading-None font-light inline-block align-text-top p-0 text-teal-500">{`{`}</span>
-            <div className="flex flex-col items-start justify-around space-y-2">
+        <div className="w-[50%] mobile:w-full mobile:h-fit h-64 flex justify-center items-center -space-x-5">
+            <div style={{fontSize:heading_font_size.sub[screen]}} className="overflow-hidden border rounded rounded-bl rounded-br flex flex-col items-start justify-start mobile:space-y-1 small:space-y-1 space-y-2">
+                <div style={{fontSize:heading_font_size.sub[screen]}} className="px-7 bg-blue-300 w-full capitalize">{t("skill check attributes")}</div>
                 {attributes.map(item => <AttributeItem key={item.id} item={item} />)}
             </div>
         </div>
@@ -102,8 +102,8 @@ const AttributeDisplay = () => {
 const AttributeItem = ({item: {name, icon}}) => {
     const { t } = useTranslation();
     return (
-        <div className="flex justify-start items-center space-x-2">
-            <span className="w-7 h-7">{icon}</span>
+        <div className="flex justify-start items-center space-x-2 px-2 capitalize">
+            <span className="w-7 h-7 mobile:w-5 mobile:h-5">{icon}</span>
             <span className="">{t(name)}</span>
         </div>
     )

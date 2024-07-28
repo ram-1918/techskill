@@ -22,7 +22,7 @@ const bg_color = "#0d9488"
 
 const Concepts = () => {
     return (
-        <div className="mobile:hidden w-full flex flex-col justify-center items-center">
+        <div className="w-full flex flex-col justify-center items-center">
                 <div className="flex justify-center items-center">
                     <LeftData />
                     <LeftEdges />
@@ -39,7 +39,7 @@ const Concepts = () => {
 
 const LeftSpan = () => {
     return (
-        <div className="w-[4.5rem] h-full flex flex-col justify-around items-center py-0">
+        <div className="w-[4.5rem] mobile:w-[1.6rem] h-full flex flex-col justify-around items-center py-0">
             <div style={{borderColor: bg_color}} className="w-full h-16 border-b border-l"></div>
             <div style={{borderColor: bg_color}} className="w-full border-t"></div>
             <div style={{borderColor: bg_color}} className="w-full h-16 border-t border-l"></div>
@@ -49,14 +49,14 @@ const LeftSpan = () => {
 
 const RightSpan = () => {
     return (
-        <div className="w-24 h-full flex flex-col justify-around items-center space-y-4 py-3">
+        <div className="w-24 mobile:w-[1.5rem] h-full flex flex-col justify-around items-center space-y-4 py-3">
             <div style={{borderColor: bg_color}} className="w-full h-16 border-b border-r"></div>
             <MiddleLine />
             <div style={{borderColor: bg_color}} className="w-full h-16 border-t border-r"></div>
         </div>
     )
 }
-const FutureImg = () => <div className="w-56 h-56 rounded-xl shadow-lg bg-future bg-cover bg-center"></div>
+const FutureImg = () => <div className="w-60 h-60 mobile:w-24 mobile:h-24 small:w-24 small:h-24 rounded-xl shadow-lg bg-future bg-cover bg-center"></div>
 
 const MiddleLine = () => {
     return (
@@ -68,7 +68,7 @@ const MiddleLine = () => {
 
 const RightEdges = () => {
     return (
-        <div className="h-full w-10 flex flex-col justify-between items-center py-3">
+        <div className="h-full w-10 mobile:w-[0.7rem] flex flex-col justify-between items-center py-3">
             <div style={{borderColor: bg_color}} className="h-1 w-full border-t"></div>
             <div style={{borderColor: bg_color}} className="w-full border-t"></div>
             <div style={{borderColor: bg_color}} className="h-1 w-full border-b"></div>
@@ -78,7 +78,7 @@ const RightEdges = () => {
 
 const LeftEdges = () => {
     return (
-        <div className="h-full w-10 flex flex-col justify-around items-center py-0">
+        <div className="h-full w-10 mobile:w-[0.7rem] flex flex-col justify-around items-center py-0">
             <div style={{borderColor: bg_color}} className="h-16 w-full border-t"></div>
             <div style={{borderColor: bg_color}} className="w-full border-t"></div>
             <div style={{borderColor: bg_color}} className="h-16 w-full border-b"></div>
@@ -116,49 +116,54 @@ const TextDiv = ({text, align}) => {
 
 const BottomSpan = () => {
     return (
-        <div className="h-20 w-full flex flex-col justify-center items-center">
-            <div style={{borderColor: bg_color}} className="h-16 border-l"></div>
+        <div className="
+        h-20 w-full flex flex-col justify-center items-center
+        mobile:absolute mobile:top-[21.8rem] 
+        ">
+            <div style={{borderColor: bg_color}} className="h-32 border-l"></div>
             <TextDiv text="adaptability and problem-solving" align="border-t" />
         </div>
     )
 }
 
-const WhyBackup = ({keys}) => {
-    return (
-        <div className="w-full flex flex-col items-start justify-start overflow-scroll">
-            {keys.map(i => (
-                <div className="">
-                    <Title key={i} title={purposes[i].title} />
-                    {purposes[i].content.map((content) => (
-                        <Listitems data={content} />
-                    ))}
-                </div>
-            ))}
-        </div>
-    )
-}
-
-const Listitems = ({data}) => {
-    const screen = localStorage.getItem('screen') || 'laptop';
-    return (
-        <div className="list-style-none mobile:leading-3 mobile:tracking-tight flex justify-start items-start space-x-1" key={data.id}>
-            <img className="w-5 h-5" src={list_icon} alt="list" />
-            <span key={data.id} style={{fontSize:heading_font_size.subcontent[screen], color: colors.subcontent}}>
-            <span style={{color: colors.subcontent, fontSize:heading_font_size.subcontent[screen]}} className="font-semibold  pr-1 after:content-[':']">{data.title}</span> {data.text}
-            </span>
-        </div>
-    )
-}
-
-const Title = ({title}) => {
-    const screen = localStorage.getItem('screen') || 'laptop';
-    return (
-        <span 
-        style={{color: colors.main, fontSize:heading_font_size.content[screen]}} 
-        className="font-bold text-md leading-6 tracking-wide py-2 text-sky-600 underline underline-offset-2 uppercase">
-            {title}
-        </span>
-    )
-}
-
 export default Why;
+
+//// BACKUP
+
+// const WhyBackup = ({keys}) => {
+//     return (
+//         <div className="w-full flex flex-col items-start justify-start overflow-scroll">
+//             {keys.map(i => (
+//                 <div className="">
+//                     <Title key={i} title={purposes[i].title} />
+//                     {purposes[i].content.map((content) => (
+//                         <Listitems data={content} />
+//                     ))}
+//                 </div>
+//             ))}
+//         </div>
+//     )
+// }
+
+// const Listitems = ({data}) => {
+//     const screen = localStorage.getItem('screen') || 'laptop';
+//     return (
+//         <div className="list-style-none mobile:leading-3 mobile:tracking-tight flex justify-start items-start space-x-1" key={data.id}>
+//             <img className="w-5 h-5" src={list_icon} alt="list" />
+//             <span key={data.id} style={{fontSize:heading_font_size.subcontent[screen], color: colors.subcontent}}>
+//             <span style={{color: colors.subcontent, fontSize:heading_font_size.subcontent[screen]}} className="font-semibold  pr-1 after:content-[':']">{data.title}</span> {data.text}
+//             </span>
+//         </div>
+//     )
+// }
+
+// const Title = ({title}) => {
+//     const screen = localStorage.getItem('screen') || 'laptop';
+//     return (
+//         <span 
+//         style={{color: colors.main, fontSize:heading_font_size.content[screen]}} 
+//         className="font-bold text-md leading-6 tracking-wide py-2 text-sky-600 underline underline-offset-2 uppercase">
+//             {title}
+//         </span>
+//     )
+// }

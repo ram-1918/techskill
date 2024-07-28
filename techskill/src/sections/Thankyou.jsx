@@ -12,7 +12,7 @@ function ThankYou() {
   return (
     <BaseSlide>
       <BaseHeader text="thank you" />
-      <div className='w-[30rem] h-[30rem] rounded-xl shadow-xl bg-thankyou bg-cover bg-center bg-no-repeat'></div>
+      <div className='w-[90%] h-[70%] rounded-xl shadow-xl bg-thankyou bg-cover bg-center bg-no-repeat'></div>
     </BaseSlide>
   );
 }

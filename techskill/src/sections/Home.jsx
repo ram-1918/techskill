@@ -14,7 +14,7 @@ const Home = () => {
         <BaseSlide>
             <BaseHeader text={main_headings.slide1.text} />
             <BaseContentDiv>
-                <div className="w-full mobile:h-full flex justify-center items-center gap-10 bg-blue-0">
+                <div className="w-full mobile:h-full flex justify-center items-center gap-10 mobile:gap-0">
                     <APImage />
                     <Body />
                 </div>
@@ -25,7 +25,7 @@ const Home = () => {
 
 const Body = () => {
     return (
-        <div className="h-full w-[55%] mobile:w-full mobile:h-full mobile:pt-0 mobile:pl-10 flex flex-col justify-start items-start gap-2">
+        <div className="h-full w-[55%] mobile:w-full mobile:h-full mobile:pt-0 mobile:pl-10 flex flex-col justify-start mobile:justify-center items-start gap-2">
             <CBN />
             <PK />
             <Lokesh />

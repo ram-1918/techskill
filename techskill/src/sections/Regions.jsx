@@ -38,7 +38,10 @@ const Regions = () => {
         <BaseSlide id="regions">
             <BaseHeader text={main_headings.slide2.text} />
             <BaseContentDiv text="list of mandals">
-                <div className="w-full flex justify-between items-center space-x-4">
+                <div className="
+                w-full flex justify-between items-center space-x-4
+                mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4 
+                ">
                     <ImageSpan />
                     <RegionsListDisplay />
                 </div>
@@ -49,13 +52,13 @@ const Regions = () => {
 
 const ImageSpan = () => {
     return (
-        <div className="w-[35%] h-56 rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80"></div>
+        <div className="w-[35%] h-56 mobile:w-full mobile:h-24 mobile:shadow-sm rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80"></div>
     )
 }
 
 const RegionsListDisplay = () => {
     return (
-        <ul className="w-[65%] mobile:w-full grid grid-flow-row grid-cols-3 gap-4 px-4 py-1">
+        <ul className="w-[65%] mobile:w-full grid grid-flow-row grid-cols-3 gap-4 mobile:gap-2 px-4 py-1">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>
     )

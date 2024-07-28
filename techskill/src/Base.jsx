@@ -1,6 +1,6 @@
 export const heading_font_size = {
     main: {
-        mobile: "0.75rem",
+        mobile: "1.5rem",
         tablet: "1.1rem",
         laptop: "2.1rem",
         desktop: "2.5rem",
@@ -12,13 +12,13 @@ export const heading_font_size = {
         desktop: "1.6rem",
     },
     content: {
-        mobile: "0.65rem",
+        mobile: "0.7rem",
         tablet: "0.7rem",
         laptop: "1rem",
         desktop: "1.2rem",
     },
     subcontent: {
-        mobile: "0.5rem",
+        mobile: "0.55rem",
         tablet: "0.6rem",
         laptop: "0.9rem",
         desktop: "1.1rem",
@@ -30,7 +30,7 @@ export const colors = {
     main: "#01204E",
     sub: "#27374D",
     content: "#134B70",
-    subcontent: "#405D72",
+    subcontent: "black",
     bg_color: "#CCF2F4"
 }
 
