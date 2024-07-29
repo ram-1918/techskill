@@ -69,6 +69,10 @@ import scroll from "../assets/icons/scroll.png";
 import design from "../assets/icons/shape.png";
 import leftbracket from '../assets/icons/leftbracket.png';
 import approved from '../assets/icons/approved.png';
+import skillcheck from '../assets/icons/gauge.png';
+import benefits from '../assets/icons/benefits.png';
+import attributes from '../assets/icons/attributes.png';
+import fullscreen from '../assets/icons/preview.png';
 
 
 const icon_style = "w-8 h-8";
@@ -145,3 +149,7 @@ export const SlideshowIcon = <img className={''} src={slideshow} alt="SlideShow 
 export const DesignIcon = <img className={''} src={design} alt="Design icon" />;
 export const LeftBracketIcon = <img className={'h-40 w-10'} src={leftbracket} alt="LeftOpen icon" />;
 export const approvedIcon = <img className={'w-6 h-6'} src={approved} alt="Approved icon" />;
+export const SkillcheckIcon = <img className={''} src={skillcheck} alt="Skill Check icon" />;
+export const BenefitsIcon = <img className={''} src={benefits} alt="Benefits icon" />;
+export const AttributesIcon = <img className={''} src={attributes} alt="Attributes icon" />;
+export const FullscreenIcon = <img className={''} src={fullscreen} alt="Fullscreen icon" />;

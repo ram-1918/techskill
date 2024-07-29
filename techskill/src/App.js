@@ -9,11 +9,11 @@ import Regions from "./sections/Regions";
 import Reporting from "./sections/Reporting";
 import SkillCheck from "./sections/SkillCheck";
 import Technologies from "./sections/Technologies";
-import { ScrollIcon, SlideshowIcon } from "./components/icons";
+import { FullscreenIcon, ScrollIcon, SlideshowIcon } from "./components/icons";
 import Why from "./sections/Why";
 import Certifications from "./sections/Certifications";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
+import { faEye, faMaximize } from "@fortawesome/free-solid-svg-icons";
 import { main_heading_fontstyle } from "./Base";
 import Menu from "./sections/Menu";
 import ThankYou from "./sections/Thankyou";
@@ -108,7 +108,12 @@ const ViewOptions = ({setIsView, isView}) => {
   }, [setCurrLang]);
 
   return (
-    <div className="flex justify-end items-center gap-8 desktop:flex-row laptop:flex-row tablet:flex-row small:flex-col mobile:flex-col mobile:gap-1 small:gap-1 mobile:justify-start mobile:items-end">
+    <div className="
+    flex justify-between items-center gap-8 
+    desktop:w-[76rem] laptop:w-[70rem] tablet:w-[95%] mobile:w-[95%] small:w-[98%]
+    desktop:flex-row laptop:flex-row tablet:flex-row small:flex-col 
+    mobile:flex-col mobile:gap-1 small:gap-1 mobile:justify-start mobile:items-end
+    ">
       <div className="flex justify-center items-center gap-2">
         <span >Translation: </span>
         <span className={`${transButton} ${currLang === 'en' && "bg-sky-400 text-black font-semibold"}`} onClick={() => changeLanguage('en')}>English</span> |
@@ -119,6 +124,7 @@ const ViewOptions = ({setIsView, isView}) => {
         <span className="text-black font-light text-lg"><FontAwesomeIcon icon={faEye} /> View: </span>
         <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-8 h-8`}>{ScrollIcon}</span>
         <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
+        <span onClick={() => setIsView('full')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{FullscreenIcon}</span>
       </div>
     </div>
   )

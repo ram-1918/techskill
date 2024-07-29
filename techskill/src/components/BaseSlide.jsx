@@ -16,7 +16,7 @@ const BaseSlide = ({ children, image="bg-bg1", id }) => {
       flex flex-col justify-start items-center gap-5
     `}>
       {children}
-      {/* {screen} */}
+      {screen}
     </section>
   );
 };
