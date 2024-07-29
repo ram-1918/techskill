@@ -33,11 +33,11 @@ const reporting_items = [
     }
 ]
 
-const Reporting = () => {
+const Reporting = ({...props}) => {
     const screen = localStorage.getItem('screen') || 'laptop'; 
     const { t } = useTranslation();
     return (
-    <BaseSlide id="reporting">
+    <BaseSlide id="reporting" {...props}>
         <BaseHeader text={main_headings.slide8.text} />
         <BaseContentDiv text="progress reporting attributes">
             <PDItems />

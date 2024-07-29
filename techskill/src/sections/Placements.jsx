@@ -89,10 +89,10 @@ const pd_items = [
     }
 ]
 
-const Placements = () => {
+const Placements = ({...props}) => {
     const { t } = useTranslation();
   return (
-    <BaseSlide id="placements">
+    <BaseSlide id="placements" {...props}>
         <BaseHeader text={main_headings.slide7.text}/>
         <BaseContentDiv text="program execution partners">
             <PlacementItems />

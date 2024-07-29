@@ -7,9 +7,9 @@ import { colors } from "../Base";
 import list_icon from '../assets/icons/next.png'
 import { useTranslation } from "react-i18next";
 
-function Why({keys}) {
+function Why({...props}) {
   return (
-        <BaseSlide image="bg-bg2" id="why">
+        <BaseSlide image="bg-bg2" id="why" {...props} >
             <BaseHeader text="skill development program after graduation" />
             <BaseContentDiv text="7 essentials for higher emplpoyment rate" >
             <Concepts />

@@ -27,10 +27,10 @@ const pd_items = [
     }
 ]
 
-const Personality = () => {
+const Personality = ({...props}) => {
   return (
     // <section className="h-[38rem] overflow-hidden rounded-xl bg-bg4 bg-center bg-no-repeat bg-cover space-y-5 py-2 px-4 flex flex-col items-end">
-    <BaseSlide id="personality">
+    <BaseSlide id="personality" {...props}>
         <BaseHeader text={main_headings.slide5.text} />
         <BaseContentDiv text="personality development program curricullam">
             <PDItems />

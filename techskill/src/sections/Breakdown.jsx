@@ -9,11 +9,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { approvedIcon } from "../components/icons";
 
 
-const Breakdown = () => {
+const Breakdown = ({...props}) => {
   const { t } = useTranslation();
   const listitem = (text, percent) => <li className="capitalize">{t(text)}: {percent}</li>;
   return (
-      <BaseSlide id="breakdown">
+      <BaseSlide id="breakdown" {...props}>
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="skill check score breakdown & calculation">
               <div className="w-full flex mobile:flex-col justify-between items-start gap-6 mobile:gap-2 mobile:overflow-x-scroll mobile:overflow-y-scroll">

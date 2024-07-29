@@ -21,7 +21,7 @@ export const main_headings = {
     },
     slide6: {
         id: 6,
-        text: "about our skill check attribute"
+        text: "about our skill check Score"
     },
     slide7: {
         id: 7,

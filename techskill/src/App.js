@@ -13,16 +13,18 @@ import { FullscreenIcon, ScrollIcon, SlideshowIcon } from "./components/icons";
 import Why from "./sections/Why";
 import Certifications from "./sections/Certifications";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye, faMaximize } from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight, faEye, faMaximize } from "@fortawesome/free-solid-svg-icons";
 import { main_heading_fontstyle } from "./Base";
 import Menu from "./sections/Menu";
 import ThankYou from "./sections/Thankyou";
 
 import './i18n';
 import { useTranslation } from "react-i18next";
+import useSwipe from "./components/hooks/useSwipe";
 
 function App() {
   const [screen, setScreen] = useState('');
+
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
@@ -78,16 +80,18 @@ function App() {
 
 const BigScreenView = ({slides}) => {
   const [isView, setIsView] = useState('scroll');
+  const [isFullscreen, setIsFullscreen] = useState(false);
   return (
-    <div style={{fontFamily: main_heading_fontstyle}} className="mobile:px-0 flex flex-col justify-start items-center space-y-5 py-10 bg-zinc-300 text-black">
-      <ViewOptions isView={isView} setIsView={setIsView} />
+    <div style={{fontFamily: main_heading_fontstyle}} className="w-full h-full mobile:px-0 flex flex-col justify-start items-center space-y-5 bg-zinc-300 text-black">
+      {!isFullscreen && <ViewOptions isView={isView} setIsView={setIsView} setIsFullscreen={setIsFullscreen} />}
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
+      {isView === "full" && <FullScreenView slides={slides} isFullscreen={isFullscreen} setIsFullscreen={setIsFullscreen} setIsView={setIsView} />}
     </div>
   );
 };
 
-const ViewOptions = ({setIsView, isView}) => {
+const ViewOptions = ({setIsView, isView, setIsFullscreen}) => {
   const { t, i18n } = useTranslation();
   const [currLang, setCurrLang] = useState('en');
   const active = 'bg-sky-300';
@@ -122,9 +126,9 @@ const ViewOptions = ({setIsView, isView}) => {
       </div>
       <div className="flex justify-end items-center gap-2">
         <span className="text-black font-light text-lg"><FontAwesomeIcon icon={faEye} /> View: </span>
-        <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex hustify-between items-center w-8 h-8`}>{ScrollIcon}</span>
-        <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
-        <span onClick={() => setIsView('full')} className={`${isView === 'single' && active} ${buttonstyles} flex hustify-between items-center w-10 h-10`}>{FullscreenIcon}</span>
+        <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex justify-between items-center w-8 h-8`}>{ScrollIcon}</span>
+        <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex justify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
+        <span onClick={() => {setIsView('full'); setIsFullscreen(true)}} className={`${isView === 'full' && active} ${buttonstyles} flex justify-between items-center w-10 h-10`}>{FullscreenIcon}</span>
       </div>
     </div>
   )
@@ -132,9 +136,50 @@ const ViewOptions = ({setIsView, isView}) => {
 
 export default App;
 
-const SmallScreenView = ({slides}) => {
+const slides_temp = {
+  home: ({...props}) => <Home {...props} />,
+  why: ({...props}) => <Why {...props} />,
+  regions: ({...props}) => <Regions {...props} />,
+  technologies: ({...props}) => <Technologies {...props} keys={['ai/ml', 'programming languages', 'cloud technologies']} />,
+  certifications: ({...props}) => <Certifications {...props} />,
+  personality: ({...props}) => <Personality {...props} />,
+  skillcheck: ({...props}) => <SkillCheck {...props} />,
+  placements: ({...props}) => <Placements {...props} />,
+  reporting: ({...props}) => <Reporting {...props} />,
+  breakdown: ({...props}) => <Breakdown {...props} />,
+  thankyou: ({...props}) => <ThankYou {...props} />
+}
+
+const FullScreenView = ({slides, isFullscreen, setIsFullscreen, setIsView}) => {
+  const slide_names = Object.keys(slides_temp);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'ArrowRight') {
+        setCurrentSlide((prevSlide) =>
+          prevSlide === slide_names.length - 1 ? 0 : prevSlide + 1
+        );
+      } else if (event.key === 'ArrowLeft') {
+        setCurrentSlide((prevSlide) =>
+          prevSlide === 0 ? slide_names.length - 1 : prevSlide - 1
+        );
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, []);
+
   return (
-    <SingleSlideView slides={slides} />
+    <div className="relative">
+      {slides_temp[slide_names[currentSlide]]({isFullscreen, setIsFullscreen, setIsView})}
+      <span onClick={() => setCurrentSlide(prev => prev === 0 ? slide_names.length - 1 : prev - 1)} className="absolute top-[50%] left-2">{currentSlide}<FontAwesomeIcon className="w-7 h-7" icon={faArrowLeft} /></span>
+      <span onClick={() => setCurrentSlide(prev => prev === slide_names.length - 1 ? 0 : prev + 1)} className="absolute top-[50%] right-2"><FontAwesomeIcon className="w-7 h-7" icon={faArrowRight} /></span>
+
+    </div>
   );
 };
 

@@ -19,8 +19,8 @@ export const heading_font_size = {
     },
     subcontent: {
         mobile: "0.55rem",
-        tablet: "0.75rem",
-        laptop: "0.9rem",
+        tablet: "0.8rem",
+        laptop: "0.95rem",
         desktop: "1.1rem",
     }
 }

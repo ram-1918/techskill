@@ -61,9 +61,9 @@ const certification_list = [
 ]
 
 
-const Certifications = () => {
+const Certifications = ({...props}) => {
     return (
-        <BaseSlide id="certifications">
+        <BaseSlide id="certifications" {...props}>
             <BaseHeader text={main_headings.slide4.text} />
             <BaseContentDiv text="offers training for the following certifications">
                 <div className="w-full flex justify-center items-center flex-wrap gap-10">
@@ -76,8 +76,8 @@ const Certifications = () => {
 
 const Item = ({icon, name}) => {
     return (
-        <div className="group relative w-28 h-28 mobile:w-12 mobile:h-12 border border-gray-200 bg-gray-50 shadow-lg rounded-lg flex justify-center items-center">
-            <span className="w-20 h-20 mobile:w-10 mobile:h-10">{icon}</span>
+        <div className="group relative w-28 h-28 mobile:w-12 mobile:h-12 tablet:w-24 tablet:h-24 border border-gray-200 bg-gray-50 shadow-lg rounded-lg flex justify-center items-center">
+            <span className="w-20 h-20 mobile:w-10 mobile:h-10 tablet:w-16 tablet:h-16">{icon}</span>
             <Tooltip name={name} />
         </div>
     )

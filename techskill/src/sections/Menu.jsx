@@ -87,7 +87,7 @@ const Menu = () => {
 
 const MenuItems = () => {
     return (
-        <div className="grid grid-flow-row grid-cols-2 gap-4 py-3 mobile:grid-cols-1 mobile:gap-2 desktop:gap-4 laptop:gap-4 tablet:gap-4">
+        <div className="grid grid-flow-row grid-cols-2 py-3 mobile:grid-cols-1 mobile:gap-2 desktop:gap-4 laptop:gap-4 tablet:gap-4">
             {contents.map(item => <MenuItem id={item.id} item={item} />)}
         </div>
     );

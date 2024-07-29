@@ -9,9 +9,9 @@ import Lokesh from "../components/Lokesh";
 import PK from "../components/PK";
 
 
-const Home = () => {
+const Home = ({...props}) => {
     return (
-        <BaseSlide>
+        <BaseSlide {...props} >
             <BaseHeader text={main_headings.slide1.text} />
             <BaseContentDiv>
                 <div className="w-full mobile:h-full flex justify-center items-center gap-10 mobile:gap-0">

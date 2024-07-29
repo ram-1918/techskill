@@ -33,13 +33,13 @@ const regions_list = [
 
 
 
-const Regions = () => {
+const Regions = ({...props}) => {
     return (
-        <BaseSlide id="regions">
+        <BaseSlide id="regions" {...props}>
             <BaseHeader text={main_headings.slide2.text} />
             <BaseContentDiv text="">
                 <div className="
-                w-full flex justify-between items-center space-x-4
+                w-full h-full flex justify-between items-start space-x-4
                 tablet:flex-row laptop:flex-row desktop:flex-row
                 mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4 
                 ">
