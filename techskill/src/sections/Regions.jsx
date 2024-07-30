@@ -75,7 +75,7 @@ const RegionsListDisplay = () => {
 
 const ListItem = ({region, id}) => {
     const list_style = "capitalize font-semibold px-2 list-disc list-inside";
-    const screen = localStorage.getItem('screen') || 'laptop';
+    const screen = localStorage.getItem('screen') || 'medium-laptop';
     const { t } = useTranslation();
     return <li 
     style={

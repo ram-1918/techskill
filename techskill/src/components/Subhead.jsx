@@ -30,7 +30,7 @@ const Subhead = ({ text }) => {
 };
 
 const Head = ({text, divRef}) => {
-    const screen = localStorage.getItem("screen") || "laptop";
+    const screen = localStorage.getItem("screen") || "medium-laptop";
     const styles = "text-center font-semibold text-orange-700 uppercase";
     const { t } = useTranslation();
     return (
@@ -49,7 +49,7 @@ const Head = ({text, divRef}) => {
 };
 
 const UnderlineDesign = ({divWidth}) => {
-    const screen = localStorage.getItem('screen') || 'laptop';
+    const screen = localStorage.getItem('screen') || 'medium-laptop';
     return (
         <div style={{fontSize: heading_font_size.content[screen]}} className="flex items-center justify-center space-x-2">
             <span style={{width: divWidth/3}} className={`h-1 bg-[#9DB2BF]`}></span>

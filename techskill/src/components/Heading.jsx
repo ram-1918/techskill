@@ -8,7 +8,7 @@ const Heading = ({ text, type = 'main' }) => {
 };
 
 const MainHead = ({text}) => {
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || "medium-laptop";
   const { t } = useTranslation();
 
   return (
@@ -28,7 +28,7 @@ const MainHead = ({text}) => {
 }
 
 const NormalText = ({text, type}) => {
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || "medium-laptop";
   const { t } = useTranslation();
 
   return (

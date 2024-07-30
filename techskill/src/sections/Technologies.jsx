@@ -227,7 +227,7 @@ const TechnologiesListDisplay = ({keys}) => {
 };
 
 const ListItem = ({tech:{name, sublist}}) => {
-    const screen = localStorage.getItem('screen') || 'laptop';
+    const screen = localStorage.getItem('screen') || 'medium-laptop';
     const divRef = useRef(null);
     const [divHeight, setDivHeight] = useState(0);
     const { t } = useTranslation();
@@ -258,7 +258,7 @@ const ListItem = ({tech:{name, sublist}}) => {
 };
 
 const SubListDisplay = ({divRef, sublist}) => {
-    const screen = localStorage.getItem('screen') || 'laptop';
+    const screen = localStorage.getItem('screen') || 'medium-laptop';
     const { t } = useTranslation();
     return (
         <ul ref={divRef} className="flex flex-col items-start justify-start gap-1">

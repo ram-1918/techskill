@@ -12,7 +12,6 @@ export const APImage = ({}) => (
 
 
 export const CBNImage = () => {
-  // const screen = localStorage.getItem("screen") || "laptop";
   return (
     <BaseBGImage
       image="bg-cbn bg-center"
@@ -25,7 +24,7 @@ export const CBNImage = () => {
 };
 
 export const PKImage = () => {
-  // const screen = localStorage.getItem("screen") || "laptop";
+  // const screen = localStorage.getItem("screen") || "medium-laptop";
   return (
     <BaseBGImage
       image="bg-pk bg-center bg-white border shadow-md"
@@ -37,7 +36,7 @@ export const PKImage = () => {
   );
 }
 export const LokeshImage = ({ size = "w-32 h-32" }) => {
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || 'medium-laptop';
   return (
     <BaseBGImage
       image="bg-lokesh bg-center border shadow-md"
@@ -56,7 +55,7 @@ export const SrinivasImage = ({ size = "w-32 h-32" }) => (
 );
 
 export const APGOV = () => {
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || "medium-laptop";
   return (
     <BaseBGImage
       image="bg-apgov"
@@ -68,7 +67,7 @@ export const APGOV = () => {
   );
 };
 export const APSSDC = () => {
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || "medium-laptop";
   return (
     <BaseBGImage
       image="bg-apssdc"

@@ -34,7 +34,7 @@ const reporting_items = [
 ]
 
 const Reporting = ({...props}) => {
-    const screen = localStorage.getItem('screen') || 'laptop'; 
+    const screen = localStorage.getItem('screen') || 'medium-laptop'; 
     const { t } = useTranslation();
     return (
     <BaseSlide id="reporting" {...props}>
@@ -59,7 +59,7 @@ const PDItems = () => {
 };
 
 const ListItem = ({item:{icon, name, content}}) => {
-    const screen = localStorage.getItem('screen') || 'laptop'; 
+    const screen = localStorage.getItem('screen') || 'medium-laptop'; 
     const { t } = useTranslation();
     return (
         <li className="flex flex-col items-center justify-start gap-3">

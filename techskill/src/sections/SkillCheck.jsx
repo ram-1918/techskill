@@ -127,7 +127,7 @@ const Steps = () => {
   );
   const textstyles = "font-bold text-md capitalize";
   const divstyles = " flex flex-col justify-start items-center text-center";
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || "medium-laptop";
 
   return (
     <div
@@ -163,7 +163,7 @@ const Steps = () => {
 
 const Layout = ({ children, icon, title }) => {
   const { t } = useTranslation();
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || "medium-laptop";
   return (
     <div className="w-[40%] overflow-hidden border rounded-xl shadow-lg flex flex-col justify-center items-center">
       <span
@@ -199,7 +199,7 @@ const BenefitItem = ({ item: { name } }) => {
 };
 
 const AttributeItem = ({ item: { name, icon } }) => {
-  const screen = localStorage.getItem("screen") || "laptop";
+  const screen = localStorage.getItem("screen") || "medium-laptop";
   const { t } = useTranslation();
   return (
     <div className="flex items-center justify-start w-full px-2 space-x-2 capitalize">

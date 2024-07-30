@@ -48,7 +48,7 @@ const PDItems = () => {
 };
 
 const ListItem = ({item:{icon, name, content}}) => {
-    const screen = localStorage.getItem('screen') || 'small-laptop';
+    const screen = localStorage.getItem('screen') || 'medium-laptop';
     const { t } = useTranslation();
     return (
         <li className="flex flex-col items-center justify-start w-[33%] h-[60%] gap-10">

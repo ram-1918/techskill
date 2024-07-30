@@ -11,7 +11,7 @@ const BaseSlide = ({
   setIsView,
 }) => {
   // mobile:h-96 h-[40rem] w-[74rem] max-w-[74rem] mobile:w-[24rem]
-  const screen = localStorage.getItem("screen");
+  const screen = localStorage.getItem("screen") || "medium-laptop";
   const [show, setShow] = useState(false);
   return (
     <section
