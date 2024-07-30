@@ -22,6 +22,7 @@ import {
   WiproIcon,
 } from "../components/icons";
 import Tooltip from "../components/Tooltip";
+import { heading_font_size, icon_sizes } from "../Base";
 
 const pd_items = [
   {
@@ -113,7 +114,7 @@ const Placements = ({ ...props }) => {
       <BaseHeader text={main_headings.slide7.text} />
       <BaseContentDiv text="program execution partners">
         <PlacementItems />
-        <span className="w-full font-light text-center">
+        <span className={`${heading_font_size.content} w-full font-light text-center`}>
           ... {t("and many others")}
         </span>
       </BaseContentDiv>
@@ -123,7 +124,7 @@ const Placements = ({ ...props }) => {
 
 const PlacementItems = () => {
   return (
-    <ul className="flex flex-wrap items-center justify-center w-full gap-8 px-2">
+    <ul className="flex flex-wrap items-center justify-center w-full gap-12 px-2 gap-y-10">
       {pd_items.map((item) => (
         <ListItem key={item.id} item={item} />
       ))}
@@ -133,10 +134,10 @@ const PlacementItems = () => {
 
 const ListItem = ({ item: { icon, name } }) => {
   return (
-    <li className="relative flex flex-col items-center justify-center gap-2 px-4 group mobile:px-1">
-      <span className="w-20 h-20 overflow-hidden bg-center bg-cover rounded-full mobile:w-8 mobile:h-8">
+    <li className={`relative flex flex-col items-center justify-center group bg-blue-500 rounded-full overflow-hidden`}>
+      {/* <span className={` bg-center bg-cover rounded-full w-full h-full ${icon_sizes.xl}`}> */}
         {icon}
-      </span>
+      {/* </span> */}
       <Tooltip name={name} />
     </li>
   );

@@ -31,7 +31,7 @@ export const heading_font_size = {
     small-tablet:text-[1.2rem] large-tablet:text-[1.7rem]
     small-laptop:text-[2.2rem] medium-laptop:text-[2.5rem] medium-laptop:text-[2.7rem] 
     large-laptop:text-[3rem] standard-desktop:text-[3.8rem] large-desktop:text-[5rem]
-    ultra-wide:text-[7rem] 5k-monitor:text-[10rem]
+    ultra-wide:text-[7.5rem] 5k-monitor:text-[12rem]
     `,
     sub: `
     small-phone:text-[0.9rem] medium-phone:text-[0.95rem]
@@ -57,6 +57,14 @@ export const heading_font_size = {
     large-laptop:text-[1.3rem] standard-desktop:text-[1.8rem] large-desktop:text-[2.2rem]
     ultra-wide:text-[3.1rem] 5k-monitor:text-[3.5rem]
 `,
+subcontent2: `
+small-phone:text-[0.25rem] medium-phone:text-[0.75rem]
+large-phone:text-[0.3rem] 
+small-tablet:text-[0.5rem] large-tablet:text-[0.6rem]
+small-laptop:text-[0.8rem] medium-laptop:text-[1rem] 
+large-laptop:text-[1.3rem] standard-desktop:text-[1.8rem] large-desktop:text-[2.2rem]
+ultra-wide:text-[3.1rem] 5k-monitor:text-[2.7rem]
+`,
     sub2: {
         mobile: "0.9rem",
         tablet: "1.15rem",
@@ -69,7 +77,7 @@ export const heading_font_size = {
         laptop: "1.1rem",
         desktop: "1.2rem",
     },
-    subcontent2: {
+    subcontent5: {
         mobile: "0.55rem",
         tablet: "0.8rem",
         laptop: "0.95rem",
@@ -119,11 +127,11 @@ export const icon_sizes = {
         `,
     // Pending 
     lg: `
-        medium-phone:w-12 medium-phone:h-12
-        large-phone:w-16 large-phone:h-16 
-        small-tablet:w-24 small-tablet:h-24 large-tablet:w-20 large-tablet:h-20
+        medium-phone:w-10 medium-phone:h-10
+        large-phone:w-12 large-phone:h-12
+        small-tablet:w-16 small-tablet:h-16 large-tablet:w-24 large-tablet:h-24
         small-laptop:w-28 small-laptop:h-28 medium-laptop:w-32 medium-laptop:h-32 large-laptop:w-36 large-laptop:h-36
-        standard-desktop:w-44 standard-desktop:h-44 large-desktop:w-56 large-desktop:h-56 ultra-wide:w-80 ultra-wide:h-80
+        standard-desktop:w-40 standard-desktop:h-40 large-desktop:w-44 large-desktop:h-44 ultra-wide:w-64 ultra-wide:h-64
         5k-monitor:w-96 5k-monitor:h-96
         `,
     medium: `
@@ -135,12 +143,12 @@ export const icon_sizes = {
         5k-monitor:w-40 5k-monitor:h-40
         `,
     small: `
-        medium-phone:w-12 medium-phone:h-12
-        large-phone:w-16 large-phone:h-16 
-        small-tablet:w-24 small-tablet:h-24 large-tablet:w-28 large-tablet:h-28
-        small-laptop:w-24 small-laptop:h-24 medium-laptop:w-28 medium-laptop:h-28 large-laptop:w-32 large-laptop:h-32
-        standard-desktop:w-36 standard-desktop:h-36 large-desktop:w-36 large-desktop:h-36 ultra-wide:w-40 ultra-wide:h-40
-        5k-monitor:w-40 5k-monitor:h-40
+        medium-phone:w-1 medium-phone:h-1
+        large-phone:w-2 large-phone:h-2
+        small-tablet:w-3 small-tablet:h-3 large-tablet:w-4 large-tablet:h-4
+        small-laptop:w-5 small-laptop:h-5 medium-laptop:w-7 medium-laptop:h-7 large-laptop:w-8 large-laptop:h-8
+        standard-desktop:w-12 standard-desktop:h-12 large-desktop:w-16 large-desktop:h-16 ultra-wide:w-16 ultra-wide:h-16
+        5k-monitor:w-20 5k-monitor:h-20
         `,
     smallest: `
         small-phone:w-3 small-phone:h-3

@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
-import { heading_font_size } from "../Base";
+import { heading_font_size, icon_sizes } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
@@ -82,8 +82,7 @@ const SkillCheck = ({ ...props }) => {
   return (
     <BaseSlide id="skillcheck" {...props}>
       <BaseHeader text={main_headings.slide6.text} />
-      <BaseContentDiv text="">
-        <Subhead text="steps involved, attributes & benefits" />
+      <BaseContentDiv text="steps involved, attributes & benefits">
         <Content />
       </BaseContentDiv>
     </BaseSlide>
@@ -121,39 +120,39 @@ const AttributeDisplay = () => {
 const Steps = () => {
   const RightArrow = (
     <FontAwesomeIcon
-      className="w-fit text-[5rem] text-gray-600"
+      className={`w-fit ${heading_font_size.sub} text-gray-600`}
       icon={faArrowRight}
     />
   );
-  const textstyles = "leading-5 font-bold text-md capitalize";
+  const textstyles = "font-bold text-md capitalize";
   const divstyles = "w-32 flex flex-col justify-start items-center text-center";
   const screen = localStorage.getItem("screen") || "laptop";
 
   return (
     <div
       style={{ fontSize: heading_font_size.subcontent[screen] }}
-      className="flex items-start justify-between w-full px-2 h-fit"
+      className="flex items-center justify-around w-full px-2 h-fit"
     >
       <div className={divstyles}>
         <span>
-          {<FontAwesomeIcon className="w-20 h-20" icon={faUserCheck} />}
+          {<FontAwesomeIcon className={icon_sizes.lg} icon={faUserCheck} />}
         </span>
-        <span className={textstyles}>register + aptitude tests</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>register + aptitude tests</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span className="w-20 h-20">{AssessmentIcon}</span>
-        <span className={textstyles}>assessments</span>
+        <span className={icon_sizes.lg}>{AssessmentIcon}</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>assessments</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span className="w-20 h-20">{CertificateIcon}</span>
-        <span className={textstyles}>certifications</span>
+        <span className={icon_sizes.lg}>{CertificateIcon}</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>certifications</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span>{<FontAwesomeIcon className="w-20 h-20" icon={faTrophy} />}</span>
-        <span className={textstyles}>
+        <span>{<FontAwesomeIcon className={icon_sizes.lg} icon={faTrophy} />}</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>
           succussfully obtains a skill check score
         </span>
       </div>
@@ -168,7 +167,7 @@ const Layout = ({ children, icon, title }) => {
     <div className="w-[40%] overflow-hidden border rounded-xl shadow-lg flex flex-col justify-center items-center">
       <span
         style={{ fontSize: heading_font_size.content[screen] }}
-        className="w-full px-2 py-1 font-semibold text-center capitalize bg-teal-200"
+        className={`${heading_font_size.content} w-full px-2 py-1 font-semibold text-center capitalize bg-teal-200`}
       >
         {t(title)}
       </span>
@@ -176,10 +175,10 @@ const Layout = ({ children, icon, title }) => {
         style={{ fontSize: heading_font_size.content[screen] }}
         className="flex items-center justify-around w-full p-2"
       >
-        <span className="desktop:w-24 desktop:h-24 laptop:w-24 laptop:h-24 tablet:w-24 tablet:h-24 mobile:w-10 small:w-10 mobile:h-10 small:h-10">
+        <span className={icon_sizes.xl}>
           {icon}
         </span>
-        <div className="flex flex-col items-start justify-start space-y-1">
+        <div className={`${heading_font_size.content} flex flex-col items-start justify-start space-y-1`}>
           {children}
         </div>
       </div>
@@ -192,7 +191,7 @@ const BenefitItem = ({ item: { name } }) => {
   return (
     <div className="flex items-center justify-start px-2 space-x-2 capitalize">
       <span className="w-full capitalize">
-        {<FontAwesomeIcon icon={faCheck} />} {t(name)}
+        {<FontAwesomeIcon icon={faCheck} className={icon_sizes.small} />} {t(name)}
       </span>
     </div>
   );
@@ -203,7 +202,7 @@ const AttributeItem = ({ item: { name, icon } }) => {
   const { t } = useTranslation();
   return (
     <div className="flex items-center justify-start w-full px-2 space-x-2 capitalize">
-      <span className="w-6 h-6 mobile:w-5 mobile:h-5">{icon}</span>
+      <span className={icon_sizes.small}>{icon}</span>
       <span className="">{t(name)}</span>
     </div>
   );

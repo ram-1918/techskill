@@ -73,6 +73,7 @@ import skillcheck from '../assets/icons/gauge.png';
 import benefits from '../assets/icons/benefits.png';
 import attributes from '../assets/icons/attributes.png';
 import fullscreen from '../assets/icons/preview.png';
+import { icon_sizes } from "../Base";
 
 
 const icon_style = "w-8 h-8";
@@ -111,32 +112,31 @@ export const CertifiedIcon = <img className={''} src={certified} alt="Certified 
 export const LocationsIcon = <img className={''} src={locations} alt="Locations icon" />;
 export const PlacedIcon = <img className={''} src={placed} alt="Placed icon" />;
 
-export const AcademicsIcon = <img className={'w-7 h-7'} src={academics} alt="Academics Icon" />;
+export const AcademicsIcon = <img className={''} src={academics} alt="Academics Icon" />;
 export const AptitudeIcon = <img className={''} src={aptitude} alt="Placed icon" />;
 export const AssessmentIcon = <img className={''} src={assessments} alt="Placed icon" />;
 export const CertificateIcon = <img className={''} src={certificate} alt="Placed icon" />;
 export const PersonalityIcon = <img className={''} src={personality} alt="Placed icon" />;
 
-export const InfosysIcon = <img className={''} src={infosys} alt="Communication icon" />;
-export const TCSIcon = <img className={''} src={tcs} alt="TCS icon" />;
-export const ZohoIcon = <img className={''} src={zoho} alt="Zoho icon" />;
-export const IBMIcon = <img className={''} src={ibm} alt="IBM icon" />;
+export const InfosysIcon = <img className={`${icon_sizes.lg}`} src={infosys} alt="Communication icon" />;
+export const TCSIcon = <img className={`${icon_sizes.lg}`} src={tcs} alt="TCS icon" />;
+export const IBMIcon = <img className={`${icon_sizes.lg}`} src={ibm} alt="IBM icon" />;
 
-export const AppleIcon = <img className={''} src={apple} alt="Apple icon" />;
-export const GoogleIcon = <img className={''} src={google} alt="Google icon" />;
-export const MetaIcon = <img className={''} src={meta} alt="Meta icon" />;
-export const AmazonIcon = <img className={''} src={amazon} alt="Amazon icon" />;
-export const MicrosoftIcon = <img className={''} src={microsoft} alt="Microsoft icon" />;
+export const AppleIcon = <img className={`${icon_sizes.lg}`} src={apple} alt="Apple icon" />;
+export const GoogleIcon = <img className={`${icon_sizes.lg}`} src={google} alt="Google icon" />;
+export const MetaIcon = <img className={`${icon_sizes.lg}`} src={meta} alt="Meta icon" />;
+export const AmazonIcon = <img className={`${icon_sizes.lg}`} src={amazon} alt="Amazon icon" />;
+export const MicrosoftIcon = <img className={`${icon_sizes.lg}`} src={microsoft} alt="Microsoft icon" />;
 
-export const DellIcon = <img className={''} src={dell} alt="Dell icon" />;
-export const DeloitteIcon = <img className={''} src={deloitte} alt="Deloitte icon" />;
-export const TechMIcon = <img className={''} src={techm} alt="Tech M icon" />;
-export const MindtreeIcon = <img className={''} src={mindtree} alt="LTI Mindtree icon" />;
+export const DellIcon = <img className={`${icon_sizes.lg}`} src={dell} alt="Dell icon" />;
+export const DeloitteIcon = <img className={`${icon_sizes.lg}`} src={deloitte} alt="Deloitte icon" />;
+export const TechMIcon = <img className={`${icon_sizes.lg}`} src={techm} alt="Tech M icon" />;
+export const MindtreeIcon = <img className={`${icon_sizes.lg}`} src={mindtree} alt="LTI Mindtree icon" />;
 
-export const WiproIcon = <img className={''} src={wipro} alt="Wipro icon" />;
-export const HCLIcon = <img className={''} src={hcl} alt="HCL icon" />;
-export const CognizantIcon = <img className={''} src={cognizant} alt="Cognizant icon" />;
-export const AccentureIcon = <img className={''} src={accenture} alt="Accenture icon" />;
+export const WiproIcon = <img className={`${icon_sizes.lg}`} src={wipro} alt="Wipro icon" />;
+export const HCLIcon = <img className={`${icon_sizes.lg}`} src={hcl} alt="HCL icon" />;
+export const CognizantIcon = <img className={`${icon_sizes.lg}`} src={cognizant} alt="Cognizant icon" />;
+export const AccentureIcon = <img className={`${icon_sizes.lg}`} src={accenture} alt="Accenture icon" />;
 
 export const InstagramIcon = <img className={icon_style} src={instagram} alt="Instagram icon" />;
 export const FacebookIcon = <img className={icon_style} src={facebook} alt="Facebook icon" />;
@@ -148,7 +148,7 @@ export const ScrollIcon = <img className={''} src={scroll} alt="Scroll icon" />;
 export const SlideshowIcon = <img className={''} src={slideshow} alt="SlideShow icon" />;
 export const DesignIcon = <img className={''} src={design} alt="Design icon" />;
 export const LeftBracketIcon = <img className={'h-40 w-10'} src={leftbracket} alt="LeftOpen icon" />;
-export const approvedIcon = <img className={'w-6 h-6'} src={approved} alt="Approved icon" />;
+export const approvedIcon = <img className={`${icon_sizes.small}`} src={approved} alt="Approved icon" />;
 export const SkillcheckIcon = <img className={''} src={skillcheck} alt="Skill Check icon" />;
 export const BenefitsIcon = <img className={''} src={benefits} alt="Benefits icon" />;
 export const AttributesIcon = <img className={''} src={attributes} alt="Attributes icon" />;

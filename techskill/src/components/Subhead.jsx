@@ -41,7 +41,7 @@ const Head = ({text, divRef}) => {
                 // fontFamily: sub_heading_fontstyle,
                 color: colors.sub 
             }}
-            className={`${styles} ${heading_font_size.content}`}
+            className={`${styles} ${heading_font_size.sub}`}
             >
             {t(text)}
         </span>
