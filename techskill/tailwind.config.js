@@ -14,7 +14,7 @@ module.exports = {
         'future':  "url('assets/images/futuretech.png')",
         'mandals':  "url('assets/images/futuretown2.png')",
         'technologies':  "url('assets/images/technologies.png')",
-        'thankyou':  "url('assets/images/thankyou.png')",
+        'thankyou':  "url('assets/images/thankyou1.png')",
         'bg1': "url('assets/images/slides/first.png')",
         'bg2': "url('assets/images/slides/second.png')",
         'bg3': "url('assets/images/bg3.png')",

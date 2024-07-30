@@ -118,6 +118,7 @@ const AttributeDisplay = () => {
 };
 
 const Steps = () => {
+  const { t } = useTranslation();
   const RightArrow = (
     <FontAwesomeIcon
       className={`w-fit ${heading_font_size.sub} text-gray-600`}
@@ -137,23 +138,23 @@ const Steps = () => {
         <span>
           {<FontAwesomeIcon className={icon_sizes.lg} icon={faUserCheck} />}
         </span>
-        <span className={`${textstyles} ${heading_font_size.subcontent}`}>register & aptitude tests</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("register & aptitude tests")}</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
         <span className={icon_sizes.lg}>{AssessmentIcon}</span>
-        <span className={`${textstyles} ${heading_font_size.subcontent}`}>assessments</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("assessments")}</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
         <span className={icon_sizes.lg}>{CertificateIcon}</span>
-        <span className={`${textstyles} ${heading_font_size.subcontent}`}>certifications</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("certifications")}</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
         <span>{<FontAwesomeIcon className={icon_sizes.lg} icon={faTrophy} />}</span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>
-          succussfully obtains a skill check score
+          {t("succussfully obtains a skill check score")}
         </span>
       </div>
     </div>
