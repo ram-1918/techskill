@@ -27,8 +27,8 @@ const BaseSlide = ({
       }}
       id={id}
       className={`
-        ${slide_sizes}
-        ${slide_padding}
+        ${!isFullscreen && slide_sizes}
+        ${!isFullscreen && slide_padding}
       px-2 py-2 
       bg-gradient-to-r from-cyan-100 to-pink-50 
       relative shadow-xl overflow-hidden rounded-4xl 

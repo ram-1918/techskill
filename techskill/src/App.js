@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { main_heading_fontstyle } from "./Base";
+import { heading_font_size, icon_sizes, main_heading_fontstyle, slide_widths } from "./Base";
 import { FullscreenIcon, ScrollIcon, SlideshowIcon } from "./components/icons";
 import ScrollsSlidesView from "./components/ScrollSlidesView";
 import SingleSlideView from "./components/SingleSlideView";
@@ -209,14 +209,12 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
 
   return (
     <div
-      className="
-    flex justify-between items-center gap-8 
-    desktop:w-[76rem] laptop:w-[70rem] tablet:w-[95%] mobile:w-[95%] small:w-[98%]
-    desktop:flex-row laptop:flex-row tablet:flex-row small:flex-col 
-    mobile:flex-col mobile:gap-1 small:gap-1 mobile:justify-start mobile:items-end
-    "
+      className={`
+    flex justify-between items-center gap-8 w-full py-4
+    ${slide_widths}
+    `}
     >
-      <div className="flex items-center justify-center gap-2">
+      <div className={`${heading_font_size.subcontent} flex items-center justify-center gap-2`}>
         <span>Translation: </span>
         <span
           className={`${transButton} ${
@@ -245,15 +243,15 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           Hindi
         </span>
       </div>
-      <div className="flex items-center justify-end gap-2">
-        <span className="text-lg font-light text-black">
+      <div  className={`${heading_font_size.subcontent} flex items-center justify-end gap-2`}>
+        <span className="font-light text-black">
           <FontAwesomeIcon icon={faEye} /> View:{" "}
         </span>
         <span
           onClick={() => setIsView("scroll")}
           className={`${
             isView === "scroll" && active
-          } ${buttonstyles} flex justify-between items-center w-8 h-8`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
         >
           {ScrollIcon}
         </span>
@@ -261,7 +259,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           onClick={() => setIsView("single")}
           className={`${
             isView === "single" && active
-          } ${buttonstyles} flex justify-between items-center w-10 h-10`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
         >
           {SlideshowIcon}
         </span>
@@ -272,7 +270,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           }}
           className={`${
             isView === "full" && active
-          } ${buttonstyles} flex justify-between items-center w-10 h-10`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
         >
           {FullscreenIcon}
         </span>
@@ -331,7 +329,7 @@ const FullScreenView = ({
   }, []);
 
   return (
-    <div className="relative">
+    <div className="relative w-full h-full">
       {slides_temp[slide_names[currentSlide]]({
         isFullscreen,
         setIsFullscreen,
@@ -346,7 +344,7 @@ const FullScreenView = ({
         className="absolute top-[50%] left-2"
       >
         {currentSlide}
-        <FontAwesomeIcon className="w-7 h-7" icon={faArrowLeft} />
+        <FontAwesomeIcon className={icon_sizes.small} icon={faArrowLeft} />
       </span>
       <span
         onClick={() =>
@@ -356,7 +354,7 @@ const FullScreenView = ({
         }
         className="absolute top-[50%] right-2"
       >
-        <FontAwesomeIcon className="w-7 h-7" icon={faArrowRight} />
+        <FontAwesomeIcon className={icon_sizes.small} icon={faArrowRight} />
       </span>
     </div>
   );

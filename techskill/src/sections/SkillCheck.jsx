@@ -125,7 +125,7 @@ const Steps = () => {
     />
   );
   const textstyles = "font-bold text-md capitalize";
-  const divstyles = "w-32 flex flex-col justify-start items-center text-center";
+  const divstyles = " flex flex-col justify-start items-center text-center";
   const screen = localStorage.getItem("screen") || "laptop";
 
   return (
@@ -137,7 +137,7 @@ const Steps = () => {
         <span>
           {<FontAwesomeIcon className={icon_sizes.lg} icon={faUserCheck} />}
         </span>
-        <span className={`${textstyles} ${heading_font_size.subcontent}`}>register + aptitude tests</span>
+        <span className={`${textstyles} ${heading_font_size.subcontent}`}>register & aptitude tests</span>
       </div>
       {RightArrow}
       <div className={divstyles}>

@@ -54,7 +54,7 @@ const ListItem = ({item:{icon, name, content}}) => {
         <li className="flex flex-col items-center justify-start w-[33%] h-[60%] gap-10">
             <span style={{backgroundColor: colors.bg_color}} className={`${icon_sizes.lg} rounded shadow-md`}>{icon}</span>
             <div className="flex flex-col items-center justify-between gap-2">
-                <span style={{color: colors.content}} className={`${heading_font_size.content} leading-7 text-center capitalize `}>{t(name)}</span>
+                <span style={{color: colors.content}} className={`${heading_font_size.content} font-bold text-center capitalize `}>{t(name)}</span>
                 <p style={{color: colors.subcontent}} className={`${heading_font_size.subcontent} text-center capitalize tracking-wide leading-loose`}>{t(content)}</p>
             </div>
         </li>

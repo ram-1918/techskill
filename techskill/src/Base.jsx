@@ -13,6 +13,21 @@ export const slide_sizes = `
     5k-monitor:w-[320.0625rem] 5k-monitor:h-[150rem]
 `
 
+export const slide_widths = `
+    small-phone:w-[20rem]
+    medium-phone:w-[22.5625rem]
+    large-phone:w-[25.9375rem]
+    small-tablet:w-[30.0625rem]
+    large-tablet:w-[48.0625rem]
+    small-laptop:w-[64.0625rem]
+    medium-laptop:w-[79.0625rem]
+    large-laptop:w-[95.0625rem]
+    standard-desktop:w-[120.0625rem]
+    large-desktop:w-[160.0625rem]
+    ultra-wide:w-[240.0625rem]
+    5k-monitor:w-[320.0625rem]
+`
+
 export const slide_padding = `
     small-phone:px-2 medium-phone:px-2 large-phone:px-6
     small-tablet:px-2 large-tablet:px-8 small-laptop:px-10
@@ -122,7 +137,7 @@ export const icon_sizes = {
         large-phone:w-10 large-phone:h-10
         small-tablet:w-12 small-tablet:h-12 large-tablet:w-12 large-tablet:h-12
         small-laptop:w-20 small-laptop:h-20 medium-laptop:w-20 medium-laptop:h-20 large-laptop:w-40 large-laptop:h-40
-        standard-desktop:w-44 standard-desktop:h-44 large-desktop:w-56 large-desktop:h-56 ultra-wide:w-72 ultra-wide:h-72
+        standard-desktop:w-40 standard-desktop:h-40 large-desktop:w-56 large-desktop:h-56 ultra-wide:w-72 ultra-wide:h-72
         5k-monitor:w-[26rem] 5k-monitor:h-[26rem]
         `,
     // Pending 
@@ -135,12 +150,13 @@ export const icon_sizes = {
         5k-monitor:w-96 5k-monitor:h-96
         `,
     medium: `
-        medium-phone:w-12 medium-phone:h-12
-        large-phone:w-16 large-phone:h-16 
-        small-tablet:w-24 small-tablet:h-24 large-tablet:w-28 large-tablet:h-28
-        small-laptop:w-24 small-laptop:h-24 medium-laptop:w-28 medium-laptop:h-28 large-laptop:w-32 large-laptop:h-32
-        standard-desktop:w-36 standard-desktop:h-36 large-desktop:w-44 large-desktop:h-44 ultra-wide:w-40 ultra-wide:h-40
-        5k-monitor:w-40 5k-monitor:h-40
+        small-phone:w-2 small-phone:h-2
+        medium-phone:w-4 medium-phone:h-4
+        large-phone:w-8 large-phone:h-8
+        small-tablet:w-12 small-tablet:h-12 large-tablet:w-16 large-tablet:h-16
+        small-laptop:w-20 small-laptop:h-20 medium-laptop:w-24 medium-laptop:h-24 large-laptop:w-32 large-laptop:h-32
+        standard-desktop:w-36 standard-desktop:h-36 large-desktop:w-44 large-desktop:h-44 ultra-wide:w-64 ultra-wide:h-64
+        5k-monitor:w-80 5k-monitor:h-80
         `,
     small: `
         medium-phone:w-1 medium-phone:h-1

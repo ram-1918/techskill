@@ -38,10 +38,13 @@ const Regions = ({...props}) => {
         <BaseSlide id="regions" {...props}>
             <BaseHeader text={main_headings.slide2.text} />
             <BaseContentDiv text="">
-                <div className="flex items-center justify-around w-full h-full space-x-4 tablet:flex-row laptop:flex-row desktop:flex-row mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4">
+            <div className="flex flex-col items-center justify-around w-full h-full">
+                <div className="flex items-center justify-around w-full space-x-4 h-fit tablet:flex-row laptop:flex-row desktop:flex-row mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4">
                     <ImageSpan />
                     <RegionsListDisplay />
                 </div>
+                <div className="h-2"></div>
+            </div>
             </BaseContentDiv>
         </BaseSlide>
     )
