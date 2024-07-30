@@ -248,7 +248,7 @@ const ListItem = ({tech:{name, sublist}}) => {
         <div className="flex flex-col items-start justify-start">
             <p 
             style={{color:colors.content, borderColor:colors.subcontent}} 
-            className={`${heading_font_size.content} px-2 overflow-hidden font-semibold tracking-tighter uppercase border-b border-dotted text-ellipsis mobile:px-0`}>{t(name)}</p>
+            className={`${heading_font_size.content} px-2 overflow-hidden font-semibold tracking-tight uppercase border-b border-dotted text-ellipsis mobile:px-0`}>{t(name)}</p>
             <div className="flex items-center justify-start h-full mobile:w-full mobile:justify-center">
                 <span style={{height: divHeight, borderColor:colors.subcontent}} className="h-full border-l border-dotted mobile:hidden"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />

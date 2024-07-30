@@ -4,6 +4,7 @@ import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
 import { colors } from "../Base";
 import { useTranslation } from "react-i18next";
+import why_image from "../assets/images/why_image.png";
 
 const screen_specific = {
     '5k-monitor': {
@@ -87,10 +88,15 @@ function Why({...props}) {
 
 const bg_color = "#0d9488"
 
+
 const Concepts = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full">
-                <div className="flex items-center justify-center">
+            {/* <div className=""></div> */}
+            <div className="w-[90%] h-[90%] flex justify-center items-center">
+                <img src={why_image} alt="why" className="" />
+            </div>
+                {/* <div className="flex items-center justify-center">
                     <LeftData />
                     <LeftEdges />
                     <LeftSpan />
@@ -99,10 +105,11 @@ const Concepts = () => {
                     <RightEdges />
                     <RightData />
                 </div>
-            <BottomSpan />
+            <BottomSpan /> */}
         </div>
     )
 }
+export default Why;
 
 const FutureImg = () => <div className={`${image_size_essential} bg-center bg-cover shadow-lg  rounded-xl bg-future`}></div>
 
@@ -200,8 +207,6 @@ const BottomSpan = () => {
         </div>
     )
 }
-
-export default Why;
 
 //// BACKUP
 

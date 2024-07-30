@@ -33,7 +33,10 @@ const Personality = ({...props}) => {
     <BaseSlide id="personality" {...props}>
         <BaseHeader text={main_headings.slide5.text} />
         <BaseContentDiv text="personality development program curricullam">
-            <PDItems />
+            <div className="flex flex-col items-center justify-around w-full h-full">
+                <PDItems />
+                <div className="w-full h-2"></div>
+            </div>
         </BaseContentDiv>
     </BaseSlide>
   );
@@ -41,7 +44,7 @@ const Personality = ({...props}) => {
 
 const PDItems = () => {
     return (
-        <ul className="flex items-center justify-around w-full h-full gap-4 px-2">
+        <ul className="flex items-start justify-around w-full h-full gap-4 px-2">
             { pd_items.map(item => <ListItem key={item.id} item={item} />) }
         </ul>
     )
@@ -52,7 +55,7 @@ const ListItem = ({item:{icon, name, content}}) => {
     const { t } = useTranslation();
     return (
         <li className="flex flex-col items-center justify-start w-[33%] h-[60%] gap-10">
-            <span style={{backgroundColor: colors.bg_color}} className={`${icon_sizes.lg} rounded shadow-md`}>{icon}</span>
+            <span style={{backgroundColor: colors.bg_color}} className={`${icon_sizes.lg} rounded shadow-md p-2`}>{icon}</span>
             <div className="flex flex-col items-center justify-between gap-2">
                 <span style={{color: colors.content}} className={`${heading_font_size.content} font-bold text-center capitalize `}>{t(name)}</span>
                 <p style={{color: colors.subcontent}} className={`${heading_font_size.subcontent} text-center capitalize tracking-wide leading-loose`}>{t(content)}</p>

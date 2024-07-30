@@ -141,7 +141,7 @@ const handleResize = () => {
   const slides = [
     <Home />,
     <Menu />,
-    // <Why />,
+    <Why />,
     <Regions />,
     <Technologies
       keys={["ai/ml", "programming languages", "cloud technologies"]}
@@ -164,7 +164,7 @@ const BigScreenView = ({ slides }) => {
   return (
     <div
       style={{ fontFamily: main_heading_fontstyle }}
-      className="flex flex-col items-center justify-start w-full h-full space-y-5 text-black mobile:px-0 bg-zinc-300"
+      className="flex flex-col items-center justify-start w-full h-full gap-12 text-black mobile:px-0 bg-zinc-300"
     >
       {!isFullscreen && (
         <ViewOptions
@@ -251,7 +251,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           onClick={() => setIsView("scroll")}
           className={`${
             isView === "scroll" && active
-          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.smallest}`}
         >
           {ScrollIcon}
         </span>
@@ -259,7 +259,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           onClick={() => setIsView("single")}
           className={`${
             isView === "single" && active
-          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.smallest}`}
         >
           {SlideshowIcon}
         </span>
@@ -270,7 +270,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           }}
           className={`${
             isView === "full" && active
-          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.smallest}`}
         >
           {FullscreenIcon}
         </span>
@@ -283,7 +283,7 @@ export default App;
 
 const slides_temp = {
   home: ({ ...props }) => <Home {...props} />,
-  // why: ({ ...props }) => <Why {...props} />,
+  why: ({ ...props }) => <Why {...props} />,
   regions: ({ ...props }) => <Regions {...props} />,
   technologies: ({ ...props }) => (
     <Technologies
@@ -343,7 +343,6 @@ const FullScreenView = ({
         }
         className="absolute top-[50%] left-2"
       >
-        {currentSlide}
         <FontAwesomeIcon className={icon_sizes.small} icon={faArrowLeft} />
       </span>
       <span

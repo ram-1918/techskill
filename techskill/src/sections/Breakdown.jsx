@@ -7,6 +7,7 @@ import BaseContentDiv from "../components/BaseContentDiv";
 import { useTranslation } from "react-i18next";
 import { approvedIcon } from "../components/icons";
 import progressbar from "../assets/icons/progressbardiv.png"
+import weightage from "../assets/images/weightage.png";
 
 
 const Breakdown = ({...props}) => {
@@ -16,11 +17,9 @@ const Breakdown = ({...props}) => {
       <BaseSlide id="breakdown" {...props}>
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="skill check score breakdown & calculation">
-              <div className="flex items-start justify-between w-full mobile:flex-col mobile:gap-2 mobile:overflow-x-scroll mobile:overflow-y-scroll">
-                <div className="w-[55%] mobile:w-full h-full mobile:h-fit">
-                    <BreakdownDiv />
-                </div>
-                <div className="w-[55%] mobile:w-full mobile:h-fit flex flex-col justify-start items-start gap-2">
+              <div style={{color: colors.subcontent}} className="flex items-center justify-center w-full px-10">
+                <div className="w-[45%] h-full bg-center bg-no-repeat bg-contain bg-weightage"></div>
+                <div className="w-[55%] flex flex-col items-start justify-start gap-2 mobile:w-full">
                   <div className={` ${heading_font_size.subcontent} p-2 font-light gap-10`}>
                     <span className="font-semibold">{t("A typical student's \"skill check\" score for the below attributes:")}</span>
                     {listitem("academics", "83%")}
@@ -42,10 +41,10 @@ const Breakdown = ({...props}) => {
 
 const BreakdownDiv = () => {
   const { t } = useTranslation();
-  const listitem = (text, percent) => <li className="capitalize">{t(text)}: {percent}</li>;
+  const listitem = (text, percent) => <li className={`${heading_font_size.subcontent2} capitalize`}>{t(text)}: {percent}</li>;
   return (
       <div className={`relative ${image_size} flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top`}>
-        <div className={`${heading_font_size.subcontent2} absolute top-[34%] left-[29%] font-sans px-2 text-black`}>
+        <div className={`${heading_font_size.subcontent2} absolute top-[32%] left-[29%] font-sans px-2 text-black`}>
           <span className="font-bold text-md">{t("scores weightage")}</span>
           <ul>
             {listitem("academics", "50%")}

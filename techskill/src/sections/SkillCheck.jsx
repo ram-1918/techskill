@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTranslation } from "react-i18next";
-import { heading_font_size, icon_sizes } from "../Base";
+import { colors, heading_font_size, icon_sizes } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
@@ -125,24 +125,24 @@ const Steps = () => {
       icon={faArrowRight}
     />
   );
-  const textstyles = "font-bold text-md capitalize";
+  const textstyles = "font-medium text-md capitalize";
   const divstyles = " flex flex-col justify-start items-center text-center";
   const screen = localStorage.getItem("screen") || "medium-laptop";
 
   return (
     <div
-      style={{ fontSize: heading_font_size.subcontent[screen] }}
+      style={{ fontSize: heading_font_size.subcontent[screen], color:colors.subcontent }}
       className="flex items-center justify-around w-full px-2 h-fit"
     >
       <div className={divstyles}>
         <span>
-          {<FontAwesomeIcon className={icon_sizes.lg} icon={faUserCheck} />}
+          {<FontAwesomeIcon className={`${icon_sizes.lg} text-gray-700`} icon={faUserCheck} />}
         </span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("register & aptitude tests")}</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span className={icon_sizes.lg}>{AssessmentIcon}</span>
+        <span className={`${icon_sizes.lg}`}>{AssessmentIcon}</span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("assessments")}</span>
       </div>
       {RightArrow}
@@ -152,7 +152,7 @@ const Steps = () => {
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span>{<FontAwesomeIcon className={icon_sizes.lg} icon={faTrophy} />}</span>
+        <span>{<FontAwesomeIcon className={`${icon_sizes.lg} text-gray-700`} icon={faTrophy} />}</span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>
           {t("succussfully obtains a skill check score")}
         </span>

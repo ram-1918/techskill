@@ -79,7 +79,10 @@ const Menu = () => {
         <BaseSlide>
             <BaseHeader text="table of contents" />
             <BaseContentDiv>
-                <MenuItems />
+                <div className="flex flex-col items-center justify-around w-full h-full">
+                    <MenuItems />
+                    <div className="h-2"></div>
+                </div>
             </BaseContentDiv>
         </BaseSlide>
     )
@@ -87,7 +90,7 @@ const Menu = () => {
 
 const MenuItems = () => {
     return (
-        <div className="grid grid-flow-row grid-cols-2 gap-12 py-6 small-phone:grid-cols-1 medium-phone:grid-cols-1 large-phone:grid-cols-1 small-tablet:grid-cols-1 large-tablet:grid-cols-1 small-phone:gap-2 medium-phone:gap-2 large-phone:gap-2 small-tablet:gap-3 large-tablet:gap-4">
+        <div className="grid grid-flow-row grid-cols-2 gap-8 py-6 small-phone:grid-cols-1 medium-phone:grid-cols-1 large-phone:grid-cols-1 small-tablet:grid-cols-1 large-tablet:grid-cols-1 small-phone:gap-2 medium-phone:gap-2 large-phone:gap-2 small-tablet:gap-3 large-tablet:gap-4">
             {contents.map(item => <MenuItem id={item.id} item={item} />)}
         </div>
     );
@@ -100,7 +103,7 @@ const MenuItem = ({item:{slidenum, title, slide_id}}) => {
         <a 
         style={{fontSize: heading_font_size.content[screen]}} 
         href={`#${slide_id}`} 
-        className={`${heading_font_size['content']} capitalize rounded shadow p-1 flex flex-row justify-start items-center space-x-4 py-1 bg-[#C4DFDF] cursor-pointer`}>
+        className={`${heading_font_size.content} capitalize rounded shadow p-1 flex flex-row justify-start items-center space-x-4 py-1 bg-[#C4DFDF] cursor-pointer`}>
             <span style={{fontWeight:"700"}}>{slidenum}</span>
             <span style={{fontWeight: "500"}}>{t(title)}</span>
         </a>

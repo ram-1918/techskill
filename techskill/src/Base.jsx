@@ -49,12 +49,12 @@ export const heading_font_size = {
     ultra-wide:text-[7.5rem] 5k-monitor:text-[12rem]
     `,
     sub: `
-    small-phone:text-[0.9rem] medium-phone:text-[0.95rem]
-    large-phone:text-[1rem] 
-    small-tablet:text-[1.1rem] large-tablet:text-[1.2rem]
-    small-laptop:text-[1.5rem] medium-laptop:text-[2rem] medium-laptop:text-[2.2rem] 
-    large-laptop:text-[2.3rem] standard-desktop:text-[3rem] large-desktop:text-[4rem]
-    ultra-wide:text-[5.5rem] 5k-monitor:text-[7rem]
+    small-phone:text-[0.3rem] medium-phone:text-[0.4rem]
+    large-phone:text-[0.6rem] 
+    small-tablet:text-[0.9rem] large-tablet:text-[1.1rem]
+    small-laptop:text-[1.3rem] medium-laptop:text-[1.8rem] medium-laptop:text-[2rem] 
+    large-laptop:text-[2.1rem] standard-desktop:text-[2.7rem] large-desktop:text-[3.8rem]
+    ultra-wide:text-[4.5rem] 5k-monitor:text-[6.5rem]
     `,
     content: `
     small-phone:text-[0.6rem] medium-phone:text-[0.65rem]
@@ -68,17 +68,17 @@ export const heading_font_size = {
     small-phone:text-[0.25rem] medium-phone:text-[0.75rem]
     large-phone:text-[0.3rem] 
     small-tablet:text-[0.5rem] large-tablet:text-[0.6rem]
-    small-laptop:text-[0.8rem] medium-laptop:text-[1rem] 
-    large-laptop:text-[1.3rem] standard-desktop:text-[1.8rem] large-desktop:text-[2.2rem]
-    ultra-wide:text-[3.1rem] 5k-monitor:text-[3.5rem]
+    small-laptop:text-[0.8rem] medium-laptop:text-[1.2rem] 
+    large-laptop:text-[1.5rem] standard-desktop:text-[2rem] large-desktop:text-[2.7rem]
+    ultra-wide:text-[3.3rem] 5k-monitor:text-[4rem]
 `,
 subcontent2: `
 small-phone:text-[0.25rem] medium-phone:text-[0.75rem]
 large-phone:text-[0.3rem] 
 small-tablet:text-[0.5rem] large-tablet:text-[0.6rem]
 small-laptop:text-[0.8rem] medium-laptop:text-[1rem] 
-large-laptop:text-[1.3rem] standard-desktop:text-[1.8rem] large-desktop:text-[2.2rem]
-ultra-wide:text-[3.1rem] 5k-monitor:text-[2.7rem]
+large-laptop:text-[1.3rem] standard-desktop:text-[1.8rem] large-desktop:text-[1.8rem]
+ultra-wide:text-[2rem] 5k-monitor:text-[1.8rem]
 `,
     sub2: {
         mobile: "0.9rem",
@@ -133,12 +133,13 @@ export const icon_sizes = {
         5k-monitor:w-[29rem] 5k-monitor:h-[29rem]
     `,
     xl:  `
-        medium-phone:w-10 medium-phone:h-10
-        large-phone:w-10 large-phone:h-10
-        small-tablet:w-12 small-tablet:h-12 large-tablet:w-12 large-tablet:h-12
-        small-laptop:w-20 small-laptop:h-20 medium-laptop:w-20 medium-laptop:h-20 large-laptop:w-40 large-laptop:h-40
-        standard-desktop:w-40 standard-desktop:h-40 large-desktop:w-56 large-desktop:h-56 ultra-wide:w-72 ultra-wide:h-72
-        5k-monitor:w-[26rem] 5k-monitor:h-[26rem]
+        small-phone:w-2 small-phone:h-2
+        medium-phone:w-5 medium-phone:h-5
+        large-phone:w-7 large-phone:h-7
+        small-tablet:w-8 small-tablet:h-8 large-tablet:w-10 large-tablet:h-10
+        small-laptop:w-20 small-laptop:h-20 medium-laptop:w-20 medium-laptop:h-20 large-laptop:w-32 large-laptop:h-32
+        standard-desktop:w-40 standard-desktop:h-40 large-desktop:w-56 large-desktop:h-56 ultra-wide:w-[26rem] ultra-wide:h-[26rem]
+        5k-monitor:w-[30rem] 5k-monitor:h-[30rem]
         `,
     // Pending 
     lg: `
@@ -188,15 +189,15 @@ export const y_spacing = `
 export const content_font = "0.9rem";
 
 export const colors = {
-    main: "#01204E",
-    sub: "black",
-    content: "black",
-    subcontent: "black",
+    main: "#088395",
+    sub: "#508C9B",
+    content: "#538392",
+    subcontent: "#201E43",
     bg_color: "#CCF2F4"
 }
 
 export const colors_backup = {
-    main: "#01204E",
+    main: "#134B70",
     sub: "#27374D",
     content: "#134B70",
     subcontent: "black",

@@ -63,10 +63,10 @@ const ListItem = ({item:{icon, name, content}}) => {
     const { t } = useTranslation();
     return (
         <li className="flex flex-col items-center justify-start gap-3">
-            <span className={`${icon_sizes.lg} p-4 rounded-full mobile:w-16 mobile:h-16 mobile:p-0`}>{icon}</span>
+            <span className={`${icon_sizes.lg} p-4 rounded-full`}>{icon}</span>
             <div className="flex flex-col items-center justify-center">
                 <span style={{fontSize:heading_font_size.sub[screen], color: colors.sub}} className={`${heading_font_size.content} font-semibold`}>{t(content)}</span>
-                <span style={{fontSize:heading_font_size.content[screen], color: colors.content}} className={` ${heading_font_size.content} font-light text-center whitespace-pre-wrap`}>{t(name)}</span>
+                <span style={{color: colors.content}} className={` ${heading_font_size.content} font-medium capitalize text-center whitespace-pre-wrap`}>{t(name)}</span>
             </div>
         </li>
     );

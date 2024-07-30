@@ -113,10 +113,13 @@ const Placements = ({ ...props }) => {
     <BaseSlide id="placements" {...props}>
       <BaseHeader text={main_headings.slide7.text} />
       <BaseContentDiv text="program execution partners">
+      <div className="flex flex-col items-center justify-around w-full h-full">
         <PlacementItems />
         <span className={`${heading_font_size.content} w-full font-light text-center`}>
           ... {t("and many others")}
         </span>
+        <div className="w-full h-2 "></div>
+      </div>
       </BaseContentDiv>
     </BaseSlide>
   );
@@ -134,7 +137,7 @@ const PlacementItems = () => {
 
 const ListItem = ({ item: { icon, name } }) => {
   return (
-    <li className={`relative flex flex-col items-center justify-center group bg-blue-500 rounded-full overflow-hidden`}>
+    <li className={`relative flex flex-col items-center justify-center group bg-blue-500 rounded-full `}>
       {/* <span className={` bg-center bg-cover rounded-full w-full h-full ${icon_sizes.xl}`}> */}
         {icon}
       {/* </span> */}

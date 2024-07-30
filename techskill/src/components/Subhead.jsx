@@ -31,7 +31,7 @@ const Subhead = ({ text }) => {
 
 const Head = ({text, divRef}) => {
     const screen = localStorage.getItem("screen") || "medium-laptop";
-    const styles = "text-center font-semibold text-orange-700 uppercase";
+    const styles = "text-center font-semibold text-orange-700 capitalize";
     const { t } = useTranslation();
     return (
         <span
@@ -39,7 +39,7 @@ const Head = ({text, divRef}) => {
             style={{ 
                 // fontSize: heading_font_size.sub[screen], 
                 // fontFamily: sub_heading_fontstyle,
-                color: colors.sub 
+                color: colors.content
             }}
             className={`${styles} ${heading_font_size.sub}`}
             >
@@ -52,9 +52,9 @@ const UnderlineDesign = ({divWidth}) => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
     return (
         <div style={{fontSize: heading_font_size.content[screen]}} className="flex items-center justify-center space-x-2">
-            <span style={{width: divWidth/3}} className={`h-1 bg-[#9DB2BF]`}></span>
+            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
             <span className={`${heading_font_size.content}`}>{<FontAwesomeIcon icon={faCogs} />}</span>
-            <span style={{width: divWidth/3}} className={`h-1 bg-[#9DB2BF]`}></span>
+            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
         </div>
     );
 };
