@@ -3,7 +3,7 @@ import { AwsIcon, azureIcon, cppIcon, gcpIcon, GoIcon, JavaIcon, JavascriptIcon,
 import BaseHeader from "../components/BaseHeader";
 import BaseContentDiv from "../components/BaseContentDiv";
 import { main_headings } from "../components/data";
-import { colors, heading_font_size } from "../Base";
+import { colors, heading_font_size, icon_sizes } from "../Base";
 import BaseSlide from "../components/BaseSlide";
 import { useTranslation } from "react-i18next";
 
@@ -213,11 +213,15 @@ const Technologies = ({keys, ...rest}) => {
 
 const TechnologiesListDisplay = ({keys}) => {
     return (
-        <ul className="w-full flex desktop:flex-row laptop:flex-row tablet:flex-row justify-between items-center mobile:flex-col small:flex-col mobile:gap-2 small:gap-2">
-            <div className="w-64 h-64 desktop:flex laptop:flex tablet:flex mobile:hidden small:hidden  bg-technologies bg-cover bg-center rounded-xl shadow-xl"></div>
+        <ul className="flex items-center justify-center w-full space-x-4 desktop:flex-row laptop:flex-row tablet:flex-row mobile:flex-col small:flex-col mobile:gap-2 small:gap-2">
             <div className="w-[80%] mobile:w-full small:w-full mobile:px-2 flex justify-around items-start gap-4 mobile:gap-2 small:gap-1">
                 {keys.map((key, idx) => <ListItem id={idx} tech={technology_list[key]} />)}
             </div>
+            <div className="
+            w-[30%] h-[70%] bg-center bg-cover shadow-xl 
+            large-tablet:hidden small-tablet:hidden large-phone:hidden medium-phone:hidden small-phone:hidden
+            bg-technologies rounded-xl"
+            ></div>
         </ul>
     )
 };
@@ -242,9 +246,11 @@ const ListItem = ({tech:{name, sublist}}) => {
     }, [divRef]);
     return (
         <div className="flex flex-col items-start justify-start">
-            <p style={{fontSize: heading_font_size.subcontent[screen], color:colors.content, borderColor:colors.subcontent}} className="overflow-hidden text-ellipsis font-semibold tracking-tighter uppercase border-b border-dotted px-2 mobile:px-0">{t(name)}</p>
-            <div className="mobile:w-full h-full flex justify-start mobile:justify-center items-center">
-                <span style={{height: divHeight, borderColor:colors.subcontent}} className="mobile:hidden h-full border-l border-dotted"></span>
+            <p 
+            style={{color:colors.content, borderColor:colors.subcontent}} 
+            className={`${heading_font_size.content} px-2 overflow-hidden font-semibold tracking-tighter uppercase border-b border-dotted text-ellipsis mobile:px-0`}>{t(name)}</p>
+            <div className="flex items-center justify-start h-full mobile:w-full mobile:justify-center">
+                <span style={{height: divHeight, borderColor:colors.subcontent}} className="h-full border-l border-dotted mobile:hidden"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
             </div>
         </div>
@@ -255,15 +261,18 @@ const SubListDisplay = ({divRef, sublist}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     const { t } = useTranslation();
     return (
-        <ul ref={divRef} className="flex flex-col justify-start items-start gap-1">
+        <ul ref={divRef} className="flex flex-col items-start justify-start gap-1">
             {
             sublist.map(
                 ({id, icon, name}) => 
                 <li key={id}
                 style={{fontSize:heading_font_size.subcontent[screen], color:colors.subcontent}}
-                className="flex justify-start items-center gap-2 font-medium">
-                    <span style={{borderColor:colors.subcontent}} className="mobile:hidden w-7 border-t border-dotted"></span>
-                    <span className="w-8 h-8 mobile:w-4 mobile:h-4">{icon}</span>
+                className={`
+                    flex items-center justify-start gap-2 font-medium
+                    ${heading_font_size.subcontent}
+                    `}>
+                    <span style={{borderColor:colors.subcontent}} className="border-t border-dotted mobile:hidden w-7"></span>
+                    <span className={`${icon_sizes.smallest}`}>{icon}</span>
                     <span>{t(name)}</span>
                 </li>
             )}

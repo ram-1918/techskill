@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { colors, heading_font_size } from "../Base";
+import { colors, heading_font_size, icon_sizes } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
@@ -41,21 +41,21 @@ const Personality = ({...props}) => {
 
 const PDItems = () => {
     return (
-        <ul className="w-full flex justify-around items-center px-2">
+        <ul className="flex items-center justify-around w-full h-full gap-4 px-2">
             { pd_items.map(item => <ListItem key={item.id} item={item} />) }
         </ul>
     )
 };
 
 const ListItem = ({item:{icon, name, content}}) => {
-    const screen = localStorage.getItem('screen') || 'laptop';
+    const screen = localStorage.getItem('screen') || 'small-laptop';
     const { t } = useTranslation();
     return (
-        <li className="w-72 h-64 flex flex-col justify-start items-center gap-3">
-            <span style={{backgroundColor: colors.bg_color}} className="w-32 h-32 mobile:w-16 mobile:h-16 p-2 rounded shadow-md">{icon}</span>
-            <div className="flex flex-col justify-center items-center gap-1.5">
-                <span style={{fontSize:heading_font_size.content[screen], color: colors.content}} className="text-center capitalize text-xl font-semibold mobile:leading-3">{t(name)}</span>
-                <span style={{fontSize:heading_font_size.subcontent[screen], color: colors.subcontent}} className="capitalize text-center text-sm font-light whitespace-pre-wrap mobile:leading-3">{t(content)}</span>
+        <li className="flex flex-col items-center justify-start w-[33%] h-[60%] gap-10">
+            <span style={{backgroundColor: colors.bg_color}} className={`${icon_sizes.lg} rounded shadow-md`}>{icon}</span>
+            <div className="flex flex-col items-center justify-between gap-2">
+                <span style={{color: colors.content}} className={`${heading_font_size.content} leading-7 text-center capitalize `}>{t(name)}</span>
+                <p style={{color: colors.subcontent}} className={`${heading_font_size.subcontent} text-center capitalize tracking-wide leading-loose`}>{t(content)}</p>
             </div>
         </li>
     );

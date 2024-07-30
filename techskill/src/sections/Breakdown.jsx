@@ -5,7 +5,6 @@ import { main_headings } from "../components/data";
 import BaseSlide from "../components/BaseSlide";
 import BaseContentDiv from "../components/BaseContentDiv";
 import { useTranslation } from "react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { approvedIcon } from "../components/icons";
 
 
@@ -16,19 +15,19 @@ const Breakdown = ({...props}) => {
       <BaseSlide id="breakdown" {...props}>
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="skill check score breakdown & calculation">
-              <div className="w-full flex mobile:flex-col justify-between items-start gap-6 mobile:gap-2 mobile:overflow-x-scroll mobile:overflow-y-scroll">
+              <div className="flex items-start justify-between w-full gap-6 mobile:flex-col mobile:gap-2 mobile:overflow-x-scroll mobile:overflow-y-scroll">
                 <div className="w-[55%] mobile:w-full h-full mobile:h-fit">
                     <BreakdownDiv />
                 </div>
                 <div className="w-[55%] mobile:w-full h-96 mobile:h-fit flex flex-col justify-start items-start gap-2">
-                  <div className="text-sm font-light p-2">
+                  <div className="p-2 text-sm font-light">
                     <span className="font-semibold">{t("A typical student's \"skill check\" score for the below attributes:")}</span>
                     {listitem("academics", "83%")}
                     {listitem("aptitude tests", "78%")}
                     {listitem("assessments", "82.5%")}
                     {listitem("certifications", "60%")}
                     {listitem("personality development", "92%")}
-                    <span className="flex justify-start items-center space-x-2 text-lg py-1 font-medium text-green-800 capitalize"> {t("skill check score")}: {approvedIcon}8.1 / 10</span>
+                    <span className="flex items-center justify-start py-1 space-x-2 text-lg font-medium text-green-800 capitalize"> {t("skill check score")}: {approvedIcon}8.1 / 10</span>
                   </div>
                   <ProgressBarDiv />
                 </div>
@@ -64,22 +63,22 @@ const ProgressBarDiv = () => {
   const { t } = useTranslation();
   return (
     <div>
-        <div style={{width:total_score}} className="relative pl-10 flex justify-between items-center gap-10">
+        <div style={{width:total_score}} className="relative flex items-center justify-between gap-10 pl-10">
           <div style={{width:`${relative_percents[0]}%`}} className={`${text_styles} text-right`}>{t("academics")}</div>
           <div style={{width:`${relative_percents[2]}%`}} className={`${text_styles} text-left`}>{t("assessments")}</div>
           <div style={{width:`${relative_percents[1]}%`}} className={`${text_styles} text-center`}>{t("aptitude")}</div>
         </div>
-        <div style={{width:total_score}} className="relative h-10 pl-40 flex justify-between items-start gap-10">
+        <div style={{width:total_score}} className="relative flex items-start justify-between h-10 gap-10 pl-40">
           <div className={line_styles}></div>
           <div className={line_styles}></div>
           <div className={line_styles}></div>
         </div>
         <ProgressBar progressRef={progressRef} max_score={max_score} relative_percents={relative_percents} total_score={total_score} />
-        <div style={{width:total_score}} className="relative h-10 pl-48 gap-x-8 flex justify-around items-start">
+        <div style={{width:total_score}} className="relative flex items-start justify-around h-10 pl-48 gap-x-8">
           <div className={line_styles}></div>
           <div className={line_styles}></div>
         </div>
-        <div style={{width:total_score}} className="relative pl-48 gap-x-28 flex justify-start items-start space-x-0">
+        <div style={{width:total_score}} className="relative flex items-start justify-start pl-48 space-x-0 gap-x-28">
           <div style={{width:relative_percents[4]}} className={`${text_styles} text-center`}>{t("personality development")}</div>
           <div style={{width:relative_percents[3]}} className={`${text_styles} text-left`}>{t("certifications")}</div>
         </div>
@@ -90,7 +89,7 @@ const ProgressBarDiv = () => {
 const ProgressBar = ({progressRef, max_score, relative_percents, total_score}) => {
   const skillcheck_score = rounded_num(relative_percents.reduce((sc, prev) => sc + prev))/10;
   return (
-    <div ref={progressRef} style={{borderColor:colors.sub, width:max_score}} className="h-8 border-2 bg-gray-100 rounded flex justify-start items-center overflow-hidden">
+    <div ref={progressRef} style={{borderColor:colors.sub, width:max_score}} className="flex items-center justify-start h-8 overflow-hidden bg-gray-100 border-2 rounded">
       <BachelorsBar  score={relative_percents[0]} total_score={total_score} bg_color="#526D82" />
       <PersonalityBar score={relative_percents[4]} total_score={total_score} bg_color="#9DB2BF" />
       <AssessmentsBar  score={relative_percents[2]} total_score={total_score}  bg_color="#CDE8E5" />
@@ -140,7 +139,7 @@ const BreakdownDiv = () => {
   return (
       <div className="relative mobile:[26rem] mobile:h-[26rem] w-[26rem] h-[23rem] flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top">
         <div className="absolute top-[37%] left-[28%] w-48 h-48 text-[0.7rem] font-sans px-2 text-black">
-          <span className="text-md font-bold">{t("scores weightage")}</span>
+          <span className="font-bold text-md">{t("scores weightage")}</span>
           <ul>
             {listitem("academics", "50%")}
             {listitem("aptitude tests", "10%")}
@@ -172,18 +171,18 @@ const BreakdownDiv = () => {
 //     const degrees = 360 - (clampedProgress / 100) * 360;
   
 //     return (
-//       <div className="flex justify-center items-center">
-//         <div className="relative w-40 h-40 rounded-full bg-green-500 overflow-hidden">
+//       <div className="flex items-center justify-center">
+//         <div className="relative w-40 h-40 overflow-hidden bg-green-500 rounded-full">
 //           <div
-//             className="absolute w-full h-full rounded-full clip-rect transform origin-center"
+//             className="absolute w-full h-full origin-center transform rounded-full clip-rect"
 //             style={{ transform: `rotate(${degrees}deg)` }}
 //           >
 //             <div
-//               className="absolute w-full h-full rounded-full clip-rect bg-gray-200 transform origin-center"
+//               className="absolute w-full h-full origin-center transform bg-gray-200 rounded-full clip-rect"
 //               style={{ transform: `rotate(${degrees}deg)` }}
 //             ></div>
 //           </div>
-//           <div className="absolute w-full h-full rounded-full clip-rect-left bg-gray-200"></div>
+//           <div className="absolute w-full h-full bg-gray-200 rounded-full clip-rect-left"></div>
 //           <div className="absolute top-2.5 left-2.5 w-[calc(100%-1.25rem)] h-[calc(100%-1.25rem)] rounded-full bg-white flex justify-center items-center text-2xl font-bold text-green-500">
 //             {clampedProgress}%
 //           </div>

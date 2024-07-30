@@ -38,11 +38,7 @@ const Regions = ({...props}) => {
         <BaseSlide id="regions" {...props}>
             <BaseHeader text={main_headings.slide2.text} />
             <BaseContentDiv text="">
-                <div className="
-                w-full h-full flex justify-between items-start space-x-4
-                tablet:flex-row laptop:flex-row desktop:flex-row
-                mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4 
-                ">
+                <div className="flex items-center justify-around w-full h-full space-x-4 tablet:flex-row laptop:flex-row desktop:flex-row mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4">
                     <ImageSpan />
                     <RegionsListDisplay />
                 </div>
@@ -53,13 +49,22 @@ const Regions = ({...props}) => {
 
 const ImageSpan = () => {
     return (
-        <div className="w-[35%] h-56 mobile:w-full mobile:h-24 mobile:shadow-sm rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80"></div>
+        <div className="
+        w-[35%] h-[60%] 
+        rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80
+        large-tablet:hidden small-tablet:hidden large-phone:hidden small-phone:hidden
+        "></div>
     )
 }
 
 const RegionsListDisplay = () => {
     return (
-        <ul className="w-[65%] mobile:w-full grid grid-flow-row grid-cols-3 gap-4 mobile:gap-2 px-4 py-1">
+        <ul className="
+        w-[65%] 
+        grid grid-flow-row grid-cols-3 gap-4 mobile:gap-2 px-4 py-1
+        large-tablet:w-full small-tablet:w-full large-phone:w-full small-phone:w-full
+        large-tablet:gap-2 small-tablet:gap-2 large-phone:gap-2 small-phone:gap-1
+        ">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>
     )
@@ -74,10 +79,10 @@ const ListItem = ({region, id}) => {
         {
             // width: regions_list.length > 20 ? (screen === 'mobile' ? "29%": "28%"): "33.33%", 
             color: colors.content, 
-            fontSize: heading_font_size.subcontent[screen]
+            // fontSize: heading_font_size.subcontent[screen]
         }
     } 
-    className={list_style} key={id}>{t(region)}</li>
+    className={`${list_style} ${heading_font_size.content} `} key={id}>{t(region)}</li>
 }
 
 export default Regions;

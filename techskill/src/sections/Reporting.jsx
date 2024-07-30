@@ -59,11 +59,11 @@ const ListItem = ({item:{icon, name, content}}) => {
     const screen = localStorage.getItem('screen') || 'laptop'; 
     const { t } = useTranslation();
     return (
-        <li className="flex flex-col justify-start items-center gap-3">
-            <span className="w-32 h-32 mobile:w-16 mobile:h-16 p-4 mobile:p-0 rounded-full">{icon}</span>
-            <div className="flex flex-col justify-center items-center">
+        <li className="flex flex-col items-center justify-start gap-3">
+            <span className="w-32 h-32 p-4 rounded-full mobile:w-16 mobile:h-16 mobile:p-0">{icon}</span>
+            <div className="flex flex-col items-center justify-center">
                 <span style={{fontSize:heading_font_size.sub[screen], color: colors.sub}} className="text-xl font-semibold mobile:leading-3">{t(content)}</span>
-                <span style={{fontSize:heading_font_size.content[screen], color: colors.content}} className="text-center text-sm font-light whitespace-pre-wrap mobile:leading-3">{t(name)}</span>
+                <span style={{fontSize:heading_font_size.content[screen], color: colors.content}} className="text-sm font-light text-center whitespace-pre-wrap mobile:leading-3">{t(name)}</span>
             </div>
         </li>
     );

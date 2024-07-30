@@ -9,11 +9,11 @@ const SingleSlideView = ({slides}) => {
     const {handle_slide_left, handle_slide_right, handle_slide_num, slideNum} = useSwipe(slides);
 
     return (
-    <div className="w-full mobile:flex flex-col justify-center items-center px-2 space-y-4 text-black">
-        <div className="w-full flex justify-center items-center">
+    <div className="flex-col items-center justify-center w-full px-2 text-black mobile:flex space-y-4">
+        <div className="flex items-center justify-center w-full">
           {slides[slideNum]}
         </div>
-        <div className="w-full flex justify-center items-center">
+        <div className="flex items-center justify-center w-full">
           <Navigation slides={slides} slideNum={slideNum} handle_slide_left={handle_slide_left} handle_slide_right={handle_slide_right} handle_slide_num={handle_slide_num} />
         </div>
       </div>
@@ -26,16 +26,16 @@ const SingleSlideView = ({slides}) => {
       desktop:w-[76rem] laptop:w-[70rem] tablet:w-[95%] mobile:w-[95%] small:w-[98%]
       w-full flex justify-between px-2 space-x-10 z-10
       ">
-        <span className="cursor-pointer text-black" onClick={() => handle_slide_left()}><FontAwesomeIcon className="w-8 h-8" icon={faArrowLeft} /></span>
+        <span className="text-black cursor-pointer" onClick={() => handle_slide_left()}><FontAwesomeIcon className="w-8 h-8" icon={faArrowLeft} /></span>
         <PageNums slides={slides} handle_slide_num={handle_slide_num} slideNum={slideNum} />
-        <span className="cursor-pointer text-black" onClick={() => handle_slide_right()}><FontAwesomeIcon className="w-8 h-8" icon={faArrowRight} /> </span>
+        <span className="text-black cursor-pointer" onClick={() => handle_slide_right()}><FontAwesomeIcon className="w-8 h-8" icon={faArrowRight} /> </span>
     </div>
     )
   }
 
   const PageNums = ({slides, setSlideNum, slideNum, handle_slide_num}) => {
     return (
-        <span className="flex justify-center items-center space-x-1">
+        <span className="flex items-center justify-center space-x-1">
             {slides.map((_, idx) => <span className={`w-7 h-7 ${idx === slideNum && 'border border-sky-500 rounded-full'} cursor-pointer`} onClick={() => handle_slide_num(idx)}>{DotIcon}</span>)}
         </span>
     )

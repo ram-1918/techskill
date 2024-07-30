@@ -22,7 +22,7 @@ const Subhead = ({ text }) => {
       }
   }, [divRef]);
   return (
-    <div className="w-full flex flex-col justify-center items-center py-2">
+    <div className="flex flex-col items-center justify-center w-full py-2">
         <Head divRef={divRef} text={text} />
         <UnderlineDesign divWidth={divWidth} />
     </div>
@@ -37,11 +37,11 @@ const Head = ({text, divRef}) => {
         <span
             ref = {divRef}
             style={{ 
-                fontSize: heading_font_size.sub[screen], 
+                // fontSize: heading_font_size.sub[screen], 
                 // fontFamily: sub_heading_fontstyle,
                 color: colors.sub 
             }}
-            className={styles}
+            className={`${styles} ${heading_font_size.content}`}
             >
             {t(text)}
         </span>
@@ -51,10 +51,10 @@ const Head = ({text, divRef}) => {
 const UnderlineDesign = ({divWidth}) => {
     const screen = localStorage.getItem('screen') || 'laptop';
     return (
-        <div style={{fontSize: heading_font_size.content[screen]}} className="flex justify-center items-center space-x-2">
-            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
-            <span className={``}>{<FontAwesomeIcon icon={faCogs} />}</span>
-            <span style={{width: divWidth/3}} className={`h-0.5 bg-[#9DB2BF]`}></span>
+        <div style={{fontSize: heading_font_size.content[screen]}} className="flex items-center justify-center space-x-2">
+            <span style={{width: divWidth/3}} className={`h-1 bg-[#9DB2BF]`}></span>
+            <span className={`${heading_font_size.content}`}>{<FontAwesomeIcon icon={faCogs} />}</span>
+            <span style={{width: divWidth/3}} className={`h-1 bg-[#9DB2BF]`}></span>
         </div>
     );
 };

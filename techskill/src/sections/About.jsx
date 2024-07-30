@@ -23,7 +23,7 @@ function About() {
 
 const ContentDiv = () => {
     return (
-        <div className="flex justify-center items-center gap-4">
+        <div className="flex items-center justify-center gap-4">
       <SrinivasImage size="w-40 h-40" />
       <Content />
     </div>
@@ -42,7 +42,7 @@ const Content = () => {
 
 const SocialMedia = () => {
   return (
-    <div className="w-full flex justify-center items-center gap-10 py-10">
+    <div className="flex items-center justify-center w-full py-10 gap-10">
       {LinkedinIcon}
       {FacebookIcon}
       {InstagramIcon}

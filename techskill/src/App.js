@@ -1,184 +1,363 @@
+import {
+  faArrowLeft,
+  faArrowRight,
+  faEye,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import { main_heading_fontstyle } from "./Base";
+import { FullscreenIcon, ScrollIcon, SlideshowIcon } from "./components/icons";
 import ScrollsSlidesView from "./components/ScrollSlidesView";
 import SingleSlideView from "./components/SingleSlideView";
 import Breakdown from "./sections/Breakdown";
+import Certifications from "./sections/Certifications";
 import Home from "./sections/Home";
+import Menu from "./sections/Menu";
 import Personality from "./sections/Personality";
 import Placements from "./sections/Placements";
 import Regions from "./sections/Regions";
 import Reporting from "./sections/Reporting";
 import SkillCheck from "./sections/SkillCheck";
 import Technologies from "./sections/Technologies";
-import { FullscreenIcon, ScrollIcon, SlideshowIcon } from "./components/icons";
-import Why from "./sections/Why";
-import Certifications from "./sections/Certifications";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft, faArrowRight, faEye, faMaximize } from "@fortawesome/free-solid-svg-icons";
-import { main_heading_fontstyle } from "./Base";
-import Menu from "./sections/Menu";
 import ThankYou from "./sections/Thankyou";
+import Why from "./sections/Why";
 
-import './i18n';
 import { useTranslation } from "react-i18next";
-import useSwipe from "./components/hooks/useSwipe";
+import "./i18n";
 
 function App() {
-  const [screen, setScreen] = useState('');
+  const [, setScreen] = useState("");
+
+  /*
+const handleResize = () => {
+  const width = window.innerWidth;
+  if (width >= 320 && width <= 360) {
+    localStorage.setItem("screen", "small-phone");
+    setScreen("small-phone");
+  } else if (width >= 361 && width <= 414) {
+    localStorage.setItem("screen", "medium-phone");
+    setScreen("medium-phone");
+  } else if (width >= 415 && width <= 480) {
+    localStorage.setItem("screen", "large-phone");
+    setScreen("large-phone");
+  } else if (width >= 481 && width <= 768) {
+    localStorage.setItem("screen", "small-tablet");
+    setScreen("small-tablet");
+  } else if (width >= 769 && width <= 1024) {
+    localStorage.setItem("screen", "large-tablet");
+    setScreen("large-tablet");
+  } else if (width >= 1025 && width <= 1280) {
+    localStorage.setItem("screen", "small-laptop");
+    setScreen("small-laptop");
+  } else if (width >= 1281 && width <= 1440) {
+    localStorage.setItem("screen", "medium-laptop");
+    setScreen("medium-laptop");
+  } else if (width >= 1441 && width <= 1920) {
+    localStorage.setItem("screen", "large-laptop");
+    setScreen("large-laptop");
+  } else if (width >= 1921 && width <= 2560) {
+    localStorage.setItem("screen", "standard-desktop");
+    setScreen("standard-desktop");
+  } else if (width >= 2561 && width <= 3840) {
+    localStorage.setItem("screen", "large-desktop");
+    setScreen("large-desktop");
+  } else if (width >= 3841 && width <= 5120) {
+    localStorage.setItem("screen", "ultra-wide");
+    setScreen("ultra-wide");
+  } else if (width >= 5121) {
+    localStorage.setItem("screen", "5k-monitor");
+    setScreen("5k-monitor");
+  }
+};
+
+  */
 
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width >= 350 && width <= 640) {
-        localStorage.setItem('screen', 'mobile');
-        setScreen('mobile')
-      } else if (width > 640 && width <= 1024) {
-        localStorage.setItem('screen', 'tablet');
-        setScreen('tablet');
-      } else if (width > 1024 && width <= 1280) {
-        localStorage.setItem('screen', 'laptop');
-        setScreen('laptop');
-      } else if (width > 1280) {
-        localStorage.setItem('screen', 'desktop');
-        setScreen('desktop');
+      if (width >= 320 && width <= 360) {
+        localStorage.setItem("screen", "small-phone");
+        setScreen("small-phone");
+      } else if (width >= 361 && width <= 414) {
+        localStorage.setItem("screen", "medium-phone");
+        setScreen("medium-phone");
+      } else if (width >= 415 && width <= 480) {
+        localStorage.setItem("screen", "large-phone");
+        setScreen("large-phone");
+      } else if (width >= 481 && width <= 768) {
+        localStorage.setItem("screen", "small-tablet");
+        setScreen("small-tablet");
+      } else if (width >= 769 && width <= 1024) {
+        localStorage.setItem("screen", "large-tablet");
+        setScreen("large-tablet");
+      } else if (width >= 1025 && width <= 1280) {
+        localStorage.setItem("screen", "small-laptop");
+        setScreen("small-laptop");
+      } else if (width >= 1281 && width <= 1440) {
+        localStorage.setItem("screen", "medium-laptop");
+        setScreen("medium-laptop");
+      } else if (width >= 1441 && width <= 1920) {
+        localStorage.setItem("screen", "large-laptop");
+        setScreen("large-laptop");
+      } else if (width >= 1921 && width <= 2560) {
+        localStorage.setItem("screen", "standard-desktop");
+        setScreen("standard-desktop");
+      } else if (width >= 2561 && width <= 3840) {
+        localStorage.setItem("screen", "large-desktop");
+        setScreen("large-desktop");
+      } else if (width >= 3841 && width <= 5120) {
+        localStorage.setItem("screen", "ultra-wide");
+        setScreen("ultra-wide");
+      } else if (width >= 5121) {
+        localStorage.setItem("screen", "5k-monitor");
+        setScreen("5k-monitor");
       }
     };
-  
-    handleResize(); // Call it initially to set the value on mount
-    window.addEventListener('resize', handleResize);
-  
+    // const handleResize = () => {
+    //   const width = window.innerWidth;
+    //   if (width >= 350 && width <= 640) {
+    //     localStorage.setItem("screen", "mobile");
+    //     setScreen("mobile");
+    //   } else if (width > 640 && width <= 1024) {
+    //     localStorage.setItem("screen", "tablet");
+    //     setScreen("tablet");
+    //   } else if (width > 1024 && width <= 1280) {
+    //     localStorage.setItem("screen", "laptop");
+    //     setScreen("laptop");
+    //   } else if (width > 1280) {
+    //     localStorage.setItem("screen", "desktop");
+    //     setScreen("desktop");
+    //   }
+    // };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const slides = [
-  <Home />, 
-  <Menu />,
-  <Why />,
-  <Regions />, 
-  <Technologies keys={['ai/ml', 'programming languages', 'cloud technologies']} />,
-  <Certifications />,
-  <Personality />,
-  <SkillCheck />,
-  <Placements />,
-  <Reporting />,
-  <Breakdown />,
-  <ThankYou />
-];
-  return (
-    <>
-      {/* {JSON.stringify(localStorage.getItem('screen'))} */}
-      {/* <div className="hidden mobile:block tablet:block">
-        <SmallScreenView slides={slides} />
-      </div> */}
-      {/* <div className="bg-red-500"> */}
-        <BigScreenView slides={slides} />
-      {/* </div> */}
-    </>
-  );
+    <Home />,
+    <Menu />,
+    <Why />,
+    <Regions />,
+    <Technologies
+      keys={["ai/ml", "programming languages", "cloud technologies"]}
+    />,
+    <Certifications />,
+    <Personality />,
+    <SkillCheck />,
+    <Placements />,
+    <Reporting />,
+    <Breakdown />,
+    <ThankYou />,
+  ];
+  
+  return <BigScreenView slides={slides} />;
 }
 
-const BigScreenView = ({slides}) => {
-  const [isView, setIsView] = useState('scroll');
+const BigScreenView = ({ slides }) => {
+  const [isView, setIsView] = useState("scroll");
   const [isFullscreen, setIsFullscreen] = useState(false);
   return (
-    <div style={{fontFamily: main_heading_fontstyle}} className="w-full h-full mobile:px-0 flex flex-col justify-start items-center space-y-5 bg-zinc-300 text-black">
-      {!isFullscreen && <ViewOptions isView={isView} setIsView={setIsView} setIsFullscreen={setIsFullscreen} />}
+    <div
+      style={{ fontFamily: main_heading_fontstyle }}
+      className="flex flex-col items-center justify-start w-full h-full space-y-5 text-black mobile:px-0 bg-zinc-300"
+    >
+      {!isFullscreen && (
+        <ViewOptions
+          isView={isView}
+          setIsView={setIsView}
+          setIsFullscreen={setIsFullscreen}
+        />
+      )}
       {isView === "single" && <SingleSlideView slides={slides} />}
       {isView === "scroll" && <ScrollsSlidesView slides={slides} />}
-      {isView === "full" && <FullScreenView slides={slides} isFullscreen={isFullscreen} setIsFullscreen={setIsFullscreen} setIsView={setIsView} />}
+      {isView === "full" && (
+        <FullScreenView
+          slides={slides}
+          isFullscreen={isFullscreen}
+          setIsFullscreen={setIsFullscreen}
+          setIsView={setIsView}
+        />
+      )}
     </div>
   );
 };
 
-const ViewOptions = ({setIsView, isView, setIsFullscreen}) => {
+const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
   const { t, i18n } = useTranslation();
-  const [currLang, setCurrLang] = useState('en');
-  const active = 'bg-sky-300';
-  const buttonstyles = 'px-2 py-1 rounded-lg cursor-pointer';
+  const [currLang, setCurrLang] = useState("en");
+  const active = "bg-sky-300";
+  const buttonstyles = "px-2 py-1 rounded-lg cursor-pointer";
   const transButton = "cursor-pointer rounded-md py-1 px-2";
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setCurrLang(lng);
-    localStorage.setItem('lang', lng);
+    localStorage.setItem("lang", lng);
   };
 
   useEffect(() => {
-    const lang = localStorage.getItem('lang');
+    const lang = localStorage.getItem("lang");
     if (lang) {
       setCurrLang(lang);
     }
   }, [setCurrLang]);
 
   return (
-    <div className="
+    <div
+      className="
     flex justify-between items-center gap-8 
     desktop:w-[76rem] laptop:w-[70rem] tablet:w-[95%] mobile:w-[95%] small:w-[98%]
     desktop:flex-row laptop:flex-row tablet:flex-row small:flex-col 
     mobile:flex-col mobile:gap-1 small:gap-1 mobile:justify-start mobile:items-end
-    ">
-      <div className="flex justify-center items-center gap-2">
-        <span >Translation: </span>
-        <span className={`${transButton} ${currLang === 'en' && "bg-sky-400 text-black font-semibold"}`} onClick={() => changeLanguage('en')}>English</span> |
-        <span className={`${transButton} ${currLang === 'te' && "bg-sky-400 text-black font-semibold"}`} onClick={() => changeLanguage('te')}>Telugu</span> |
-        <span className={`${transButton} ${currLang === 'hi' && "bg-sky-400 text-black font-semibold"}`}onClick={() => changeLanguage('hi')}>Hindi</span>
+    "
+    >
+      <div className="flex items-center justify-center gap-2">
+        <span>Translation: </span>
+        <span
+          className={`${transButton} ${
+            currLang === "en" && "bg-sky-400 text-black font-semibold"
+          }`}
+          onClick={() => changeLanguage("en")}
+        >
+          English
+        </span>{" "}
+        |
+        <span
+          className={`${transButton} ${
+            currLang === "te" && "bg-sky-400 text-black font-semibold"
+          }`}
+          onClick={() => changeLanguage("te")}
+        >
+          Telugu
+        </span>{" "}
+        |
+        <span
+          className={`${transButton} ${
+            currLang === "hi" && "bg-sky-400 text-black font-semibold"
+          }`}
+          onClick={() => changeLanguage("hi")}
+        >
+          Hindi
+        </span>
       </div>
-      <div className="flex justify-end items-center gap-2">
-        <span className="text-black font-light text-lg"><FontAwesomeIcon icon={faEye} /> View: </span>
-        <span onClick={() => setIsView('scroll')} className={`${isView === 'scroll' && active} ${buttonstyles} flex justify-between items-center w-8 h-8`}>{ScrollIcon}</span>
-        <span onClick={() => setIsView('single')} className={`${isView === 'single' && active} ${buttonstyles} flex justify-between items-center w-10 h-10`}>{SlideshowIcon}</span>
-        <span onClick={() => {setIsView('full'); setIsFullscreen(true)}} className={`${isView === 'full' && active} ${buttonstyles} flex justify-between items-center w-10 h-10`}>{FullscreenIcon}</span>
+      <div className="flex items-center justify-end gap-2">
+        <span className="text-lg font-light text-black">
+          <FontAwesomeIcon icon={faEye} /> View:{" "}
+        </span>
+        <span
+          onClick={() => setIsView("scroll")}
+          className={`${
+            isView === "scroll" && active
+          } ${buttonstyles} flex justify-between items-center w-8 h-8`}
+        >
+          {ScrollIcon}
+        </span>
+        <span
+          onClick={() => setIsView("single")}
+          className={`${
+            isView === "single" && active
+          } ${buttonstyles} flex justify-between items-center w-10 h-10`}
+        >
+          {SlideshowIcon}
+        </span>
+        <span
+          onClick={() => {
+            setIsView("full");
+            setIsFullscreen(true);
+          }}
+          className={`${
+            isView === "full" && active
+          } ${buttonstyles} flex justify-between items-center w-10 h-10`}
+        >
+          {FullscreenIcon}
+        </span>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default App;
 
 const slides_temp = {
-  home: ({...props}) => <Home {...props} />,
-  why: ({...props}) => <Why {...props} />,
-  regions: ({...props}) => <Regions {...props} />,
-  technologies: ({...props}) => <Technologies {...props} keys={['ai/ml', 'programming languages', 'cloud technologies']} />,
-  certifications: ({...props}) => <Certifications {...props} />,
-  personality: ({...props}) => <Personality {...props} />,
-  skillcheck: ({...props}) => <SkillCheck {...props} />,
-  placements: ({...props}) => <Placements {...props} />,
-  reporting: ({...props}) => <Reporting {...props} />,
-  breakdown: ({...props}) => <Breakdown {...props} />,
-  thankyou: ({...props}) => <ThankYou {...props} />
-}
+  home: ({ ...props }) => <Home {...props} />,
+  why: ({ ...props }) => <Why {...props} />,
+  regions: ({ ...props }) => <Regions {...props} />,
+  technologies: ({ ...props }) => (
+    <Technologies
+      {...props}
+      keys={["ai/ml", "programming languages", "cloud technologies"]}
+    />
+  ),
+  certifications: ({ ...props }) => <Certifications {...props} />,
+  personality: ({ ...props }) => <Personality {...props} />,
+  skillcheck: ({ ...props }) => <SkillCheck {...props} />,
+  placements: ({ ...props }) => <Placements {...props} />,
+  reporting: ({ ...props }) => <Reporting {...props} />,
+  breakdown: ({ ...props }) => <Breakdown {...props} />,
+  thankyou: ({ ...props }) => <ThankYou {...props} />,
+};
 
-const FullScreenView = ({slides, isFullscreen, setIsFullscreen, setIsView}) => {
+const FullScreenView = ({
+  slides,
+  isFullscreen,
+  setIsFullscreen,
+  setIsView,
+}) => {
   const slide_names = Object.keys(slides_temp);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const handleKeyDown = (event) => {
-      if (event.key === 'ArrowRight') {
+      if (event.key === "ArrowRight") {
         setCurrentSlide((prevSlide) =>
           prevSlide === slide_names.length - 1 ? 0 : prevSlide + 1
         );
-      } else if (event.key === 'ArrowLeft') {
+      } else if (event.key === "ArrowLeft") {
         setCurrentSlide((prevSlide) =>
           prevSlide === 0 ? slide_names.length - 1 : prevSlide - 1
         );
       }
     };
 
-    window.addEventListener('keydown', handleKeyDown);
+    window.addEventListener("keydown", handleKeyDown);
     return () => {
-      window.removeEventListener('keydown', handleKeyDown);
+      window.removeEventListener("keydown", handleKeyDown);
     };
   }, []);
 
   return (
     <div className="relative">
-      {slides_temp[slide_names[currentSlide]]({isFullscreen, setIsFullscreen, setIsView})}
-      <span onClick={() => setCurrentSlide(prev => prev === 0 ? slide_names.length - 1 : prev - 1)} className="absolute top-[50%] left-2">{currentSlide}<FontAwesomeIcon className="w-7 h-7" icon={faArrowLeft} /></span>
-      <span onClick={() => setCurrentSlide(prev => prev === slide_names.length - 1 ? 0 : prev + 1)} className="absolute top-[50%] right-2"><FontAwesomeIcon className="w-7 h-7" icon={faArrowRight} /></span>
-
+      {slides_temp[slide_names[currentSlide]]({
+        isFullscreen,
+        setIsFullscreen,
+        setIsView,
+      })}
+      <span
+        onClick={() =>
+          setCurrentSlide((prev) =>
+            prev === 0 ? slide_names.length - 1 : prev - 1
+          )
+        }
+        className="absolute top-[50%] left-2"
+      >
+        {currentSlide}
+        <FontAwesomeIcon className="w-7 h-7" icon={faArrowLeft} />
+      </span>
+      <span
+        onClick={() =>
+          setCurrentSlide((prev) =>
+            prev === slide_names.length - 1 ? 0 : prev + 1
+          )
+        }
+        className="absolute top-[50%] right-2"
+      >
+        <FontAwesomeIcon className="w-7 h-7" icon={faArrowRight} />
+      </span>
     </div>
   );
 };

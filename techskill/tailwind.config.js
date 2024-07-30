@@ -24,18 +24,35 @@ module.exports = {
         'bg10': "url('assets/images/bg10.webp')",
         'bg11': "url('assets/images/bg11.png')",
       },
+      screens: {
+        // Mobile Devices
+        'small-phone': {'min': '320px', 'max': '360px'},
+        'medium-phone': {'min': '361px', 'max': '414px'},
+        'large-phone': {'min': '415px', 'max': '480px'},
+  
+        // Tablets
+        'small-tablet': {'min': '481px', 'max': '768px'},
+        'large-tablet': {'min': '769px', 'max': '1024px'},
+  
+        // Laptops
+        'small-laptop': {'min': '1025px', 'max': '1280px'},
+        'medium-laptop': {'min': '1281px', 'max': '1440px'},
+        'large-laptop': {'min': '1441px', 'max': '1920px'},
+  
+        // Desktops
+        'standard-desktop': {'min': '1921px', 'max': '2560px'},
+        'large-desktop': {'min': '2561px', 'max': '3840px'},
+  
+        // Ultra-Wide and 4K/5K Monitors
+        'ultra-wide': {'min': '3841px', 'max': '5120px'},
+        '5k-monitor': {'min': '5121px'},
+      },
       clipPath: {
         'rect': 'polygon(0 0, 50% 0, 50% 100%, 0% 100%)',
         'rect-left': 'polygon(50% 0, 100% 0, 100% 100%, 50% 100%)',
       }
     },
-    screens: {
-      'small': {'min': '320px'},
-      'mobile': {'min': '350px', 'max': '640px'},
-      'tablet': {'min': '640px', 'max': '1025px'},
-      'laptop': {'min': '1025px', 'max': '1280px'},
-      'desktop': '1280px',
-    },
+
   },
   plugins: [
     function ({ addUtilities }) {
@@ -58,3 +75,10 @@ module.exports = {
   ]
 }
 
+    // screens: {
+    //   'small': {'min': '320px'},
+    //   'mobile': {'min': '350px', 'max': '640px'},
+    //   'tablet': {'min': '640px', 'max': '1025px'},
+    //   'laptop': {'min': '1025px', 'max': '1280px'},
+    //   'desktop': '1280px',
+    // },

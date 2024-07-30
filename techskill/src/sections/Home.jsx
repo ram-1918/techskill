@@ -14,7 +14,7 @@ const Home = ({...props}) => {
         <BaseSlide {...props} >
             <BaseHeader text={main_headings.slide1.text} />
             <BaseContentDiv>
-                <div className="w-full mobile:h-full flex justify-center items-center gap-10 mobile:gap-0">
+                <div className="flex items-center justify-center w-full gap-10 mobile:gap-0">
                     <APImage />
                     <Body />
                 </div>
@@ -25,7 +25,11 @@ const Home = ({...props}) => {
 
 const Body = () => {
     return (
-        <div className="h-full w-[55%] mobile:w-full mobile:h-full mobile:pt-0 mobile:pl-10 flex flex-col justify-center mobile:justify-center items-start gap-2">
+        <div className="
+        h-full
+        w-[55%] pt-0 flex flex-col justify-center items-start gap-2 
+        small-phone:w-fit medium-phone:w-fit large-phone:w-fit small-tablet:w-fit
+        ">
             <CBN />
             <PK />
             <Lokesh />
@@ -35,8 +39,8 @@ const Body = () => {
 
 // const ProposedBy = () => {
 //     return (
-//         <div className="relative border w-fit h-fit rounded-lg bg-gray-100 flex flex-col justify-start items-start p-2">
-//             <span className="absolute -top-6 left-0 text-md font-light">Proposed By</span>
+//         <div className="relative flex flex-col items-start justify-start p-2 bg-gray-100 border rounded-lg w-fit h-fit">
+//             <span className="absolute left-0 font-light -top-6 text-md">Proposed By</span>
 //             <Srinivas />
 //         </div>
 //     )
