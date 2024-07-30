@@ -247,10 +247,10 @@ const ListItem = ({tech:{name, sublist}}) => {
     return (
         <div className="flex flex-col items-start justify-start">
             <p 
-            style={{color:colors.content, borderColor:colors.subcontent}} 
-            className={`${heading_font_size.content} px-2 overflow-hidden font-semibold tracking-tight uppercase border-b border-dotted text-ellipsis mobile:px-0`}>{t(name)}</p>
+            style={{color:colors.content, borderColor:"black"}} 
+            className={`${heading_font_size.content} px-2 overflow-hidden font-bold tracking-tight uppercase border-b-2 border-dotted text-ellipsis mobile:px-0`}>{t(name)}</p>
             <div className="flex items-center justify-start h-full mobile:w-full mobile:justify-center">
-                <span style={{height: divHeight, borderColor:colors.subcontent}} className="h-full border-l border-dotted mobile:hidden"></span>
+                <span style={{height: divHeight, borderColor:"black"}} className="h-full border-l-2 border-dotted mobile:hidden"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
             </div>
         </div>
@@ -271,7 +271,7 @@ const SubListDisplay = ({divRef, sublist}) => {
                     flex items-center justify-start gap-2 font-medium
                     ${heading_font_size.subcontent}
                     `}>
-                    <span style={{borderColor:colors.subcontent}} className="border-t border-dotted mobile:hidden w-7"></span>
+                    <span style={{borderColor:colors.subcontent}} className="border-t-2 border-dotted mobile:hidden w-7"></span>
                     <span className={`${icon_sizes.smallest}`}>{icon}</span>
                     <span>{t(name)}</span>
                 </li>
