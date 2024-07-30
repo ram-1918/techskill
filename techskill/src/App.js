@@ -141,7 +141,7 @@ const handleResize = () => {
   const slides = [
     <Home />,
     <Menu />,
-    <Why />,
+    // <Why />,
     <Regions />,
     <Technologies
       keys={["ai/ml", "programming languages", "cloud technologies"]}
@@ -283,7 +283,7 @@ export default App;
 
 const slides_temp = {
   home: ({ ...props }) => <Home {...props} />,
-  why: ({ ...props }) => <Why {...props} />,
+  // why: ({ ...props }) => <Why {...props} />,
   regions: ({ ...props }) => <Regions {...props} />,
   technologies: ({ ...props }) => (
     <Technologies

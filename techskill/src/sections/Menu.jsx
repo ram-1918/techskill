@@ -95,7 +95,7 @@ const MenuItems = () => {
 
 const MenuItem = ({item:{slidenum, title, slide_id}}) => {
     const { t } = useTranslation();
-    const screen = localStorage.getItem('screen') || 'laptop';
+    const screen = localStorage.getItem('screen') || 'medium-laptop';
     return (
         <a 
         style={{fontSize: heading_font_size.content[screen]}} 
