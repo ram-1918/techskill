@@ -31,27 +31,44 @@ const BaseSlide = ({
       className={`
         ${!isFullscreen && slide_sizes}
         ${!isFullscreen && slide_padding}
-      px-2 py-4 
-      bg-gradient-to-tl from-[hsl(0,0%,100%)] via-white to-[#fefdff]
-      relative shadow-xl shadow-blue-200 overflow-hidden rounded-[1rem] border-4 border-gray-200
+      px-4 py-2
+      bg-gradient-to-r from-[#FFC371] to-[#ff5988]
+      relative shadow-lg shadow-[#526D82] overflow-hidden rounded-[1rem]
       flex flex-col justify-start items-center gap-5
     `}
+    // e4953c = c66d00
     // bg-bg0 bg-cover bg-no-repeat bg-center
+    // 460645 + ff5450 : violet + orange
+    // bg-gradient-to-r from-[#FFC371] to-[#ff5988] ----
+    // bg-borderframe bg-center bg-cover bg-no-repeat
+    // bg-gradient-to-l from-[#BDC3C7] to-[#2c3e50] : Slate gray + black
+    // bg-gradient-to-bl from-[#ff7e5f] to-[#feb474]
+    // bg-gradient-to-bl from-[#fc4a1a] to-[#F7B733] : yellow + orange
+    // bg-gradient-to-bl from-[#A1FFCE] to-[#FAFFD1] : light green + green
+    // bg-gradient-to-bl from-[#ffe998] to-[#57370d] : yollow + gold
+    // bg-gradient-to-tr from-[#ffc2c2] to-[#ff5450] : light pink. + dark pink
+    // bg-gradient-to-r from-[#ffde50] to-[#e45d0b] : Yellow + orange
+    // bg-gradient-to-r from-[#ff5988] to-[#500c7f] : pink + Violet
+    // bg-gradient-to-r from-[#ff4a64] to-[#71244e] : Red
+    // bg-gradient-to-r from-[#ff8859] to-[#d02d7f : Red + Pink
+    // bg-gradient-to-r from-[#CD7F32] to-[#FFC371] : Orange
     // bg-gradient-to-r from-[#E66C2C] to-[#EFB261]
     // bg-gradient-to-r from-[#C36241] to-[#DEAA88]
     >
-      {children}
-      {isFullscreen && show && (
-        <span
-          className={`absolute bottom-10 left-[50%] cursor-pointer py-10`}
-          onClick={() => {
-            setIsFullscreen(false);
-            setIsView("scroll");
-          }}
-        >
-          <FontAwesomeIcon className={`${icon_sizes.small}`} icon={faMultiply} />
-        </span>
+      {/* <div className="w-full h-full p-2 border-4 border-red-100"> */}
+        {children}
+        {isFullscreen && show && (
+          <span
+            className={`absolute bottom-10 left-[50%] cursor-pointer py-10`}
+            onClick={() => {
+              setIsFullscreen(false);
+              setIsView("scroll");
+            }}
+          >
+            <FontAwesomeIcon className={`${icon_sizes.small}`} icon={faMultiply} />
+          </span>
       )}
+      {/* </div> */}
       {screen}
     </section>
   );

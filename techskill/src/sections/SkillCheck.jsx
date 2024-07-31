@@ -99,7 +99,7 @@ const Content = () => {
 
 const AttributeDisplay = () => {
   return (
-    <div className="flex flex-col w-full gap-4 mobile:w-full mobile:h-fit flex-start">
+    <div className="flex flex-col w-full h-full gap-2 flex-start">
       <Steps />
       <div className="flex items-start justify-around w-full">
         <Layout icon={AttributesIcon} title="primary skill check attributes">
@@ -136,23 +136,23 @@ const Steps = () => {
     >
       <div className={divstyles}>
         <span>
-          {<FontAwesomeIcon className={`${icon_sizes.lg} text-gray-700`} icon={faUserCheck} />}
+          {<FontAwesomeIcon className={`${icon_sizes.medium} text-gray-700`} icon={faUserCheck} />}
         </span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("register & aptitude tests")}</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span className={`${icon_sizes.lg}`}>{AssessmentIcon}</span>
+        <span className={`${icon_sizes.medium}`}>{AssessmentIcon}</span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("assessments")}</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span className={icon_sizes.lg}>{CertificateIcon}</span>
+        <span className={icon_sizes.medium}>{CertificateIcon}</span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>{t("certifications")}</span>
       </div>
       {RightArrow}
       <div className={divstyles}>
-        <span>{<FontAwesomeIcon className={`${icon_sizes.lg} text-gray-700`} icon={faTrophy} />}</span>
+        <span>{<FontAwesomeIcon className={`${icon_sizes.medium} text-gray-700`} icon={faTrophy} />}</span>
         <span className={`${textstyles} ${heading_font_size.subcontent}`}>
           {t("succussfully obtains a skill check score")}
         </span>
@@ -167,14 +167,14 @@ const Layout = ({ children, icon, title }) => {
   return (
     <div className="w-[40%] overflow-hidden border rounded-xl shadow-lg flex flex-col justify-center items-center">
       <span
-        style={{ fontSize: heading_font_size.content[screen] }}
-        className={`${heading_font_size.content} w-full px-2 py-1 font-semibold text-center capitalize bg-teal-200`}
+        style={{ fontSize: heading_font_size.content[screen], backgroundColor: colors.bg_color }}
+        className={`${heading_font_size.content} w-full px-2 py-1 font-semibold text-center capitalize`}
       >
         {t(title)}
       </span>
       <div
         style={{ fontSize: heading_font_size.content[screen] }}
-        className="flex items-center justify-around w-full p-2"
+        className="flex items-center justify-around w-full p-2 shadow-lg"
       >
         <span className={icon_sizes.xl}>
           {icon}

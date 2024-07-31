@@ -127,7 +127,7 @@ const Placements = ({ ...props }) => {
 
 const PlacementItems = () => {
   return (
-    <ul className="flex flex-wrap items-center justify-center w-full gap-12 px-2 gap-y-10">
+    <ul className="flex flex-wrap items-center justify-center w-full gap-12 px-2 gap-y-8">
       {pd_items.map((item) => (
         <ListItem key={item.id} item={item} />
       ))}

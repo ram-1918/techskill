@@ -247,10 +247,11 @@ const ListItem = ({tech:{name, sublist}}) => {
     return (
         <div className="flex flex-col items-start justify-start">
             <p 
-            style={{color:colors.content, borderColor:"black"}} 
-            className={`${heading_font_size.content} px-2 overflow-hidden font-bold tracking-tight uppercase border-b-2 border-dotted text-ellipsis mobile:px-0`}>{t(name)}</p>
+            style={{color:colors.content, borderColor:colors.bordercolor}} 
+            className={`${heading_font_size.content} px-2 overflow-hidden font-bold tracking-tight uppercase text-ellipsis mobile:px-0`}>{t(name)}</p>
+            <span style={{ backgroundColor: colors.bordercolor,borderColor:colors.bordercolor}} className="w-full h-0.5 border-l border-dotted mobile:hidden"></span>
             <div className="flex items-center justify-start h-full mobile:w-full mobile:justify-center">
-                <span style={{height: divHeight, borderColor:"black"}} className="h-full border-l-2 border-dotted mobile:hidden"></span>
+                <span style={{height: divHeight, borderColor:colors.bordercolor, backgroundColor: colors.bordercolor}} className="w-0.5 h-full border-l border-dotted mobile:hidden"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
             </div>
         </div>
@@ -268,10 +269,10 @@ const SubListDisplay = ({divRef, sublist}) => {
                 <li key={id}
                 style={{fontSize:heading_font_size.subcontent[screen], color:colors.subcontent}}
                 className={`
-                    flex items-center justify-start gap-2 font-medium
+                    flex items-center justify-start gap-2 font-normal
                     ${heading_font_size.subcontent}
                     `}>
-                    <span style={{borderColor:colors.subcontent}} className="border-t-2 border-dotted mobile:hidden w-7"></span>
+                    <span style={{borderColor:colors.bordercolor, backgroundColor: colors.bordercolor}} className="w-8 h-0.5 border-t border-dotted mobile:hidden"></span>
                     <span className={`${icon_sizes.smallest}`}>{icon}</span>
                     <span>{t(name)}</span>
                 </li>

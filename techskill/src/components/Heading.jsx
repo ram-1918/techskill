@@ -19,12 +19,14 @@ const MainHead = ({text}) => {
       }}
       className={`
         ${heading_font_size.main}
-        text-transparent bg-clip-text bg-gradient-to-r from-green-700 via-orange-500 to-sky-600
+        text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] via-[#1D2671] to-[#C33764]
         font-bold tracking-tighter text-center capitalize
         `}
     >
       <span className={` py-10 leading-6`}>{t(text)}</span>
     </div>
+    // text-transparent bg-clip-text bg-gradient-to-r from-[#FDFCFB] via-[#FDFCFB] to-[#E2D1C3]
+    // text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] via-[#1D2671] to-[#C33764]
   )
 }
 

@@ -2,6 +2,12 @@
 @tailwind utilities;
 @tailwind components;
 
+@layer components {
+  .border-groove {
+    border-style: groove;
+  }
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

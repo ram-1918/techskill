@@ -13,8 +13,13 @@ export const slide_sizes = `
     5k-monitor:w-[320.0625rem] 5k-monitor:h-[150rem]
 `
 
+// https://essential-blocks.com/stunning-color-gradients-for-web-design/
+// https://offeo.com/learn/gradient-color-palette
+// https://www.b3multimedia.ie/beautiful-color-gradients-for-your-next-design-project/
+
 export const slide_widths = `
     small-phone:w-[20rem]
+
     medium-phone:w-[22.5625rem]
     large-phone:w-[25.9375rem]
     small-tablet:w-[30.0625rem]
@@ -52,7 +57,7 @@ export const heading_font_size = {
     small-phone:text-[0.3rem] medium-phone:text-[0.4rem]
     large-phone:text-[0.6rem] 
     small-tablet:text-[0.9rem] large-tablet:text-[1.1rem]
-    small-laptop:text-[1.3rem] medium-laptop:text-[1.8rem] medium-laptop:text-[2rem] 
+    small-laptop:text-[1.2rem] medium-laptop:text-[1.8rem] medium-laptop:text-[2rem] 
     large-laptop:text-[2.1rem] standard-desktop:text-[2.7rem] large-desktop:text-[3.8rem]
     ultra-wide:text-[4.5rem] 5k-monitor:text-[6.5rem]
     `,
@@ -69,16 +74,16 @@ export const heading_font_size = {
     large-phone:text-[0.3rem] 
     small-tablet:text-[0.5rem] large-tablet:text-[0.6rem]
     small-laptop:text-[0.8rem] medium-laptop:text-[1.2rem] 
-    large-laptop:text-[1.5rem] standard-desktop:text-[2rem] large-desktop:text-[2.7rem]
+    large-laptop:text-[1.2rem] standard-desktop:text-[2rem] large-desktop:text-[2.7rem]
     ultra-wide:text-[3.3rem] 5k-monitor:text-[4rem]
 `,
 subcontent2: `
 small-phone:text-[0.25rem] medium-phone:text-[0.75rem]
 large-phone:text-[0.3rem] 
-small-tablet:text-[0.5rem] large-tablet:text-[0.6rem]
-small-laptop:text-[0.8rem] medium-laptop:text-[1rem] 
-large-laptop:text-[1.3rem] standard-desktop:text-[1.8rem] large-desktop:text-[1.8rem]
-ultra-wide:text-[2rem] 5k-monitor:text-[1.8rem]
+small-tablet:text-[0.3rem] large-tablet:text-[0.5rem]
+small-laptop:text-[0.7rem] medium-laptop:text-[0.9rem] 
+large-laptop:text-[1.1rem] standard-desktop:text-[1.4rem] large-desktop:text-[1.8rem]
+ultra-wide:text-[2rem] 5k-monitor:text-[3rem]
 `,
     sub2: {
         mobile: "0.9rem",
@@ -112,13 +117,13 @@ export const image_size_essential = `
 `
 
 export const image_size = `
-        small-phone: w-10 small-phone:h-
+        small-phone: w-10 small-phone:h-10
         medium-phone:w-12 medium-phone:h-12 
         large-phone:w-12 large-phone:h-12 
-        small-tablet:w-16 small-tablet:h-16 large-tablet:w-[24rem] large-tablet:h-[24rem]
+        small-tablet:w-[10rem] small-tablet:h-[10rem] large-tablet:w-[24rem] large-tablet:h-[24rem]
         small-laptop:w-[28rem] small-laptop:h-[28rem] medium-laptop:w-[36rem] medium-laptop:h-[36rem] large-laptop:w-[40rem] large-laptop:h-[40rem]
-        standard-desktop:w-[50rem] standard-desktop:h-[50rem] large-desktop:w-[60rem] large-desktop:h-[60rem] ultra-wide:w-[70rem] ultra-wide:h-[70rem]
-        5k-monitor:w-[90rem] 5k-monitor:h-[90rem]
+        standard-desktop:w-[50rem] standard-desktop:h-[50rem] large-desktop:w-[60rem] large-desktop:h-[60rem] ultra-wide:w-[75rem] ultra-wide:h-[75rem]
+        5k-monitor:w-[95rem] 5k-monitor:h-[95rem]
 `
 
 // Pending
@@ -189,14 +194,21 @@ export const y_spacing = `
 export const content_font = "0.9rem";
 
 export const colors = {
-    main: "#405D72",
-    sub: "#405D72",
+    main: "white",
+    sub: "#27374D",
     content: "#27374D",
     subcontent: "#27374D",
-    bg_color: "#DDE6ED"
+    bg_color: "rgb(255 237 213)",
+    bordercolor: "#27374D"
 }
 
 export const colors_backup = {
+    main: "#405D72",
+    sub: "#09203F",
+    content: "#09203F",
+    subcontent: "#09203F",
+    bg_color: "#C2E9FB",
+
     main: "#088395",
     sub: "#508C9B",
     content: "#538392",
@@ -210,7 +222,7 @@ export const colors_backup = {
     bg_color: "#EAC696"
 };
 
-export const main_heading_fontstyle = "anaheim"; // lexend, roboto, anaheim
+export const main_heading_fontstyle = "mono, anaheim"; // lexend, roboto, anaheim
 export const sub_heading_fontstyle = "anaheim, roboto, lexend, sans";
 export const content_fontstyle = "anaheim, roboto, lexend, sans";
 

@@ -27,7 +27,7 @@ const Body = () => {
     return (
         <div className="
         h-full 
-        w-[45%] pt-0 flex flex-col justify-center items-start gap-2 
+        w-[50%] pt-0 flex flex-col justify-center items-start gap-2 
         small-phone:w-fit medium-phone:w-fit large-phone:w-fit small-tablet:w-fit
         ">
             <CBN />

@@ -103,9 +103,9 @@ const MenuItem = ({item:{slidenum, title, slide_id}}) => {
         <a 
         style={{fontSize: heading_font_size.content[screen], backgroundColor:colors.bg_color}} 
         href={`#${slide_id}`} 
-        className={`${heading_font_size.content} capitalize rounded shadow p-1 flex flex-row justify-start items-center space-x-4 py-1 cursor-pointer`}>
-            <span style={{fontWeight:"700"}}>{slidenum}</span>
-            <span style={{fontWeight: "500"}}>{t(title)}</span>
+        className={`${heading_font_size.content} capitalize rounded shadow-md p-1 flex flex-row justify-start items-center space-x-4 py-1 cursor-pointer`}>
+            <span style={{fontWeight:"800"}}>{slidenum}</span>
+            <span style={{fontWeight: "600"}}>{t(title)}</span>
         </a>
     )
 }
