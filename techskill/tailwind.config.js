@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'ap': "url('assets/images/ap.png')",
+        'ap': "url('assets/images/thankyou2.png')",
         'cbn': "url('assets/images/chandrababu.png')",
         'pk': "url('assets/images/pk4.png')",
         'lokesh': "url('assets/images/lokesh.png')",
@@ -16,6 +16,8 @@ module.exports = {
         'technologies':  "url('assets/images/technologies.png')",
         'thankyou':  "url('assets/images/thankyou1.png')",
         'weightage':  "url('assets/images/weightage.png')",
+        'weightage-white':  "url('assets/images/weightage_white.png')",
+        'bg0': "url('assets/images/frame.png')",
         'bg1': "url('assets/images/slides/first.png')",
         'bg2': "url('assets/images/slides/second.png')",
         'bg3': "url('assets/images/bg3.png')",

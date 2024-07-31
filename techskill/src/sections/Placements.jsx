@@ -137,7 +137,7 @@ const PlacementItems = () => {
 
 const ListItem = ({ item: { icon, name } }) => {
   return (
-    <li className={`relative flex flex-col items-center justify-center group bg-blue-500 rounded-full overflow-hidden`}>
+    <li className={`relative flex flex-col items-center justify-center group bg-blue-500 shadow-lg rounded-full overflow-hidden`}>
       {/* <span className={` bg-center bg-cover rounded-full w-full h-full ${icon_sizes.xl}`}> */}
         {icon}
       {/* </span> */}

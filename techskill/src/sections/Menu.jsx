@@ -8,7 +8,7 @@ import CBN from "../components/CBN";
 import { main_headings } from "../components/data";
 import Lokesh from "../components/Lokesh";
 import PK from "../components/PK";
-import { heading_font_size } from "../Base";
+import { colors, heading_font_size } from "../Base";
 
 const contents = [
     {
@@ -101,9 +101,9 @@ const MenuItem = ({item:{slidenum, title, slide_id}}) => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
     return (
         <a 
-        style={{fontSize: heading_font_size.content[screen]}} 
+        style={{fontSize: heading_font_size.content[screen], backgroundColor:colors.bg_color}} 
         href={`#${slide_id}`} 
-        className={`${heading_font_size.content} capitalize rounded shadow p-1 flex flex-row justify-start items-center space-x-4 py-1 bg-[#C4DFDF] cursor-pointer`}>
+        className={`${heading_font_size.content} capitalize rounded shadow p-1 flex flex-row justify-start items-center space-x-4 py-1 cursor-pointer`}>
             <span style={{fontWeight:"700"}}>{slidenum}</span>
             <span style={{fontWeight: "500"}}>{t(title)}</span>
         </a>

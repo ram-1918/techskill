@@ -4,7 +4,7 @@ import BaseBGImage from "./BaseBGImage";
 export const APImage = ({}) => (
     <div className="
     small-phone:hidden medium-phone:hidden large-phone:hidden small-tablet:hidden
-    w-[45%] flex justify-center items-center
+    w-[35%] flex justify-center items-center
     ">
       <div className={`bg-ap ${image_size} bg-center bg-contain bg-no-repeat`}></div>
     </div>

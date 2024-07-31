@@ -189,19 +189,25 @@ export const y_spacing = `
 export const content_font = "0.9rem";
 
 export const colors = {
+    main: "#405D72",
+    sub: "#405D72",
+    content: "#27374D",
+    subcontent: "#27374D",
+    bg_color: "#DDE6ED"
+}
+
+export const colors_backup = {
     main: "#088395",
     sub: "#508C9B",
     content: "#538392",
     subcontent: "#201E43",
-    bg_color: "#CCF2F4"
-}
+    bg_color: "#CCF2F4",
 
-export const colors_backup = {
-    main: "#134B70",
-    sub: "#27374D",
-    content: "#134B70",
-    subcontent: "black",
-    bg_color: "#CCF2F4"
+    main: "#6482AD",
+    sub: "#765827",
+    content: "#65451F",
+    subcontent: "#765827",
+    bg_color: "#EAC696"
 };
 
 export const main_heading_fontstyle = "anaheim"; // lexend, roboto, anaheim

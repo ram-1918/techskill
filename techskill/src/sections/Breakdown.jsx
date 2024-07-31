@@ -6,8 +6,8 @@ import BaseSlide from "../components/BaseSlide";
 import BaseContentDiv from "../components/BaseContentDiv";
 import { useTranslation } from "react-i18next";
 import { approvedIcon } from "../components/icons";
-import progressbar from "../assets/icons/progressbardiv.png"
-import weightage from "../assets/images/weightage.png";
+import progressbar from "../assets/images/progressbar_div.png"
+import weightage from "../assets/images/weightage_white.png";
 
 
 const Breakdown = ({...props}) => {
@@ -18,7 +18,10 @@ const Breakdown = ({...props}) => {
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="skill check score breakdown & calculation">
               <div style={{color: colors.subcontent}} className="flex items-center justify-center w-full px-10">
-                <div className="w-[45%] h-full bg-center bg-no-repeat bg-contain bg-weightage"></div>
+                <div className="w-[45%] h-full bg-center bg-no-repeat bg-contain bg-weightage-white"></div>
+                {/* <div className="w-[45%] h-full">
+                  <BreakdownDiv />
+                </div> */}
                 <div className="w-[55%] flex flex-col items-start justify-start gap-2 mobile:w-full">
                   <div className={` ${heading_font_size.subcontent} p-2 font-light gap-10`}>
                     <span className="font-semibold">{t("A typical student's \"skill check\" score for the below attributes:")}</span>
@@ -60,12 +63,11 @@ const BreakdownDiv = () => {
 
 /*
 
-
 const screen_specific = {
   '5k-monitor': {
       width: 'w-[70%]',
       height: 'h-40',
-      barheight: 'h-20',
+      barheight: 'h-24',
       gapup: 'gap-[25rem]',
       paddingup: 'pl-[42rem]',
       paddingtextup: 'pl-[35rem]',
@@ -236,7 +238,7 @@ const ProgressBar = ({ progressRef, maxScore, relativePercents, totalScore }) =>
       <AssessmentsBar score={relativePercents[2]} totalScore={totalScore} bgColor="#CDE8E5" />
       <CertificationsBar score={relativePercents[3]} totalScore={totalScore} bgColor="#93BFCF" />
       <ApptitudeBar score={relativePercents[1]} totalScore={totalScore} bgColor="#BDCDD6" />
-      <span className={`${heading_font_size.subcontent2} pl-4 font-bold text-green-800`}>{skillCheckScore}/10</span>
+      <span className={`${heading_font_size.subcontent} pl-4 font-bold text-green-800`}>{skillCheckScore}/10</span>
     </div>
   );
 };
@@ -263,8 +265,9 @@ const ApptitudeBar = ({ score, bgColor }) => (
   <div style={{ backgroundColor: bgColor, width: `${score}%` }} className={`${barStyles} border-r-4 border-r-green-800`}></div>
 );
 
+*/
 
-
+/*
 <div>
       <span>A typical student's scroring attributes</span>
       <li>Bachelor's degree grade: 8.3</li>

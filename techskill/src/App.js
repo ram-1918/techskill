@@ -164,7 +164,7 @@ const BigScreenView = ({ slides }) => {
   return (
     <div
       style={{ fontFamily: main_heading_fontstyle }}
-      className="flex flex-col items-center justify-start w-full h-full gap-12 text-black mobile:px-0 bg-zinc-300"
+      className="flex flex-col items-center justify-start w-full h-full gap-12 text-black mobile:px-0 bg-zinc-0"
     >
       {!isFullscreen && (
         <ViewOptions
@@ -190,7 +190,7 @@ const BigScreenView = ({ slides }) => {
 const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
   const { t, i18n } = useTranslation();
   const [currLang, setCurrLang] = useState("en");
-  const active = "bg-sky-300";
+  const active = "bg-sky-200";
   const buttonstyles = "px-2 py-1 rounded-lg cursor-pointer";
   const transButton = "cursor-pointer rounded-md py-1 px-2";
 
@@ -218,7 +218,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
         <span>Translation: </span>
         <span
           className={`${transButton} ${
-            currLang === "en" && "bg-sky-400 text-black font-semibold"
+            currLang === "en" && "bg-sky-200 text-black font-semibold"
           }`}
           onClick={() => changeLanguage("en")}
         >
@@ -227,7 +227,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
         |
         <span
           className={`${transButton} ${
-            currLang === "te" && "bg-sky-400 text-black font-semibold"
+            currLang === "te" && "bg-sky-200 text-black font-semibold"
           }`}
           onClick={() => changeLanguage("te")}
         >
@@ -236,7 +236,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
         |
         <span
           className={`${transButton} ${
-            currLang === "hi" && "bg-sky-400 text-black font-semibold"
+            currLang === "hi" && "bg-sky-200 text-black font-semibold"
           }`}
           onClick={() => changeLanguage("hi")}
         >

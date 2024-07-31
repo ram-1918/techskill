@@ -32,10 +32,13 @@ const BaseSlide = ({
         ${!isFullscreen && slide_sizes}
         ${!isFullscreen && slide_padding}
       px-2 py-4 
-      bg-gradient-to-r from-cyan-100 to-pink-50 
-      relative shadow-xl overflow-hidden rounded-[1rem]
+      bg-gradient-to-tl from-[hsl(0,0%,100%)] via-white to-[#fefdff]
+      relative shadow-xl shadow-blue-200 overflow-hidden rounded-[1rem] border-4 border-gray-200
       flex flex-col justify-start items-center gap-5
     `}
+    // bg-bg0 bg-cover bg-no-repeat bg-center
+    // bg-gradient-to-r from-[#E66C2C] to-[#EFB261]
+    // bg-gradient-to-r from-[#C36241] to-[#DEAA88]
     >
       {children}
       {isFullscreen && show && (
@@ -49,7 +52,7 @@ const BaseSlide = ({
           <FontAwesomeIcon className={`${icon_sizes.small}`} icon={faMultiply} />
         </span>
       )}
-      {/* {screen} */}
+      {screen}
     </section>
   );
 };

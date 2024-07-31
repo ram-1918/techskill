@@ -4,7 +4,7 @@ import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
 import { colors } from "../Base";
 import { useTranslation } from "react-i18next";
-import why_image from "../assets/images/why_image.png";
+import why_image from "../assets/images/why_image_white.png";
 
 const screen_specific = {
     '5k-monitor': {
@@ -88,7 +88,6 @@ function Why({...props}) {
 
 const bg_color = "#0d9488"
 
-
 const Concepts = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full">
@@ -117,8 +116,8 @@ const LeftSpan = () => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
     return (
         <div className={` ${screen_specific[screen].width} h-full flex flex-col justify-around items-center space-y-4 py-0`}>
-            <div style={{borderColor: bg_color}} className={`w-full ${screen_specific[screen].height} border-b border-l`}></div>
-            <div style={{borderColor: bg_color}} className="w-full h-1 border-t"></div>
+            <div style={{borderColor: bg_color}} className={`w-full ${screen_specific[screen].height} border-b border-l border-black`}></div>
+            <div style={{borderColor: bg_color}} className="w-full h-1 border-t "></div>
             <div style={{borderColor: bg_color}} className={`w-full ${screen_specific[screen].height} border-t border-l`}></div>
         </div>
     )
