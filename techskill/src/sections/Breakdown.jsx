@@ -18,12 +18,12 @@ const Breakdown = ({...props}) => {
       <BaseSlide id="breakdown" {...props}>
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="skill check score breakdown & calculation">
-              <div style={{color: colors.subcontent}} className="flex items-center justify-center w-full px-10 space-x-4 small-tablet:flex-col small-tablet:overflow-y-scroll">
+              <div style={{color: colors.subcontent}} className="flex items-center justify-center w-full px-10 space-x-4 small-tablet:flex-col small-tablet:overflow-y-scroll small-phone:flex-col medium-phone:flex-col">
                 {/* <div className="w-[45%] h-full bg-center bg-no-repeat bg-contain bg-weightage-white"></div> */}
-                <div className="w-[45%] flex items-center justify-center h-fit small-tablet:w-full">
+                <div className="w-[45%] flex items-center justify-center h-fit small-tablet:w-full large-phone:w-full large-phone:h-full medium-phone:w-full medium-phone:hidden small-phone:w-full">
                   <BreakdownDiv />
                 </div>
-                <div className="w-[55%] flex flex-col items-start justify-start h-full gap-1 px-2">
+                <div className="w-[55%] large-phone:w-full medium-phone:w-full flex flex-col items-start justify-start h-full gap-1 px-2">
                   <div className={` ${heading_font_size.subcontent} p-2 font-light gap-4`}>
                       <span className="font-semibold">{t("A typical student's \"skill check\" score for the below attributes:")}</span>
                       {listitem("academics", "83%")}
@@ -43,7 +43,7 @@ const Breakdown = ({...props}) => {
 }
 
 const positions = `
-large-laptop:top-[28%] medium-laptop:top-[26%] small-laptop:top-[25%] large-tablet:top-[20%] large-tablet:left-[28%]
+large-laptop:top-[30%] medium-laptop:top-[26%] small-laptop:top-[28%] large-tablet:top-[25%] large-tablet:left-[28%]
 `
 
 const BreakdownDiv = () => {

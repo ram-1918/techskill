@@ -91,15 +91,13 @@ const SkillCheck = ({ ...props }) => {
 
 const Content = () => {
   return (
-    <div className="w-full">
       <AttributeDisplay />
-    </div>
   );
 };
 
 const AttributeDisplay = () => {
   return (
-    <div className="flex flex-col w-full h-full gap-2 flex-start">
+    <div className="flex flex-col items-center justify-start w-full h-full gap-10">
       <Steps />
       <div className="flex items-start justify-around w-full">
         <Layout icon={AttributesIcon} title="primary skill check attributes">

@@ -21,7 +21,7 @@ function Why({...props}) {
 
 const Concepts = () => {
     return (
-        <div className="flex flex-col items-center justify-center w-full h-full">
+        <div className="flex flex-col items-center justify-start w-full h-full">
             {/* <div className=""></div> */}
             {/* <div className="w-[90%] h-[90%] bg-whyimage bg-cover bg-center bg-no-repeat">
                 <img src={why_image} alt="why" className="w-full h-full bg-cover" />

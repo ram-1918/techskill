@@ -81,7 +81,7 @@ const Certifications = ({...props}) => {
 const Item = ({icon, name}) => {
     return (
         <div className="relative flex items-center justify-center p-4 border border-gray-200 rounded-lg shadow-lg h-fit group bg-gray-50">
-            <span className={icon_sizes.xl}>{icon}</span>
+            <span className={icon_sizes.medium}>{icon}</span>
             <Tooltip name={name} />
         </div>
     )

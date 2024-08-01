@@ -6,16 +6,16 @@ import { useTranslation } from "react-i18next";
 const screen_specific = {
     '5k-monitor': {
         width: 'w-[70%]',
-        height: 'h-40',
-        barheight: 'h-20',
+        height: 'h-[15rem]',
+        barheight: 'h-24',
     },
     'ultra-wide': {
       width: 'w-[70%]',
-      barheight: 'h-16',
+      barheight: 'h-20',
   },
     'large-desktop': {
       width: 'w-[70%]',
-      barheight: 'h-12',
+      barheight: 'h-16',
   },
     'standard-desktop': {
       width: 'w-[70%]',
@@ -45,6 +45,10 @@ const screen_specific = {
         width: 'w-[3rem]',
         barheight: 'h-8'
     },
+    'medium-phone': {
+      width: 'w-[3rem]',
+      barheight: 'h-8'
+  },
     'small-phone': {
         width: 'w-[3rem]',
         barheight: 'h-8'
@@ -83,7 +87,7 @@ const ProgressBarDiv = () => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
   
     return (
-      <div className="w-full ">
+      <div className="w-full py-10">
         <Text val1={true} val3={true} val5={true} relativePercents={relativePercents} />
         <Bars relativePercents={relativePercents} val1={true} val3={true} val5={true} />
         <ProgressBar progressRef={progressRef} maxScore={maxScore} relativePercents={relativePercents} totalScore={totalScore} />
@@ -107,7 +111,7 @@ const ProgressBarDiv = () => {
 
   const Bars = ({relativePercents, val1=false, val2=false, val3=false, val4=false, val5=false}) => {
     return (
-        <div style={{ borderColor: '#C0C0C0', width: "85%", height: "2.5rem" }} className={`flex items-center justify-start `}>
+        <div style={{ borderColor: '#C0C0C0', width: "85%" }} className={`flex items-center justify-start `}>
             <BarLine width={relativePercents[0]} isLine={val1} />
             <BarLine width={relativePercents[4]} isLine={val2} />
             <BarLine width={relativePercents[2]} isLine={val3} />
@@ -119,16 +123,18 @@ const ProgressBarDiv = () => {
 
   const BarText = ({width, text}) => {
     return (
-        <div style={{ width: `${width}%`, color:colors.sub }} className={`flex items-center justify-center h-full ${heading_font_size.subcontent2} text-black font-light -rotate-45`}>
+        <div style={{ width: `${width}%`, color:colors.sub }} className={`flex items-center justify-center h-full ${heading_font_size.subcontent2} font-semibold`}>
             {text}
         </div>
     )
   }
 
   const BarLine = ({width, isLine=true}) => {
+    const screen = localStorage.getItem('screen') || 'medium-laptop';
+
     return (
-        <div style={{ width: `${width}%`, height: "" }} className="flex items-center justify-center h-full ">
-            {isLine &&  <div style={{borderColor: colors.content}} className="w-1 h-full border-2 border-dotted"></div>}
+        <div style={{ width: `${width}%`, height: "4rem"}} className="flex items-center justify-center h-full ">
+            {isLine &&  <div style={{borderColor: colors.content}} className="w-1 h-full border-2 border-dashed"></div>}
         </div>
     )
   }

@@ -19,7 +19,7 @@ const MainHead = ({text}) => {
       }}
       className={`
         ${heading_font_size.main}
-        text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] via-[#1D2671] to-[#C33764]
+        ${colors.textgradient}
         font-bold tracking-tighter text-center capitalize
         `}
     >

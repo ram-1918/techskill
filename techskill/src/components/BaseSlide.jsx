@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useSwipe from "./hooks/useSwipe";
-import { icon_sizes, slide_padding, slide_sizes } from "../Base";
+import { colors, icon_sizes, slide_padding, slide_sizes } from "../Base";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMultiply } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,13 +29,36 @@ const BaseSlide = ({
       }}
       id={id}
       className={`
-        ${!isFullscreen && slide_sizes}
-        ${!isFullscreen && slide_padding}
-      px-4 py-2
-      bg-gradient-to-r from-[#FFC371] to-[#ff5988]
+      ${colors.main}
+      p-10
       relative shadow-lg shadow-[#526D82] overflow-hidden rounded-[1rem]
-      flex flex-col justify-start items-center gap-5
     `}
+    >
+      <div  className={`relative w-full h-full p-2 border-2 border-white overflow-hidden rounded-[1rem] ${!isFullscreen && slide_padding} ${!isFullscreen && slide_sizes}`}>
+
+        {/* flex flex-col justify-start items-center gap-5 */}
+        {children}
+        {isFullscreen && show && (
+          <span
+            className={`absolute bottom-10 left-[50%] cursor-pointer py-10`}
+            onClick={() => {
+              setIsFullscreen(false);
+              setIsView("scroll");
+            }}
+          >
+            <FontAwesomeIcon className={`${icon_sizes.small}`} icon={faMultiply} />
+          </span>
+      )}
+
+      </div>
+      {/* {screen} */}
+    </section>
+  );
+};
+
+export default BaseSlide;
+
+/*
     // e4953c = c66d00
     // bg-bg0 bg-cover bg-no-repeat bg-center
     // 460645 + ff5450 : violet + orange
@@ -54,24 +77,4 @@ const BaseSlide = ({
     // bg-gradient-to-r from-[#CD7F32] to-[#FFC371] : Orange
     // bg-gradient-to-r from-[#E66C2C] to-[#EFB261]
     // bg-gradient-to-r from-[#C36241] to-[#DEAA88]
-    >
-      {/* <div className="w-full h-full p-2 border-4 border-red-100"> */}
-        {children}
-        {isFullscreen && show && (
-          <span
-            className={`absolute bottom-10 left-[50%] cursor-pointer py-10`}
-            onClick={() => {
-              setIsFullscreen(false);
-              setIsView("scroll");
-            }}
-          >
-            <FontAwesomeIcon className={`${icon_sizes.small}`} icon={faMultiply} />
-          </span>
-      )}
-      {/* </div> */}
-      {screen}
-    </section>
-  );
-};
-
-export default BaseSlide;
+*/

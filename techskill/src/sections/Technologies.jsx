@@ -62,7 +62,7 @@ const technology_list = {
     },
     "programming languages": {
         id: 3,
-        name: "programming languages",
+        name: "programming",
         sublist: [
             {
                 id: 1, 
@@ -245,13 +245,13 @@ const ListItem = ({tech:{name, sublist}}) => {
         }
     }, [divRef]);
     return (
-        <div className="flex flex-col items-start justify-start">
+        <div className="flex flex-col items-start justify-start medium-phone:">
             <p 
             style={{color:colors.content, borderColor:colors.bordercolor}} 
             className={`${heading_font_size.content} px-2 overflow-hidden font-bold tracking-tight uppercase text-ellipsis mobile:px-0`}>{t(name)}</p>
-            <span style={{ backgroundColor: colors.bordercolor,borderColor:colors.bordercolor}} className="w-full h-0.5 border-l border-dotted mobile:hidden"></span>
-            <div className="flex items-center justify-start h-full mobile:w-full mobile:justify-center">
-                <span style={{height: divHeight, borderColor:colors.bordercolor, backgroundColor: colors.bordercolor}} className="w-0.5 h-full border-l border-dotted mobile:hidden"></span>
+            <span style={{ borderColor:colors.bordercolor}} className="w-full border border-l border-dashed"></span>
+            <div className="flex items-center justify-start h-full">
+                <span style={{height: divHeight, borderColor:colors.bordercolor }} className="h-full border-l border-dashed"></span>
                 <SubListDisplay divRef={divRef} sublist={sublist} />
             </div>
         </div>
@@ -272,7 +272,7 @@ const SubListDisplay = ({divRef, sublist}) => {
                     flex items-center justify-start gap-2 font-normal
                     ${heading_font_size.subcontent}
                     `}>
-                    <span style={{borderColor:colors.bordercolor, backgroundColor: colors.bordercolor}} className="w-8 h-0.5 border-t border-dotted mobile:hidden"></span>
+                    <span style={{borderColor:colors.bordercolor}} className="w-8 border border-t border-dashed mobile:hidden"></span>
                     <span className={`${icon_sizes.smallest}`}>{icon}</span>
                     <span>{t(name)}</span>
                 </li>

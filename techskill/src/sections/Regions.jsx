@@ -55,7 +55,7 @@ const ImageSpan = () => {
         <div className="
         w-[35%] h-[90%] 
         rounded-xl shadow-lg bg-mandals bg-center bg-cover opacity-80
-        large-tablet:hidden small-tablet:hidden large-phone:hidden small-phone:hidden
+        large-tablet:hidden small-tablet:hidden large-phone:hidden medium-phone:hidden small-phone:hidden
         "></div>
     )
 }
@@ -65,8 +65,8 @@ const RegionsListDisplay = () => {
         <ul className="
         w-[65%] 
         grid grid-flow-row grid-cols-3 gap-4 mobile:gap-2 px-4 py-1
-        large-tablet:w-[80%] small-tablet:w-[80%] large-phone:w-[80%] small-phone:w-[80%]
-        large-tablet:gap-2 small-tablet:gap-2 large-phone:gap-2 small-phone:gap-1
+        large-tablet:w-full small-tablet:w-full large-phone:w-full medium-phone:w-full small-phone:w-full
+        large-tablet:gap-2 small-tablet:gap-2 large-phone:gap-4 small-phone:gap-1
         ">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>
