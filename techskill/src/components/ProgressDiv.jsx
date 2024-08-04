@@ -100,11 +100,11 @@ const ProgressBarDiv = () => {
   const Text = ({width="", val1='', val2='', val3='', val4='', val5='', relativePercents}) => {
     return (
         <div  style={{ borderColor: '#C0C0C0', width: "85%", height:"" }} className={`flex items-center justify-start`}>
-            <BarText text={val1 && "Academics"} width={relativePercents[0]}/>
-            <BarText text={val2 && "Certifications"} width={relativePercents[4]} />
-            <BarText text={val3 && "Assessments"} width={relativePercents[2]} />
-            <BarText text={val4 && "Personality"} width={relativePercents[3]} />
-            <BarText text={val5 && "Aptitude"} width={relativePercents[1]} />
+            <BarText text={val1 && "academics"} width={relativePercents[0]}/>
+            <BarText text={val2 && "certifications"} width={relativePercents[4]} />
+            <BarText text={val3 && "assessments"} width={relativePercents[2]} />
+            <BarText text={val4 && "personality development"} width={relativePercents[3]} />
+            <BarText text={val5 && "aptitude"} width={relativePercents[1]} />
         </div>
     )
   }
@@ -122,9 +122,10 @@ const ProgressBarDiv = () => {
   }
 
   const BarText = ({width, text}) => {
+    const {t} = useTranslation();
     return (
         <div style={{ width: `${width}%`, color:colors.sub }} className={`flex items-center justify-center h-full ${heading_font_size.subcontent2} font-semibold`}>
-            {text}
+            {t(text)}
         </div>
     )
   }

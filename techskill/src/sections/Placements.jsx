@@ -108,17 +108,12 @@ const pd_items = [
 ];
 
 const Placements = ({ ...props }) => {
-  const { t } = useTranslation();
   return (
     <BaseSlide id="placements" {...props}>
       <BaseHeader text={main_headings.slide7.text} />
-      <BaseContentDiv text="program execution partners">
-      <div className="flex flex-col items-center justify-around w-full h-full">
+      <BaseContentDiv text="">
+      <div className="flex flex-col items-center justify-around w-full h-fit">
         <PlacementItems />
-        <span className={`${heading_font_size.content} w-full font-light text-center`}>
-          ... {t("and many others")}
-        </span>
-        <div className="w-full h-2 "></div>
       </div>
       </BaseContentDiv>
     </BaseSlide>
@@ -126,11 +121,15 @@ const Placements = ({ ...props }) => {
 };
 
 const PlacementItems = () => {
+  const { t } = useTranslation();
   return (
     <ul className="flex flex-wrap items-center justify-center w-full gap-12 px-2 gap-y-8">
       {pd_items.map((item) => (
         <ListItem key={item.id} item={item} />
       ))}
+        <span className={`${heading_font_size.content} w-full font-light text-center`}>
+          ... {t("and many others")}
+        </span>
     </ul>
   );
 };

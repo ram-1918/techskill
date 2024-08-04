@@ -73,7 +73,7 @@ export const heading_font_size = {
     small-phone:text-[0.6rem] medium-phone:text-[0.6rem]
     large-phone:text-[0.7rem] 
     small-tablet:text-[0.8rem] large-tablet:text-[0.8rem]
-    small-laptop:text-[1rem] medium-laptop:text-[1.2rem] large-laptop:text-[1.7rem] 
+    small-laptop:text-[1rem] medium-laptop:text-[1rem] large-laptop:text-[1.2rem] 
     standard-desktop:text-[1.9rem] large-desktop:text-[2.5rem]
     ultra-wide:text-[3.2rem] 5k-monitor:text-[4.5rem]
     `,
@@ -155,9 +155,9 @@ export const icon_sizes = {
         medium-phone:w-[4rem] medium-phone:h-[4rem]
         large-phone:w-[5rem] large-phone:h-[5rem]
         small-tablet:w-[7rem] small-tablet:h-[7rem] large-tablet:w-[8rem] large-tablet:h-[8rem]
-        small-laptop:w-[12rem] small-laptop:h-[12rem] medium-laptop:w-[15rem] medium-laptop:h-[15rem] large-laptop:w-[20rem] large-laptop:h-[20rem]
-        standard-desktop:w-[23rem] standard-desktop:h-[23rem] large-desktop:w-[27rem] large-desktop:h-[27rem] ultra-wide:w-[29rem] ultra-wide:h-[29rem]
-        5k-monitor:w-[32rem] 5k-monitor:h-[32rem]
+        small-laptop:w-[12rem] small-laptop:h-[12rem] medium-laptop:w-[10rem] medium-laptop:h-[13rem] large-laptop:w-[14rem] large-laptop:h-[15rem]
+        standard-desktop:w-[23rem] standard-desktop:h-[23rem] large-desktop:w-[30rem] large-desktop:h-[30rem] ultra-wide:w-[30rem] ultra-wide:h-[35rem]
+        5k-monitor:w-[60rem] 5k-monitor:h-[60rem]
     `,
     xl:  `
         small-phone:w-2 small-phone:h-2
@@ -182,9 +182,9 @@ export const icon_sizes = {
         medium-phone:w-10 medium-phone:h-10
         large-phone:w-8 large-phone:h-8
         small-tablet:w-12 small-tablet:h-12 large-tablet:w-16 large-tablet:h-16
-        small-laptop:w-20 small-laptop:h-20 medium-laptop:w-24 medium-laptop:h-24 large-laptop:w-32 large-laptop:h-32
+        small-laptop:w-20 small-laptop:h-20 medium-laptop:w-24 medium-laptop:h-24 large-laptop:w-28 large-laptop:h-28
         standard-desktop:w-36 standard-desktop:h-36 large-desktop:w-44 large-desktop:h-44 ultra-wide:w-64 ultra-wide:h-64
-        5k-monitor:w-80 5k-monitor:h-80
+        5k-monitor:w-96 5k-monitor:h-96
         `,
     small: `
         medium-phone:w-1 medium-phone:h-1

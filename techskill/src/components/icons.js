@@ -63,7 +63,7 @@ import instagram from "../assets/icons/social/instagram.png";
 import linkedin from "../assets/icons/social/linkedin.png";
 import gmail from "../assets/icons/social/gmail.png";
 
-import rubic from "../assets/images/rubiksystems.png";
+import i5tech from "../assets/images/i5tech.png";
 import cloud5 from "../assets/images/cloud5.png";
 import cloudserv from "../assets/images/cloudserv.png";
 
@@ -147,7 +147,7 @@ export const FacebookIcon = <img className={icon_style} src={facebook} alt="Face
 export const LinkedinIcon = <img className={icon_style} src={linkedin} alt="Linkedin icon" />;
 export const GmailIcon = <img className={icon_style} src={gmail} alt="Gmail icon" />;
 
-export const RubikIcon = <img className={''} src={rubic} alt="Rubic icon" />;
+export const I5techIcon = <img className={''} src={i5tech} alt="I5tech icon" />;
 export const Cloud5Icon = <img className={''} src={cloud5} alt="cloud5 icon" />;
 export const CloudservIcon = <img className={''} src={cloudserv} alt="cloudserv icon" />;
 

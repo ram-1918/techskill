@@ -57,7 +57,7 @@ const contents = [
         id: 8,
         slidenum: "08",
         slide_id: "reporting",
-        title: "delivarable updates"
+        title: "deliverable updates"
     },
     {
         id: 9,
@@ -69,7 +69,7 @@ const contents = [
         id: 10,
         slidenum: "10",
         slide_id: "about",
-        title: "about"
+        title: "about me & our companies"
     },
     // {
     //     id: 10,
@@ -109,7 +109,7 @@ const MenuItem = ({item:{slidenum, title, slide_id}}) => {
         <a 
         style={{fontSize: heading_font_size.content[screen], backgroundColor:colors.bg_color}} 
         href={`#${slide_id}`} 
-        className={`${heading_font_size.content} capitalize rounded-2xl shadow-lg p-4 flex flex-row justify-start items-center space-x-4 py-1 cursor-pointer`}>
+        className={`${heading_font_size.content} capitalize rounded-lg shadow-lg p-4 flex flex-row justify-start items-center space-x-4 py-1 cursor-pointer`}>
             <span style={{fontWeight:"800"}}>{slidenum}</span>
             <span style={{fontWeight: "600"}}>{t(title)}</span>
         </a>

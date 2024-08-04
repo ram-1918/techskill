@@ -344,7 +344,7 @@ const FullScreenView = ({
             prev === 0 ? slide_names.length - 1 : prev - 1
           )
         }
-        className="absolute top-[50%] left-2"
+        className="absolute top-[50%] left-2 cursor-pointer"
       >
         <FontAwesomeIcon className={icon_sizes.small} icon={faArrowLeft} />
       </span>
@@ -354,7 +354,7 @@ const FullScreenView = ({
             prev === slide_names.length - 1 ? 0 : prev + 1
           )
         }
-        className="absolute top-[50%] right-2"
+        className="absolute top-[50%] right-2 cursor-pointer"
       >
         <FontAwesomeIcon className={icon_sizes.small} icon={faArrowRight} />
       </span>

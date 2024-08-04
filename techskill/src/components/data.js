@@ -25,7 +25,7 @@ export const main_headings = {
   },
   slide7: {
     id: 7,
-    text: "companies that can exploit this program",
+    text: "potential program execution partners",
   },
   slide8: {
     id: 8,
@@ -37,7 +37,7 @@ export const main_headings = {
   },
   slide10: {
     id: 10,
-    text: "about me & our company",
+    text: "about me & our companies",
   },
 };
 

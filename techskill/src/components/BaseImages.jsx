@@ -1,5 +1,6 @@
 import { icon_sizes, image_size } from "../Base";
 import BaseBGImage from "./BaseBGImage";
+import srinivas from '../assets/images/srinivas.png'
 
 export const APImage = ({}) => (
     <div className="
@@ -48,7 +49,8 @@ export const LokeshImage = ({ size = "w-32 h-32" }) => {
   );
 };
 export const SrinivasImage = ({ size = "w-32 h-32" }) => (
-  <div className={`${icon_sizes.me} bg-srinivas shadow-md bg-cover bg-center bg-no-repeat rounded-2xl`}></div>
+  <div className={`${icon_sizes.me} bg-srinivas bg-contain bg-top bg-no-repeat`}>
+  </div>
 );
 
 export const APGOV = () => {

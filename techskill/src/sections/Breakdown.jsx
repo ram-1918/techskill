@@ -43,7 +43,7 @@ const Breakdown = ({...props}) => {
 }
 
 const positions = `
-large-laptop:top-[30%] medium-laptop:top-[26%] small-laptop:top-[28%] large-tablet:top-[25%] large-tablet:left-[28%]
+large-laptop:top-[31%] medium-laptop:top-[28%] small-laptop:top-[28%] large-tablet:top-[25%] large-tablet:left-[28%]
 `
 
 const BreakdownDiv = () => {
