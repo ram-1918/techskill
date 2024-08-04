@@ -48,10 +48,7 @@ export const LokeshImage = ({ size = "w-32 h-32" }) => {
   );
 };
 export const SrinivasImage = ({ size = "w-32 h-32" }) => (
-  <BaseBGImage
-    image="bg-srinivas"
-    size={`${size} + " " + "border shadow-md"`}
-  />
+  <div className={`${icon_sizes.me} bg-srinivas shadow-md bg-cover bg-center bg-no-repeat rounded-2xl`}></div>
 );
 
 export const APGOV = () => {

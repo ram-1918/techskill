@@ -91,7 +91,9 @@ const SkillCheck = ({ ...props }) => {
 
 const Content = () => {
   return (
+    <div className="flex flex-col items-center justify-center w-full">
       <AttributeDisplay />
+    </div>
   );
 };
 
@@ -99,7 +101,7 @@ const AttributeDisplay = () => {
   return (
     <div className="flex flex-col items-center justify-start w-full h-full gap-10">
       <Steps />
-      <div className="flex items-start justify-around w-full">
+      <div className="flex items-start justify-around w-full py-10">
         <Layout icon={AttributesIcon} title="primary skill check attributes">
           {attributes.map((item) => (
             <AttributeItem key={item.id} item={item} />

@@ -49,9 +49,17 @@ export const heading_font_size = {
     small-phone:text-[0.75rem] medium-phone:text-[0.8rem]
     large-phone:text-[0.9rem]
     small-tablet:text-[1.2rem] large-tablet:text-[1.7rem]
-    small-laptop:text-[2.2rem] medium-laptop:text-[2.5rem] medium-laptop:text-[2.7rem] 
-    large-laptop:text-[3rem] standard-desktop:text-[3.8rem] large-desktop:text-[5rem]
+    small-laptop:text-[2.2rem] medium-laptop:text-[2.5rem]
+    large-laptop:text-[3rem] standard-desktop:text-[3.8rem] large-desktop:text-[5.5rem]
     ultra-wide:text-[7.5rem] 5k-monitor:text-[12rem]
+    `,
+    mainlarge: `
+    small-phone:text-[0.75rem] medium-phone:text-[0.85rem]
+    large-phone:text-[1.1rem]
+    small-tablet:text-[1.8rem] large-tablet:text-[2rem]
+    small-laptop:text-[3rem] medium-laptop:text-[4rem]
+    large-laptop:text-[5rem] standard-desktop:text-[7rem] large-desktop:text-[10rem]
+    ultra-wide:text-[16rem] 5k-monitor:text-[24rem]
     `,
     sub: `
     small-phone:text-[0.3rem] medium-phone:text-[0.7rem]
@@ -76,15 +84,15 @@ export const heading_font_size = {
     small-laptop:text-[0.8rem] medium-laptop:text-[1.2rem] 
     large-laptop:text-[1.2rem] standard-desktop:text-[2rem] large-desktop:text-[2.7rem]
     ultra-wide:text-[3.3rem] 5k-monitor:text-[4rem]
-`,
-subcontent2: `
-small-phone:text-[0.25rem] medium-phone:text-[0.75rem]
-large-phone:text-[0.3rem] 
-small-tablet:text-[0.3rem] large-tablet:text-[0.5rem]
-small-laptop:text-[0.7rem] medium-laptop:text-[0.9rem] 
-large-laptop:text-[1.1rem] standard-desktop:text-[1.4rem] large-desktop:text-[1.8rem]
-ultra-wide:text-[2rem] 5k-monitor:text-[3rem]
-`,
+    `,
+    subcontent2: `
+    small-phone:text-[0.25rem] medium-phone:text-[0.75rem]
+    large-phone:text-[0.3rem] 
+    small-tablet:text-[0.3rem] large-tablet:text-[0.5rem]
+    small-laptop:text-[0.7rem] medium-laptop:text-[0.9rem] 
+    large-laptop:text-[1.1rem] standard-desktop:text-[1.4rem] large-desktop:text-[1.8rem]
+    ultra-wide:text-[2rem] 5k-monitor:text-[3rem]
+    `,
     sub2: {
         mobile: "0.9rem",
         tablet: "1.15rem",
@@ -142,14 +150,23 @@ export const icon_sizes = {
         standard-desktop:w-56 standard-desktop:h-56 large-desktop:w-64 large-desktop:h-64 ultra-wide:w-[22rem] ultra-wide:h-[22rem]
         5k-monitor:w-[29rem] 5k-monitor:h-[29rem]
     `,
+    me: `
+        small-phone: w-[3.5rem] small-phone:h-[3.5rem]
+        medium-phone:w-[4rem] medium-phone:h-[4rem]
+        large-phone:w-[5rem] large-phone:h-[5rem]
+        small-tablet:w-[7rem] small-tablet:h-[7rem] large-tablet:w-[8rem] large-tablet:h-[8rem]
+        small-laptop:w-[12rem] small-laptop:h-[12rem] medium-laptop:w-[15rem] medium-laptop:h-[15rem] large-laptop:w-[20rem] large-laptop:h-[20rem]
+        standard-desktop:w-[23rem] standard-desktop:h-[23rem] large-desktop:w-[27rem] large-desktop:h-[27rem] ultra-wide:w-[29rem] ultra-wide:h-[29rem]
+        5k-monitor:w-[32rem] 5k-monitor:h-[32rem]
+    `,
     xl:  `
         small-phone:w-2 small-phone:h-2
         medium-phone:w-10 medium-phone:h-10
         large-phone:w-7 large-phone:h-7
         small-tablet:w-8 small-tablet:h-8 large-tablet:w-20 large-tablet:h-20
-        small-laptop:w-24 small-laptop:h-24 medium-laptop:w-28 medium-laptop:h-28 large-laptop:w-32 large-laptop:h-32
-        standard-desktop:w-40 standard-desktop:h-40 large-desktop:w-56 large-desktop:h-56 ultra-wide:w-[26rem] ultra-wide:h-[26rem]
-        5k-monitor:w-[30rem] 5k-monitor:h-[30rem]
+        small-laptop:w-28 small-laptop:h-28 medium-laptop:w-32 medium-laptop:h-32 large-laptop:w-36 large-laptop:h-36
+        standard-desktop:w-44 standard-desktop:h-44 large-desktop:w-64 large-desktop:h-64 ultra-wide:w-[28rem] ultra-wide:h-[28rem]
+        5k-monitor:w-[32rem] 5k-monitor:h-[32rem]
         `,
     // Pending 
     lg: `
@@ -200,7 +217,7 @@ export const content_font = "0.9rem";
 
 export const colors = {
     main: "bg-gradient-to-r from-[#FFC371] to-[#ff5988]",
-    textgradient: "text-transparent bg-clip-text bg-gradient-to-r from-[#09203F] via-[#1D2671] to-[#C33764]",
+    textgradient: "text-transparent bg-clip-text bg-gradient-to-r from-[#C33764] via-[#1D2671] to-[#09203F]",
     sub: "#27374D",
     content: "#27374D",
     subcontent: "#27374D",

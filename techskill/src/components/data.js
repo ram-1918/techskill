@@ -29,7 +29,7 @@ export const main_headings = {
   },
   slide8: {
     id: 8,
-    text: "delivarable updates",
+    text: "deliverable updates",
   },
   slide9: {
     id: 9,
@@ -37,7 +37,7 @@ export const main_headings = {
   },
   slide10: {
     id: 10,
-    text: "about me",
+    text: "about me & our company",
   },
 };
 

@@ -24,6 +24,7 @@ import Why from "./sections/Why";
 
 import { useTranslation } from "react-i18next";
 import "./i18n";
+import About from "./sections/About";
 
 function App() {
   const [, setScreen] = useState("");
@@ -152,7 +153,8 @@ const handleResize = () => {
     <Placements />,
     <Reporting />,
     <Breakdown />,
-    <ThankYou />,
+    <About />,
+    // <ThankYou />,
   ];
   
   return <BigScreenView slides={slides} />;
@@ -297,7 +299,8 @@ const slides_temp = {
   placements: ({ ...props }) => <Placements {...props} />,
   reporting: ({ ...props }) => <Reporting {...props} />,
   breakdown: ({ ...props }) => <Breakdown {...props} />,
-  thankyou: ({ ...props }) => <ThankYou {...props} />,
+  about: ({ ...props }) => <About {...props} />,
+  // thankyou: ({ ...props }) => <ThankYou {...props} />,
 };
 
 const FullScreenView = ({

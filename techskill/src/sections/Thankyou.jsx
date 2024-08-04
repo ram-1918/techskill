@@ -5,15 +5,15 @@ import { colors, heading_font_size } from "../Base";
 function ThankYou({ ...props }) {
   return (
     <BaseSlide {...props}>
-      {/* <BaseHeader text="thank you" /> */}
-      {/* <div
+      {/* <BaseHeader text="thank you" />
+      <div
         className="
-      h-[70%] rounded-3xl shadow-xl bg-thankyou bg-cover bg-center bg-no-repeat
-      w-[60%]
+      h-[70%] bg-thankyou bg-contain bg-center bg-no-repeat
+      w-full
       "
       ></div> */}
       <div className="flex flex-col items-center justify-center w-full h-full">
-        <span className={`${heading_font_size.main} font-bold font-[cursive] ${colors.textgradient}`}>Thank you!</span>
+        <span className={`${heading_font_size.mainlarge} font-bold font-[cursive] text-white ${colors.textgradient}`}>Thank you!</span>
       </div>
     </BaseSlide>
   );

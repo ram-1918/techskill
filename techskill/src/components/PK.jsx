@@ -7,7 +7,7 @@ const PK = () => {
         <div className="flex items-center justify-center space-x-4">
             <PKImage />
             <div className={`flex flex-col items-start justify-start ${y_spacing}`}>
-                <Heading type="sub" text="shri konedala pawan kalyan" />
+                <Heading type="sub" text="shri konidala pawan kalyan" />
                 <Heading type="content" text="hon'ble deputy chief minister" />
                 <Heading type="content" text="government of andhra pradesh" />
             </div>
