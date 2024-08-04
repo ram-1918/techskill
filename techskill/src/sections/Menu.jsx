@@ -68,9 +68,15 @@ const contents = [
     {
         id: 10,
         slidenum: "10",
-        slide_id: "thankyou",
-        title: "thank you"
+        slide_id: "about",
+        title: "about"
     },
+    // {
+    //     id: 10,
+    //     slidenum: "10",
+    //     slide_id: "thankyou",
+    //     title: "thank you"
+    // },
 
 ];
 

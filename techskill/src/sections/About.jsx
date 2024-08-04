@@ -19,7 +19,7 @@ import { heading_font_size, icon_sizes } from "../Base";
 
 function About() {
   return (
-    <BaseSlide>
+    <BaseSlide id="about">
         <BaseHeader text={main_headings.slide10.text} />
         <BaseContentDiv>
           <ContentDiv />
