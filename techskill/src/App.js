@@ -166,7 +166,7 @@ const BigScreenView = ({ slides }) => {
   return (
     <div
       style={{ fontFamily: main_heading_fontstyle }}
-      className="flex flex-col items-center justify-start w-full h-full gap-12 text-black mobile:px-0 bg-zinc-0"
+      className="flex flex-col items-center justify-start w-full h-full gap-12 text-black transition-all ease-linear mobile:px-0 bg-zinc-0"
     >
       {!isFullscreen && (
         <ViewOptions
