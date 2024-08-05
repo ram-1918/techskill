@@ -66,10 +66,10 @@ const Details = () => {
   const classnames = "space-x-2 flex justify-center items-center font-medium";
   return (
     <div className="flex items-center justify-center w-full py-5 space-x-8 small-tablet:flex-wrap large-phone:flex-wrap">
-      <span className={classnames}>
+      {/* <span className={classnames}>
         <FontAwesomeIcon icon={faLocationDot} />
         <span>Edison, NJ, USA</span>
-      </span>
+      </span> */}
       <span className={classnames}>
         <FontAwesomeIcon icon={faPhone} />
         <a href="tel:+1 201-290-4385" >{"+1 (201) 290-4385"}</a>
@@ -83,7 +83,7 @@ const Details = () => {
 }
 
 const SocialMedia = () => {
-  const styles = `relative overflow-hidden ${icon_sizes.medium}`
+  const styles = `relative overflow-hidden ${icon_sizes.medium} rounded-xl shadow-xl`
   return (
     <div className="relative flex items-center justify-center w-full gap-10 py-10">
       <span className={styles}>
