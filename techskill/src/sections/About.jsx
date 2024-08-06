@@ -32,8 +32,8 @@ function About({...props}) {
 
 const ContentDiv = () => {
     return (
-      <div className={`${heading_font_size.content}`}>
-        <div className="flex items-center justify-center gap-10 small-tablet:flex-col large-phone:flex-col">
+      <div className={`${heading_font_size.content} flex flex-col justify-center items-center`}>
+        <div className="flex items-center justify-center gap-1 small-tablet:flex-col">
           <SrinivasImage size="w-48 h-48" />
           <Content />
         </div>
@@ -52,7 +52,7 @@ const Content = () => {
     const content4 = "I am a seasoned Cloud Solutions Architect with a two-decade track record in designing, implementing, and managing cloud-based solutions. In addition to my technical proficiency, I possess a proven history of successfully leading and growing staffing and recruiting organizations. By emphasizing training and skill development, I have optimized operational efficiency and talent acquisition strategies. My combined expertise in cloud architecture, team management, strategic planning, and human capital development positions me as a versatile asset across both technology and human resources sectors."
     
     return (
-        <span className="w-[50%] whitespace-pre-wrap font-medium small-tablet:w-full large-phone:w-full">
+        <span className="w-[50%] whitespace-pre-wrap font-medium small-tablet:w-full">
             {t(content4)}
         </span>
     )
@@ -65,7 +65,7 @@ const Content = () => {
 const Details = () => {
   const classnames = "space-x-2 flex justify-center items-center font-medium";
   return (
-    <div className="flex items-center justify-center w-full py-5 space-x-8 small-tablet:flex-wrap large-phone:flex-wrap">
+    <div className="flex items-center justify-center w-full py-1 space-x-8 small-tablet:flex-wrap">
       {/* <span className={classnames}>
         <FontAwesomeIcon icon={faLocationDot} />
         <span>Edison, NJ, USA</span>
@@ -83,9 +83,9 @@ const Details = () => {
 }
 
 const SocialMedia = () => {
-  const styles = `relative overflow-hidden ${icon_sizes.medium} rounded-xl shadow-xl`
+  const styles = `relative overflow-hidden ${icon_sizes.medium} shadow-xl`
   return (
-    <div className="relative flex items-center justify-center w-full gap-10 py-10">
+    <div className="relative flex items-center justify-center w-full gap-10 py-10 medium-phone:py-4 large-phone:py-4">
       <span className={styles}>
         {CloudservIcon}
         <Tooltip name="Cloudserv.ai" />

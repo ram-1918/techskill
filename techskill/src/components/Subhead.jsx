@@ -52,9 +52,9 @@ const UnderlineDesign = ({divWidth}) => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
     return (
         <div style={{fontSize: heading_font_size.content[screen]}} className="flex items-center justify-center space-x-2">
-            <span style={{width: divWidth/3, backgroundColor: colors.bordercolor}} className={`h-0.5`}></span>
+            <span style={{width: divWidth/3, backgroundColor: colors.bordercolor}} className={`h-[0.1rem]`}></span>
             <span className={`${heading_font_size.content}`}>{<FontAwesomeIcon icon={faCogs} />}</span>
-            <span style={{width: divWidth/3, backgroundColor: colors.bordercolor}} className={`h-0.5 bg-[black]`}></span>
+            <span style={{width: divWidth/3, backgroundColor: colors.bordercolor}} className={`h-[0.1rem] bg-[black]`}></span>
         </div>
     );
 };

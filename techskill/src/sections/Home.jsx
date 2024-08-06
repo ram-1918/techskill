@@ -14,7 +14,7 @@ const Home = ({...props}) => {
         <BaseSlide {...props} >
             <BaseHeader text={main_headings.slide1.text} />
             <BaseContentDiv>
-                <div className="flex items-center justify-center w-full gap-10 mobile:gap-0">
+                <div className="flex items-center justify-center w-full gap-10">
                     <Body />
                     <APImage />
                 </div>

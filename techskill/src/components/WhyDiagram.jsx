@@ -65,8 +65,8 @@ const screen_specific = {
     },
     'medium-phone': {
         width: 'w-[1rem]',
-        height: 'h-[2rem]',
-        innerwidth: 'w-[1.2rem]',
+        height: 'h-[0.9rem]',
+        innerwidth: 'w-[0.4rem]',
         padding: 'py-[0.3rem]'
     },
     'small-phone': {

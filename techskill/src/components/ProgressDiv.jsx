@@ -134,7 +134,7 @@ const ProgressBarDiv = () => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
 
     return (
-        <div style={{ width: `${width}%`, height: "4rem"}} className="flex items-center justify-center h-full ">
+        <div style={{ width: `${width}%`, height: "2.5rem"}} className="flex items-center justify-center h-full ">
             {isLine &&  <div style={{borderColor: colors.content}} className="w-1 h-full border-2 border-dashed"></div>}
         </div>
     )

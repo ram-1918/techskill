@@ -96,7 +96,7 @@ const Menu = () => {
 
 const MenuItems = () => {
     return (
-        <div className="grid grid-flow-row grid-cols-2 gap-10 py-6 small-phone:grid-cols-1 medium-phone:grid-cols-1 large-phone:grid-cols-1 small-tablet:grid-cols-1 large-tablet:grid-cols-1 small-phone:gap-2 medium-phone:gap-2 large-phone:gap-2 small-tablet:gap-3 large-tablet:gap-4">
+        <div className="grid grid-flow-row grid-cols-2 gap-12 py-4 medium-phone:gap-6 large-phone:gap-6 small-phone:grid-cols-1 small-tablet:grid-cols-1 large-tablet:grid-cols-1 small-phone:gap-2 small-tablet:gap-3 large-tablet:gap-4">
             {contents.map(item => <MenuItem id={item.id} item={item} />)}
         </div>
     );
@@ -109,7 +109,7 @@ const MenuItem = ({item:{slidenum, title, slide_id}}) => {
         <a 
         style={{fontSize: heading_font_size.content[screen], backgroundColor:colors.bg_color}} 
         href={`#${slide_id}`} 
-        className={`${heading_font_size.content} capitalize rounded-lg shadow-lg p-4 flex flex-row justify-start items-center space-x-4 py-1 cursor-pointer`}>
+        className={`${heading_font_size.content} capitalize rounded-lg shadow-lg p-1 flex flex-row justify-start items-center space-x-4 cursor-pointer`}>
             <span style={{fontWeight:"800"}}>{slidenum}</span>
             <span style={{fontWeight: "600"}}>{t(title)}</span>
         </a>

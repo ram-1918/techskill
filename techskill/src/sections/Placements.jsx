@@ -123,11 +123,11 @@ const Placements = ({ ...props }) => {
 const PlacementItems = () => {
   const { t } = useTranslation();
   return (
-    <ul className="flex flex-wrap items-center justify-center w-full gap-12 px-2 gap-y-8">
+    <ul className="flex flex-wrap items-center justify-center w-full gap-12 px-2 gap-y-10 medium-phone:gap-y-4 large-phone:gap-y-4">
       {pd_items.map((item) => (
         <ListItem key={item.id} item={item} />
       ))}
-        <span className={`${heading_font_size.content} w-full font-light text-center`}>
+        <span className={`${heading_font_size.subcontent2} w-full font-light text-center`}>
           ... {t("and many others")}
         </span>
     </ul>

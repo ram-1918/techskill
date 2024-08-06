@@ -68,7 +68,7 @@ const Certifications = ({...props}) => {
             <BaseHeader text={main_headings.slide4.text} />
             <BaseContentDiv text="offers training for the following certifications">
                 <div className="flex flex-col items-center justify-around w-full h-full px-2">
-                    <div className="flex flex-wrap items-center justify-around w-full gap-x-12 h-fit gap-y-10">
+                    <div className="flex flex-wrap items-center justify-around w-full gap-x-10 h-fit gap-y-8 medium-phone:gap-y-1 large-phone:gap-y-1">
                         {certification_list.map(item => <Item key={item.id} icon={item.icon} name={item.name} />)}
                     </div>
                     <div className="w-full h-2"></div>
@@ -80,7 +80,7 @@ const Certifications = ({...props}) => {
 
 const Item = ({icon, name}) => {
     return (
-        <div className="relative flex items-center justify-center p-4 border border-gray-200 rounded-lg shadow-lg h-fit group bg-gray-50">
+        <div className={`relative flex items-center justify-center p-1 border border-gray-200 rounded-lg shadow-lg h-fit group bg-gray-50`}>
             <span className={icon_sizes.medium}>{icon}</span>
             <Tooltip name={name} />
         </div>

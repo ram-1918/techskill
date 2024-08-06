@@ -54,9 +54,9 @@ const ListItem = ({item:{icon, name, content}}) => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
     const { t } = useTranslation();
     return (
-        <li className="flex flex-col items-center justify-start w-[33%] gap-10">
-            <span style={{backgroundColor: colors.bg_color}} className={`${icon_sizes.xl} rounded shadow-md p-2`}>{icon}</span>
-            <div className="flex flex-col items-center justify-between gap-2">
+        <li className="flex flex-col items-center justify-start w-[33%] gap-4">
+            <span style={{backgroundColor: colors.bg_color}} className={`${icon_sizes.xl} rounded shadow-md p-1`}>{icon}</span>
+            <div className="flex flex-col items-center justify-between gap-1">
                 <span style={{color: colors.content}} className={`${heading_font_size.content} font-bold text-center capitalize `}>{t(name)}</span>
                 <p style={{color: colors.subcontent}} className={`${heading_font_size.subcontent} text-center capitalize tracking-wide leading-loose`}>{t(content)}</p>
             </div>

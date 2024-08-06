@@ -1,7 +1,7 @@
 export const slide_sizes = `
     small-phone:w-[20rem] small-phone:h-[35rem] 
-    medium-phone:w-[22.5625rem] medium-phone:h-[40rem] 
-    large-phone:w-[25.9375rem] large-phone:h-[45rem] 
+    medium-phone:w-[20.5625rem] medium-phone:h-[12.5rem] 
+    large-phone:w-[23.9375rem] large-phone:h-[14rem]
     small-tablet:w-[30.0625rem] small-tablet:h-[40rem] 
     large-tablet:w-[48.0625rem] large-tablet:h-[40rem] 
     small-laptop:w-[64.0625rem] small-laptop:h-[40rem] 
@@ -12,6 +12,20 @@ export const slide_sizes = `
     ultra-wide:w-[240.0625rem] ultra-wide:h-[110rem]
     5k-monitor:w-[320.0625rem] 5k-monitor:h-[150rem]
 `
+// export const slide_sizes = `
+//     small-phone:w-[20rem] small-phone:h-[35rem] 
+//     medium-phone:w-[22.5625rem] medium-phone:h-[40rem] 
+//     large-phone:w-[25.9375rem] large-phone:h-[45rem] 
+//     small-tablet:w-[30.0625rem] small-tablet:h-[40rem] 
+//     large-tablet:w-[48.0625rem] large-tablet:h-[40rem] 
+//     small-laptop:w-[64.0625rem] small-laptop:h-[40rem] 
+//     medium-laptop:w-[79.0625rem] medium-laptop:h-[50rem] 
+//     large-laptop:w-[95.0625rem] large-laptop:h-[60rem] 
+//     standard-desktop:w-[120.0625rem] standard-desktop:h-[70rem] 
+//     large-desktop:w-[160.0625rem] large-desktop:h-[90rem] 
+//     ultra-wide:w-[240.0625rem] ultra-wide:h-[110rem]
+//     5k-monitor:w-[320.0625rem] 5k-monitor:h-[150rem]
+// `
 
 // https://essential-blocks.com/stunning-color-gradients-for-web-design/
 // https://offeo.com/learn/gradient-color-palette
@@ -19,7 +33,6 @@ export const slide_sizes = `
 
 export const slide_widths = `
     small-phone:w-[20rem]
-
     medium-phone:w-[22.5625rem]
     large-phone:w-[25.9375rem]
     small-tablet:w-[30.0625rem]
@@ -36,7 +49,7 @@ export const slide_widths = `
 export const slide_padding = `
     small-phone:px-2 medium-phone:px-2 large-phone:px-6
     small-tablet:px-2 large-tablet:px-8 small-laptop:px-10
-    medium-laptop:px-12
+    medium-laptop:px-1
     large-laptop:px-14
     standard-desktop:px-16
     large-desktop:px-20
@@ -46,8 +59,8 @@ export const slide_padding = `
 
 export const heading_font_size = {
     main: `
-    small-phone:text-[0.75rem] medium-phone:text-[0.8rem]
-    large-phone:text-[0.9rem]
+    small-phone:text-[0.75rem] medium-phone:text-[0.6rem]
+    large-phone:text-[0.7rem]
     small-tablet:text-[1.2rem] large-tablet:text-[1.7rem]
     small-laptop:text-[2.2rem] medium-laptop:text-[2.5rem]
     large-laptop:text-[3rem] standard-desktop:text-[3.8rem] large-desktop:text-[5.5rem]
@@ -62,31 +75,31 @@ export const heading_font_size = {
     ultra-wide:text-[16rem] 5k-monitor:text-[24rem]
     `,
     sub: `
-    small-phone:text-[0.3rem] medium-phone:text-[0.7rem]
-    large-phone:text-[0.6rem] 
+    small-phone:text-[0.3rem] medium-phone:text-[0.4rem]
+    large-phone:text-[0.5rem] 
     small-tablet:text-[0.9rem] large-tablet:text-[1.1rem]
     small-laptop:text-[1.2rem] medium-laptop:text-[1.8rem] medium-laptop:text-[2rem] 
     large-laptop:text-[2.1rem] standard-desktop:text-[2.7rem] large-desktop:text-[3.8rem]
     ultra-wide:text-[4.5rem] 5k-monitor:text-[6.5rem]
     `,
     content: `
-    small-phone:text-[0.6rem] medium-phone:text-[0.6rem]
-    large-phone:text-[0.7rem] 
+    small-phone:text-[0.6rem] medium-phone:text-[0.35rem]
+    large-phone:text-[0.3rem] 
     small-tablet:text-[0.8rem] large-tablet:text-[0.8rem]
     small-laptop:text-[1rem] medium-laptop:text-[1rem] large-laptop:text-[1.2rem] 
     standard-desktop:text-[1.9rem] large-desktop:text-[2.5rem]
     ultra-wide:text-[3.2rem] 5k-monitor:text-[4.5rem]
     `,
     subcontent: `
-    small-phone:text-[0.25rem] medium-phone:text-[0.5rem]
-    large-phone:text-[0.6rem] 
+    small-phone:text-[0.25rem] medium-phone:text-[0.4rem]
+    large-phone:text-[0.4rem] 
     small-tablet:text-[0.65rem] large-tablet:text-[0.7rem]
-    small-laptop:text-[0.8rem] medium-laptop:text-[1.2rem] 
+    small-laptop:text-[0.9rem] medium-laptop:text-[1.2rem] 
     large-laptop:text-[1.2rem] standard-desktop:text-[2rem] large-desktop:text-[2.7rem]
     ultra-wide:text-[3.3rem] 5k-monitor:text-[4rem]
     `,
     subcontent2: `
-    small-phone:text-[0.25rem] medium-phone:text-[0.75rem]
+    small-phone:text-[0.25rem] medium-phone:text-[0.25rem]
     large-phone:text-[0.3rem] 
     small-tablet:text-[0.3rem] large-tablet:text-[0.5rem]
     small-laptop:text-[0.7rem] medium-laptop:text-[0.9rem] 
@@ -131,7 +144,7 @@ export const image_size_essential = `
 
 export const image_size = `
         small-phone: w-10 small-phone:h-10
-        medium-phone:w-12 medium-phone:h-12 
+        medium-phone:w-40 medium-phone:h-40 
         large-phone:w-36 large-phone:h-36
         small-tablet:w-[10rem] small-tablet:h-[10rem] large-tablet:w-[24rem] large-tablet:h-[24rem]
         small-laptop:w-[28rem] small-laptop:h-[28rem] medium-laptop:w-[36rem] medium-laptop:h-[36rem] large-laptop:w-[40rem] large-laptop:h-[40rem]
@@ -143,8 +156,8 @@ export const image_size = `
 export const icon_sizes = {
     xxl: `
         small-phone: w-12 small-phone:h-12
-        medium-phone:w-12 medium-phone:h-12
-        large-phone:w-[3.8rem] large-phone:h-[3.8rem]
+        medium-phone:w-8 medium-phone:h-8
+        large-phone:w-10 large-phone:h-10
         small-tablet:w-[4.5rem] small-tablet:h-[4.5rem] large-tablet:w-24 large-tablet:h-24
         small-laptop:w-32 small-laptop:h-32 medium-laptop:w-36 medium-laptop:h-36 large-laptop:w-44 large-laptop:h-44
         standard-desktop:w-56 standard-desktop:h-56 large-desktop:w-64 large-desktop:h-64 ultra-wide:w-[22rem] ultra-wide:h-[22rem]
@@ -161,7 +174,7 @@ export const icon_sizes = {
     `,
     xl:  `
         small-phone:w-2 small-phone:h-2
-        medium-phone:w-10 medium-phone:h-10
+        medium-phone:w-7 medium-phone:h-7
         large-phone:w-7 large-phone:h-7
         small-tablet:w-8 small-tablet:h-8 large-tablet:w-20 large-tablet:h-20
         small-laptop:w-28 small-laptop:h-28 medium-laptop:w-32 medium-laptop:h-32 large-laptop:w-36 large-laptop:h-36
@@ -170,7 +183,7 @@ export const icon_sizes = {
         `,
     // Pending 
     lg: `
-        medium-phone:w-10 medium-phone:h-10
+        medium-phone:w-7 medium-phone:h-7
         large-phone:w-12 large-phone:h-12
         small-tablet:w-16 small-tablet:h-16 large-tablet:w-24 large-tablet:h-24
         small-laptop:w-28 small-laptop:h-28 medium-laptop:w-32 medium-laptop:h-32 large-laptop:w-36 large-laptop:h-36
@@ -179,16 +192,16 @@ export const icon_sizes = {
         `,
     medium: `
         small-phone:w-8 small-phone:h-8
-        medium-phone:w-10 medium-phone:h-10
-        large-phone:w-8 large-phone:h-8
+        medium-phone:w-4 medium-phone:h-4
+        large-phone:w-5 large-phone:h-5
         small-tablet:w-12 small-tablet:h-12 large-tablet:w-16 large-tablet:h-16
         small-laptop:w-20 small-laptop:h-20 medium-laptop:w-24 medium-laptop:h-24 large-laptop:w-28 large-laptop:h-28
         standard-desktop:w-36 standard-desktop:h-36 large-desktop:w-44 large-desktop:h-44 ultra-wide:w-64 ultra-wide:h-64
         5k-monitor:w-96 5k-monitor:h-96
         `,
     small: `
-        medium-phone:w-1 medium-phone:h-1
-        large-phone:w-2 large-phone:h-2
+        medium-phone:w-5 medium-phone:h-5
+        large-phone:w-4 large-phone:h-4
         small-tablet:w-3 small-tablet:h-3 large-tablet:w-4 large-tablet:h-4
         small-laptop:w-5 small-laptop:h-5 medium-laptop:w-7 medium-laptop:h-7 large-laptop:w-8 large-laptop:h-8
         standard-desktop:w-12 standard-desktop:h-12 large-desktop:w-16 large-desktop:h-16 ultra-wide:w-16 ultra-wide:h-16
@@ -196,8 +209,8 @@ export const icon_sizes = {
         `,
     smallest: `
         small-phone:w-3 small-phone:h-3
-        medium-phone:w-6 medium-phone:h-6
-        large-phone:w-7 large-phone:h-7
+        medium-phone:w-2 medium-phone:h-2
+        large-phone:w-3 large-phone:h-3
         small-tablet:w-6 small-tablet:h-6 large-tablet:w-8 large-tablet:h-8
         small-laptop:w-8 small-laptop:h-8 medium-laptop:w-10 medium-laptop:h-10 large-laptop:w-12 large-laptop:h-12
         standard-desktop:w-16 standard-desktop:h-16 large-desktop:w-20 large-desktop:h-20 ultra-wide:w-24 ultra-wide:h-24
@@ -216,7 +229,7 @@ export const y_spacing = `
 export const content_font = "0.9rem";
 
 export const colors = {
-    main: "bg-gradient-to-r from-[#FFC371] to-[#ff5988]",
+    main: "bg-gradient-to-r from-[#FFECD2] to-[#FCB69F]",
     textgradient: "text-transparent bg-clip-text bg-gradient-to-r from-[#C33764] via-[#1D2671] to-[#09203F]",
     sub: "#27374D",
     content: "#27374D",

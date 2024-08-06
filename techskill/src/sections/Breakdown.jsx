@@ -1,13 +1,10 @@
-import { useEffect, useRef, useState } from "react";
 import BaseHeader from "../components/BaseHeader";
-import { colors, heading_font_size, icon_sizes, image_size, image_size_essential } from "../Base";
+import { colors, heading_font_size, image_size } from "../Base";
 import { main_headings } from "../components/data";
 import BaseSlide from "../components/BaseSlide";
 import BaseContentDiv from "../components/BaseContentDiv";
 import { useTranslation } from "react-i18next";
 import { approvedIcon } from "../components/icons";
-import progressbar from "../assets/images/progressbar_div.png"
-import weightage from "../assets/images/weightage_white.png";
 import ProgressBarDiv from "../components/ProgressDiv";
 
 
@@ -18,13 +15,13 @@ const Breakdown = ({...props}) => {
       <BaseSlide id="breakdown" {...props}>
         <BaseHeader text={main_headings.slide9.text} />
         <BaseContentDiv text="skill check score breakdown & calculation">
-              <div style={{color: colors.subcontent}} className="flex items-center justify-center w-full px-10 space-x-4 small-tablet:flex-col small-tablet:overflow-y-scroll small-phone:flex-col medium-phone:flex-col">
+              <div style={{color: colors.subcontent}} className="flex items-start justify-center w-full px-5 space-x-4 small-tablet:flex-col small-tablet:overflow-y-scroll small-phone:flex-col">
                 {/* <div className="w-[45%] h-full bg-center bg-no-repeat bg-contain bg-weightage-white"></div> */}
-                <div className="w-[45%] flex items-center justify-center h-fit small-tablet:w-full large-phone:w-full large-phone:h-full medium-phone:w-full medium-phone:hidden small-phone:w-full">
+                <div className="w-[45%] flex items-center justify-center h-fit small-tablet:w-full small-phone:w-full">
                   <BreakdownDiv />
                 </div>
-                <div className="w-[55%] large-phone:w-full medium-phone:w-full flex flex-col items-start justify-start h-full gap-1 px-2">
-                  <div className={` ${heading_font_size.subcontent} p-2 font-light gap-4`}>
+                <div className="w-[55%] large-phone:w-full flex flex-col items-start justify-start h-full gap-1 px-2">
+                  <div className={`w-full ${heading_font_size.subcontent} p-2 font-light gap-4`}>
                       <span className="font-semibold">{t("A typical student's \"skill check\" score for the below attributes:")}</span>
                       {listitem("academics", "83%")}
                       {listitem("aptitude tests", "78%")}
@@ -50,7 +47,7 @@ const BreakdownDiv = () => {
   const { t } = useTranslation();
   const listitem = (text, percent) => <li className={`${heading_font_size.subcontent2} capitalize`}>{t(text)}: {percent}</li>;
   return (
-      <div className={`relative ${image_size} flex justify-center items-center rounded-lg bg-bg10 bg-contain bg-no-repeat bg-top`}>
+      <div className={`relative ${image_size} flex justify-center items-center rounded-lg bg-weightage bg-contain bg-no-repeat bg-top`}>
         <div className={`${heading_font_size.subcontent2} ${positions} absolute top-[32%] left-[28.5%] small-tablet:left-[24%] font-sans px-2 text-black`}>
           <span className="font-bold capitalize text-md">{t("scores weightage")}</span>
           <ul>

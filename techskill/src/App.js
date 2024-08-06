@@ -166,7 +166,7 @@ const BigScreenView = ({ slides }) => {
   return (
     <div
       style={{ fontFamily: main_heading_fontstyle }}
-      className="flex flex-col items-center justify-start w-full h-full gap-12 text-black transition-all ease-linear mobile:px-0 bg-zinc-0"
+      className="flex flex-col items-center justify-start w-full h-full gap-8 text-black transition-all ease-linear mobile:px-0 bg-zinc-0"
     >
       {!isFullscreen && (
         <ViewOptions
@@ -193,7 +193,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
   const { t, i18n } = useTranslation();
   const [currLang, setCurrLang] = useState("en");
   const active = "bg-sky-200";
-  const buttonstyles = "px-2 py-1 rounded-lg cursor-pointer";
+  const buttonstyles = "px-1 py-1 rounded-lg cursor-pointer";
   const transButton = "cursor-pointer rounded-md py-1 px-2";
 
   const changeLanguage = (lng) => {
@@ -253,7 +253,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           onClick={() => setIsView("scroll")}
           className={`${
             isView === "scroll" && active
-          } ${buttonstyles} flex justify-between items-center ${icon_sizes.smallest}`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
         >
           {ScrollIcon}
         </span>
@@ -261,7 +261,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           onClick={() => setIsView("single")}
           className={`${
             isView === "single" && active
-          } ${buttonstyles} flex justify-between items-center ${icon_sizes.smallest}`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
         >
           {SlideshowIcon}
         </span>
@@ -272,7 +272,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           }}
           className={`${
             isView === "full" && active
-          } ${buttonstyles} flex justify-between items-center ${icon_sizes.smallest}`}
+          } ${buttonstyles} flex justify-between items-center ${icon_sizes.small}`}
         >
           {FullscreenIcon}
         </span>

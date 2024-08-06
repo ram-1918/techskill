@@ -272,7 +272,7 @@ const SubListDisplay = ({divRef, sublist}) => {
                     flex items-center justify-start gap-2 font-normal
                     ${heading_font_size.subcontent}
                     `}>
-                    <span style={{borderColor:colors.bordercolor}} className="w-8 border border-t border-dashed mobile:hidden"></span>
+                    <span style={{borderColor:colors.bordercolor}} className="w-8 border border-t border-dashed medium-phone:w-2 medium-phone:border-dotted large-phone:w-2 large-phone:border-dotted"></span>
                     <span className={`${icon_sizes.smallest}`}>{icon}</span>
                     <span>{t(name)}</span>
                 </li>

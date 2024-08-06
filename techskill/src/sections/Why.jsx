@@ -1,10 +1,6 @@
-import { heading_font_size, image_size, image_size_essential } from "../Base";
 import BaseContentDiv from "../components/BaseContentDiv";
 import BaseHeader from "../components/BaseHeader";
 import BaseSlide from "../components/BaseSlide";
-import { colors } from "../Base";
-import { useTranslation } from "react-i18next";
-import why_image from "../assets/images/why_image_orange.png";
 import { BottomSpan, Edges, FutureImg, LeftData, RightData, Span } from "../components/WhyDiagram";
 
 
@@ -13,7 +9,7 @@ function Why({...props}) {
         <BaseSlide image="bg-bg2" id="why" {...props} >
             <BaseHeader text="skill development program after graduation" />
             <BaseContentDiv text="7 essentials for higher emplpoyment rate" >
-            <Concepts />
+                <Concepts />
             </BaseContentDiv>
         </BaseSlide>
     );
@@ -22,10 +18,6 @@ function Why({...props}) {
 const Concepts = () => {
     return (
         <div className="flex flex-col items-center justify-start w-full">
-            {/* <div className=""></div> */}
-            {/* <div className="w-[90%] h-[90%] bg-whyimage bg-cover bg-center bg-no-repeat">
-                <img src={why_image} alt="why" className="w-full h-full bg-cover" />
-            </div> */}
                 <div className="relative flex items-center justify-center">
                     <LeftData />
                     <Edges />

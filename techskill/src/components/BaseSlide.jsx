@@ -30,11 +30,13 @@ const BaseSlide = ({
       id={id}
       className={`
       ${colors.main}
-      p-10
+      medium-phone:p-4
+      large-phone:p-4
+      p-8
       relative shadow-lg shadow-[#526D82] overflow-hidden rounded-[1rem]
     `}
     >
-      <div  className={`relative w-full h-full p-4 border-2 border-purple-800 shadow-lg overflow-hidden rounded-[1rem] ${!isFullscreen && slide_padding} ${!isFullscreen && slide_sizes}`}>
+      <div  className={`relative w-full h-full p-4 border border-purple-800 shadow-lg overflow-hidden rounded-[1rem] ${!isFullscreen && slide_padding} ${!isFullscreen && slide_sizes}`}>
 
         {/* flex flex-col justify-start items-center gap-5 */}
         {children}

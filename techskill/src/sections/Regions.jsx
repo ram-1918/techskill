@@ -39,7 +39,7 @@ const Regions = ({...props}) => {
             <BaseHeader text={main_headings.slide2.text} />
             <BaseContentDiv text="">
             <div className="flex flex-col items-center justify-around w-full h-full">
-                <div className="flex items-center justify-around w-full space-x-4 h-fit tablet:flex-row laptop:flex-row desktop:flex-row mobile:flex-col small:flex-col mobile:space-x-0 small:space-x-0 mobile:gap-4 small:gap-4">
+                <div className="flex items-center justify-around w-full space-x-4 h-fit ">
                     <ImageSpan />
                     <RegionsListDisplay />
                 </div>
@@ -64,9 +64,9 @@ const RegionsListDisplay = () => {
     return (
         <ul className="
         w-[65%] 
-        grid grid-flow-row grid-cols-3 gap-4 mobile:gap-2 px-4 py-1
+        grid grid-flow-row grid-cols-3 gap-1 px-4 py-1
         large-tablet:w-full small-tablet:w-full large-phone:w-full medium-phone:w-full small-phone:w-full
-        large-tablet:gap-2 small-tablet:gap-2 large-phone:gap-4 small-phone:gap-1
+        large-tablet:gap-2 small-tablet:gap-2 large-phone:gap-2 small-phone:gap-1
         ">
             {regions_list.map((region, idx) => <ListItem id={idx} region={region} />)}
         </ul>

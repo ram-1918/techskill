@@ -43,7 +43,7 @@ const NormalText = ({text, type}) => {
       }}
       className={`
         ${heading_font_size[type]}
-      leading-7 tracking-tight capitalize
+         tracking-tight capitalize
       `}
       >
       {t(text)}

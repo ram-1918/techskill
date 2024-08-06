@@ -3,7 +3,7 @@ import Subhead from "./Subhead";
 
 const BaseContentDiv = ({children, text=''}) => {
     return (
-        <div className="flex flex-col items-center justify-start w-full h-full gap-4 overflow-hidden ">
+        <div className="flex flex-col items-center justify-start w-full h-full gap-4 overflow-hidden medium-phone:gap-1 ">
             {text && <Subhead text={text} />}
             <div className="flex flex-col items-center justify-around w-full h-full">
                 {children}

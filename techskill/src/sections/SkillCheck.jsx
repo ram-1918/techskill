@@ -99,9 +99,9 @@ const Content = () => {
 
 const AttributeDisplay = () => {
   return (
-    <div className="flex flex-col items-center justify-start w-full h-full gap-10">
+    <div className="flex flex-col items-center justify-start w-full h-full gap-1">
       <Steps />
-      <div className="flex items-start justify-around w-full py-10">
+      <div className="flex items-start justify-around w-full py-5">
         <Layout icon={AttributesIcon} title="primary skill check attributes">
           {attributes.map((item) => (
             <AttributeItem key={item.id} item={item} />
@@ -126,7 +126,7 @@ const Steps = () => {
     />
   );
   const textstyles = "font-medium text-md capitalize";
-  const divstyles = " flex flex-col justify-start items-center text-center";
+  const divstyles = " flex flex-col justify-start items-center text-center w-80 medium-phone:w-32 large-phone:w-32";
   const screen = localStorage.getItem("screen") || "medium-laptop";
 
   return (
@@ -179,7 +179,7 @@ const Layout = ({ children, icon, title }) => {
         <span className={icon_sizes.xl}>
           {icon}
         </span>
-        <div className={`${heading_font_size.content} flex flex-col items-start justify-start space-y-1`}>
+        <div className={`${heading_font_size.subcontent} flex flex-col items-start justify-start space-y-1`}>
           {children}
         </div>
       </div>

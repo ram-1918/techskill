@@ -45,7 +45,7 @@ const Reporting = ({...props}) => {
                 <div className="h-2"></div>
             </div>
         </BaseContentDiv>
-        <span style={{fontSize: heading_font_size.subcontent[screen]}} className="absolute bottom-0 text-[0.7rem] py-2">* {t("above numerical figures are just for illustration purposes")}.</span>
+        <span style={{fontSize: heading_font_size.subcontent2}} className="absolute bottom-0 text-[0.5rem] py-2">* {t("above numerical figures are just for illustration purposes")}.</span>
     </BaseSlide>
   );
 }
