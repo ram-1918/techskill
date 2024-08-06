@@ -87,7 +87,7 @@ const ProgressBarDiv = () => {
     const screen = localStorage.getItem('screen') || 'medium-laptop';
   
     return (
-      <div className="w-full py-10">
+      <div className="w-full py-10 medium-phone:hidden large-phone:hidden">
         <Text val1={true} val3={true} val5={true} relativePercents={relativePercents} />
         <Bars relativePercents={relativePercents} val1={true} val3={true} val5={true} />
         <ProgressBar progressRef={progressRef} maxScore={maxScore} relativePercents={relativePercents} totalScore={totalScore} />

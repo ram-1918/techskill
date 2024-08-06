@@ -32,7 +32,7 @@ function About({...props}) {
 
 const ContentDiv = () => {
     return (
-      <div className={`${heading_font_size.content} flex flex-col justify-center items-center`}>
+      <div className={`${heading_font_size.subcontent} flex flex-col justify-center items-center`}>
         <div className="flex items-center justify-center gap-1 small-tablet:flex-col">
           <SrinivasImage size="w-48 h-48" />
           <Content />

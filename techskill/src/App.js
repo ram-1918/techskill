@@ -216,7 +216,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
     ${slide_widths}
     `}
     >
-      <div className={`${heading_font_size.subcontent} flex items-center justify-center gap-2`}>
+      <div className={`${heading_font_size.subcontent} medium-phone:hidden large-phone:hidden small-tablet:hidden flex items-center justify-center gap-2`}>
         <span>Translation: </span>
         <span
           className={`${transButton} ${
@@ -245,7 +245,7 @@ const ViewOptions = ({ setIsView, isView, setIsFullscreen }) => {
           Hindi
         </span>
       </div>
-      <div  className={`${heading_font_size.subcontent} flex items-center justify-end gap-2`}>
+      <div  className={`${heading_font_size.subcontent} medium-phone:hidden large-phone:hidden small-tablet:hidden flex items-center justify-end gap-2`}>
         <span className="font-light text-black">
           <FontAwesomeIcon icon={faEye} /> View:{" "}
         </span>

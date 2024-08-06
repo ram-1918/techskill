@@ -86,7 +86,7 @@ export const heading_font_size = {
     small-phone:text-[0.6rem] medium-phone:text-[0.35rem]
     large-phone:text-[0.3rem] 
     small-tablet:text-[0.8rem] large-tablet:text-[0.8rem]
-    small-laptop:text-[1rem] medium-laptop:text-[1rem] large-laptop:text-[1.2rem] 
+    small-laptop:text-[1rem] medium-laptop:text-[1rem] large-laptop:text-[1.7rem] 
     standard-desktop:text-[1.9rem] large-desktop:text-[2.5rem]
     ultra-wide:text-[3.2rem] 5k-monitor:text-[4.5rem]
     `,

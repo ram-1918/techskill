@@ -53,7 +53,7 @@ const BaseSlide = ({
       )}
 
       </div>
-      {/* {screen} */}
+      {screen}
     </section>
   );
 };
